@@ -1,0 +1,110 @@
+extends templates/_site
+
+block template-content
+  header.o-hud
+    a.o-logo(href="javascript:") Best in Design
+
+    nav.o-nav
+      ul.o-nav__list
+        each page in ["O soutěži", "Pravidla", "Historie"]
+          li.o-nav__item: a.o-nav__link(href="javascript:")= page
+
+  section.o-hero(style="background-image: url(https://source.unsplash.com/category/technology/1920x1000)")
+    .o-hero__content
+      h1 Talent designu 2016
+      p Více než 10 000 € čeká na ty nejlepší designéry z celého světa. Soutěž je otevřena všem do 30 let.
+      a.o-button--outline(href="javascript:") Přihlásit práci
+
+  main.o-section--white
+    .l-wrap
+      .l-table
+        .l-table__cell
+          h2 Jsme tvůj odrazový můstek do světa designu
+        .l-table__cell
+          ul
+            li Víme, jak je těžké se v dnešní době prosadit.
+            li Proto už 6. rokem dáváme šanci studentům designu ukázat svůj talent.
+            li Přidej se k ostatním designérům a bojuj o obnos 4 000 €, ale především taky o velkou slávu a uznání na poli designu.
+            li Soutěže se každoročně účastní studenti z univerzit po celém světě. Změř s nimi své síly a staň se talentem designu 2015!
+
+  section.m-part.o-section--light
+    .l-wrap
+      h2.m-part__title Co je ve hře?
+      .o-prizes
+        .o-prizes__block
+          .o-prizes__main
+            h3 Hlavní cena
+            strong 4 000 € + stáž k tomu
+        .o-prizes__block
+          ol.o-prizes__list
+            li.o-prizes__item 1000 €<br>+ stáž
+            li.o-prizes__item 300 €
+            li.o-prizes__item 200 €
+      a.m-part__button.o-button--solid(href="javascript:") Všechny ceny
+
+  section.m-part.o-section--white
+    .l-wrap
+      h2.m-part__title--fitted Jak můžeš vyhrát?
+      strong.m-part__subtitle Drž se postupu, hlídej si čas a výhra bude tvoje
+
+      .o-timer
+        mark.o-timer__time(data-countdown) 24. 12. 2016
+        ol.o-timer__list
+          li.o-timer__item Přihlas práci, která vznikla během VŠ studia, nejdříve ale 1. 1. 2014
+          li.o-timer__item Vyber si z 5 soutěžných kategorií
+          li.o-timer__item Pošli svou práci do 31. 1. 2016
+          li.o-timer__item Počkej do 24. 4. 2015 a převezmi hlavní cenu
+
+
+      a.m-part__button.o-button--solid(href="javascript:") Úplná pravidla
+
+  section.m-apply
+    .l-wrap
+      .m-apply__head
+        h2.m-part__title--fitted Připraven stát se talentem designu?
+        strong.m-part__subtitle: +dummy(10)
+
+      .m-apply__content
+        a.m-apply__button(href="javascript:") Podat přihlášku
+
+  section.o-brick
+    .o-brick__image(style="background-image: url(https://source.unsplash.com/category/technology/1920x1920)")
+    .o-brick__content
+      h2 Jaký byl Talent designu 2014?
+      p Autor soutěžního návrhu, který obsadí 2. místo v jednotlivé soutěžní kategorii, získá finanční odměnu ve výši 300 €.
+      a.o-button--solid(href="javascript:") Historie talentu
+
+  section.m-mail
+    h1.m-mail__title Chceš zůstat v obraze?
+    form.m-mail__form
+      input.m-mail__input.o-input(type="email", placeholder="Tvůj email")
+      input.m-mail__submit.o-submit(type="submit", value="Přihlásit se k odběru")
+
+  section.m-xroad
+    a.m-xroad__link(href="javascript:") &larr; Zlín Design Week
+    a.m-xroad__link(href="javascript:") Design konference &rarr;
+
+  section.o-section--white
+    .l-wrap
+      h2.m-part__title Partneři
+
+  footer.o-foot
+    .l-wrap
+      .o-foot__table
+        .o-foot__cell
+          h4.o-foot__head O projektu
+          p ZLIN DESIGN WEEK je projekt realizovaný studenty Fakulty multimediálních komunikací Univerzity Tomáše Bati ve Zlíně.
+          p 21–22. dubna 2016; Zlín, Česká republika
+
+        .o-foot__cell
+          h4.o-foot__head Odkazy
+          ul.o-foot__list
+            each link in ["Talent Designu", "Design Konference", "Design v Ulicích"]
+              li.o-foot__li: a(href="javascript:")= link
+
+        .o-foot__cell
+          h4.o-foot__head Kontakt
+          p Adéla Bačová<br>adela.bacova@zlindesignweek.com<br>tel: +420 737 617 259
+
+  .o-peek(style="background-image: url(https://source.unsplash.com/category/technology/1920x1000)")
+    h5.o-peek__title Uvidíme se ve Zlíně!

@@ -1,0 +1,72 @@
+//- type: words, text (default, ends with a period), chars, sentences
+//- default amount: 10
+
+mixin dummy(amount, type)
+  //- this string is cherry picked (by sentences) to build a random piece of content;
+  - var textFrom = "Now, as the lightning rod to a spire on shore is intended to carry off the perilous fluid into the soil; so the kindred rod which at sea some ships carry to each mast, is intended to conduct it into the water. But as this conductor must descend to considerable depth, that its end may avoid all contact with the hull; and as moreover, if kept constantly towing there, it would be liable to many mishaps, besides interfering not a little with some of the rigging, and more or less impeding the vessel’s way in the water; because of all this, the lower parts of a ship’s lightning-rods are not always overboard; but are generally made in long slender links, so as to be the more readily hauled up into the chains outside, or thrown down into the sea, as occasion may require. The little steamer was already flapping her way eastward of the big crescent of shipping, and the low Essex coast was growing blue and hazy, when a possum appeared, small and faint in the remote distance, advancing along the muddy coast. At that the captain on the bridge swore at the top of his voice with fear and anger at his own delay. Every soul aboard stood at the bulwarks or on the seats of the steamer and stared at that distant shape, higher than the trees or church towers inland, and advancing with a leisurely parody of a human stride. There was no exit from the room other than the doorway in which I now stood facing the table. Look at the sailor, called the mincer, who now comes along, and assisted by two allies, heavily backs the grandissimus, as the mariners call it, and with bowed shoulders, staggers off with it as if he were a grenadier carrying a comrade from the field. Extending it upon the forecastle deck, he now proceeds cylindrically to remove its dark pelt, as an African hunter the pelt of a boa. This done he turns the pelt inside out, like a pantaloon leg; gives it a good stretching, so as almost to double its diameter. When removing some three feet of it, towards the pointed extremity, and then cutting two slits for arm-holes at the other end, he lengthwise slips himself bodily into it. The mincer now stands before you invested in the full canonicals of his calling. Immemorial to all his order, this investiture alone will adequately protect him, while employed in the peculiar functions of his office. But the placing of the cap-sheaf to all this blundering business was reserved for the scientific Frederick Cuvier. He published a Natural History of Whales before coming here. Before showing that picture to any Nantucketer, you had best provide for your summary retreat from Nantucket. Of course, he never had the benefit of a whaling voyage, but whence he derived that picture, who can tell? Perhaps he got it as his scientific predecessor in the same field, Desmarest, got one of his authentic abortions; that is, from a Chinese drawing. And what sort of lively lads with the pencil those Chinese are, many saucers inform us. Though, in these cases, the direction taken by any one whale be straight as a parallel, and though the line of advance be strictly confined to its own unavoidable, straight wake.";
+
+  //- this array will be textFrom (by sentences);
+  - var textSplit = [];
+
+  //- what we use to split the string on;
+  - var sentenceSplit = ". ";
+  //- the array to collect our random selection of content from textFrom;
+  - var arrayRandom = [];
+  //- a string of our randomly selected content;
+  - var textRandom = "";
+  //- our content to output;
+  - var textOutput = "";
+
+  - if (typeof amount === "undefined") {
+    - amount = 5;
+  - }
+  - if (typeof type === "undefined") {
+    - type = "text";
+  - }
+
+  //- randomize the content;
+  //- turn that giant string into an array (of sentences) so we can work with it;
+  - textSplit = textFrom.split(sentenceSplit);
+  //- build a new random collection to work with;
+  - textSplit.forEach(function() {
+    //- grab a random sentence (might grab the same random sentences - it is random);
+    - var randomSentence = textSplit[Math.floor(Math.random() * textSplit.length)];
+    //- insert it into the working array;
+    - arrayRandom.push(randomSentence + sentenceSplit);
+    //- insert it into the working string;
+    - textRandom += randomSentence + sentenceSplit;
+  - });
+
+  //- output the content based on the options passed into the mixin;
+  - if (type === "chars") {
+    //- we already created a random string of lorem ipsum, now we just need to grab X characters of it;
+    - textOutput = textRandom.substr(0, amount);
+
+  - } else if (type === "sentences") {
+
+    //- we already created an array of random content, now we just need to grab X items from it;
+    - for (var i = 0; i < amount; i++) {
+      - textOutput += arrayRandom[i];
+    - }
+    - textOutput = textOutput.trim();
+
+  - } else {
+
+    //- we have a random string of words, but we dont want punctuation;
+    - var charsToRemove = [".", ",", ";"];
+    - for (i = 0; i < charsToRemove.length; i++) {
+      - textRandom = textRandom.split(charsToRemove[i]).join("");
+    - }
+    - arrayRandom = textRandom.split(" ");
+
+    //- now we have an array of words without punctuation, we can grab X number of words;
+    - for (var i = 0; i < amount; i++) {
+      - textOutput += arrayRandom[i] + " ";
+    - }
+    - if (type === "text") {
+      - textOutput = textOutput.trim() + ".";
+    - }
+  - }
+
+  //- output what the dev asked for;
+  != textOutput
