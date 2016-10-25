@@ -1,5 +1,5 @@
 var
-  endDate = moment("2016-12-01"),
+  endDate = moment("2017-01-31"),
   deadDate = endDate.fromNow();
 
 $("[data-countdown]").text("Uzávěrka " + deadDate);
