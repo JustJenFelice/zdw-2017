@@ -1,0 +1,51 @@
+.o-timer {
+  margin-top: 2em;
+}
+
+.o-timer__time {
+  position: relative;
+
+  display: block;
+
+  font-size: 9vw;
+  line-height: 1.25;
+
+  color: currentColor;
+  background-color: transparent;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    content: "";
+
+    background: linear-gradient(to right, tomato, gold);
+    mix-blend-mode: screen;
+  }
+}
+
+.o-timer__list {
+  display: flex;
+  justify-content: space-between;
+
+  list-style-type: none;
+  padding-left: 0;
+  @include margin(null -1em);
+
+  counter-reset: timer-count;
+}
+
+.o-timer__item {
+  @include padding(null 1em);
+
+  &:before {
+    display: block;
+
+    content: counter(timer-count);
+    counter-increment: timer-count;
+  }
+}

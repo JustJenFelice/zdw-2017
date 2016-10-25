@@ -1,0 +1,31 @@
+.o-foot {
+  color: $grey--900;
+  background-color: $grey--100;
+
+  margin-bottom: 50vmin;
+}
+
+.o-foot__table {
+  display: flex;
+
+  margin-left: 10em;
+}
+
+.o-foot__cell {
+  @include padding(null 1em);
+}
+
+.o-foot__head {
+  margin-top: 0;
+
+  color: white;
+}
+
+.o-foot__list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.o-foot__li {
+  white-space: nowrap;
+}

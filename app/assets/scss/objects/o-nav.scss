@@ -1,0 +1,9 @@
+.o-nav__list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.o-nav__item {
+  display: inline-block;
+  @include margin(null 1em);
+}

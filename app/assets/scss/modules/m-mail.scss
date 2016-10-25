@@ -1,0 +1,29 @@
+.m-mail {
+  background-color: $grey--100;
+
+  padding: 3em;
+
+  color: white;
+}
+
+.m-mail__title {
+  margin-top: 0;
+
+  text-align: center;
+}
+
+.m-mail__form {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+
+  @include margin(null auto);
+}
+
+.m-mail__input {
+  flex-grow: 1;
+
+  min-width: 15em;
+}
+.m-mail__submit {
+}

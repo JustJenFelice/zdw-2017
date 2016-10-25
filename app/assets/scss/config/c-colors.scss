@@ -1,0 +1,12 @@
+$grey--100:   hsb(000, 000, 014);
+$grey--900:   hsb(000, 000, 096);
+
+// Interactive
+$c-link:         currentColor;
+$c-visited:      $c-link;
+
+$c-hover:        currentColor;
+$c-active:       $c-hover;
+
+$c-select__bg:   black;
+$c-select__text: white;

@@ -1,0 +1,31 @@
+// HSB to HSLA.
+@function hsb ($h-hsb, $s-hsb, $b-hsb, $a: 1) {
+  @if $b-hsb == 0 {
+    @return hsla(0, 0, 0, $a)
+  } @else {
+    $l-hsl: ($b-hsb / 2) * (2 - ($s-hsb / 100));
+    $s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2);
+    @return hsla($h-hsb, $s-hsl, $l-hsl, $a);
+  }
+}
+
+// Remove horizontal margins
+@mixin collapse-children {
+  & > :first-child {
+    margin-top: 0;
+  }
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin pseudo-center {
+  content: "";
+
+  display: inline-block;
+
+  width: 0;
+  height: 100%;
+
+  vertical-align: middle;
+}

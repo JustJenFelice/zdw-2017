@@ -1,0 +1,21 @@
+.m-apply {
+  color: white;
+
+  background: linear-gradient(45deg, tomato, gold);
+}
+
+.m-apply__head {
+  text-align: center;
+}
+
+.m-apply__button {
+  display: block;
+
+  max-width: 60%;
+  @include margin(1em auto null);
+  padding: .5em 1em;
+
+  border: 2px solid;
+
+  font-size: 2em;
+}

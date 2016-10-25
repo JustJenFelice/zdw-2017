@@ -1,0 +1,35 @@
+.o-section--white {
+  background-color: white;
+}
+
+.o-section--light {
+  background-color: $grey--900;
+}
+
+.o-input {
+  font-family: $font__sans;
+
+  color: currentColor;
+  background-color: transparent;
+
+  padding: .75em 1em;
+
+  appearance: none;
+  border-radius: 0;
+  border: 2px solid;
+}
+
+.o-submit {
+  font-family: $font__sans;
+
+  padding: .875em 1.125em;
+
+  appearance: none;
+  border-radius: 0;
+  border: none;
+
+  color: black;
+  background-color: white;
+
+  cursor: pointer;
+}

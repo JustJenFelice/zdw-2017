@@ -1,0 +1,63 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  cursor: default;
+
+  font: $default__weight em($default__size, 16) $default__family;
+  line-height: $default__leading;
+}
+
+img {
+  display: block;
+
+  max-width: 100%;
+}
+
+canvas,
+iframe {
+  display: block;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+
+  &:link {
+    color: $c-link;
+  }
+  &:visited {
+    color: $c-visited;
+  }
+  &:hover {
+    color: $c-hover;
+  }
+  &:active {
+    color: $c-hover;
+  }
+}
+
+nav a {
+  text-decoration: none;
+}
+
+::selection {
+  background-color: $c-select__bg;
+  color: $c-select__text;
+  text-shadow: none;
+}
+
+a[href^="tel"] {
+  text-decoration: none;
+
+  color: $c-link;
+}

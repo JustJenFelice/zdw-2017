@@ -1,0 +1,22 @@
+.l-wrap {
+  @include margin(null auto);
+
+  @include clearfix;
+  @include reset-children;
+
+  padding: 4em 2em;
+}
+
+.l-table {
+  display: table;
+  width: 100%;
+}
+
+.l-table__cell {
+  display: table-cell;
+  width: 50%;
+
+  vertical-align: top;
+
+  @include reset-children;
+}

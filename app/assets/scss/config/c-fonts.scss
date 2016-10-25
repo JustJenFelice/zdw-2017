@@ -1,0 +1,12 @@
+$font__sans: "Work Sans", sans-serif;
+
+$font__sans--regular:  400;
+$font__sans--medium:   500;
+$font__sans--semibold: 600;
+$font__sans--bold:     700;
+
+// Defaults.
+$default__size: 16;
+$default__family: $font__sans;
+$default__weight: $font__sans--regular;
+$default__leading: $leading--b;

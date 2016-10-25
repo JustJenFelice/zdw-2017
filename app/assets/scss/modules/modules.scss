@@ -1,0 +1,10 @@
+.m-part {
+  text-align: center;
+}
+.m-part__title--fitted {
+  @include margin(0 null);
+}
+
+.m-part__button {
+  margin-top: 2em;
+}

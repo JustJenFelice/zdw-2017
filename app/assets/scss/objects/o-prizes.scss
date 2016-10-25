@@ -1,0 +1,76 @@
+.o-prizes {
+  display: table;
+  width: 100%;
+
+  text-align: center;
+}
+
+.o-prizes__block {
+  position: relative;
+
+  display: table-cell;
+  width: 50%;
+  // @include padding(null 5em);
+
+  vertical-align: middle;
+
+  // &:before, &:after {
+  //   position: absolute;
+  //   font-size: 5em;
+  //   top: 50%;
+
+  //   transform: translateY(-50%);
+  // }
+
+  // &:before {
+  //   left: .25em;
+  //   content: "(";
+  // }
+  // &:after {
+  //   right: .25em;
+  //   content: ")";
+  // }
+}
+
+.o-prizes__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @include margin(0 null);
+  padding-left: 0;
+  list-style-type: none;
+
+  counter-reset: prizes-count;
+
+  &:before,
+  &:after {
+    font-size: 5em;
+  }
+
+  &:before {
+    content: "(";
+    order: 0;
+  }
+  &:after {
+    content: ")";
+    order: 5;
+  }
+}
+
+.o-prizes__item {
+  &:before {
+    display: block;
+
+    content: counter(prizes-count);
+    counter-increment: prizes-count;
+
+    font-size: 2em;
+  }
+  &:first-child {
+    order: 1;
+  }
+  &:last-child {
+    order: 3;
+  }
+}

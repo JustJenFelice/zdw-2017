@@ -1,0 +1,25 @@
+[class^="o-button--"],
+[class*=" o-button--"] {
+  display: inline-block;
+
+  text-transform: uppercase;
+  letter-spacing: em(1);
+
+  font-weight: $font__sans--medium;
+}
+
+.o-button--outline {
+  border: 2px solid;
+
+  @include padding(.5em 1em);
+}
+
+.o-button--solid {
+  @include padding(.625em 1em);
+
+  background-color: black;
+
+  &:link, &:visited {
+    color: white;
+  }
+}
