@@ -1,14 +1,17 @@
 .o-brick {
-  display: table;
-  width: 100%;
+  position: relative;
 
   background-color: white;
 
-  min-height: 75vmin;
+  @include clearfix;
 }
 
 .o-brick__image {
-  display: table-cell;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
   width: 50%;
 
   background-color: $grey--900;
@@ -18,21 +21,22 @@
 }
 
 .o-brick__content {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-  display: table-cell;
   width: 50%;
+  float: right;
+
+  min-height: 75vmin;
 
   padding: 3em;
-
-  @include reset-children;
 }
 
 .o-brick__text {
   color: $grey--400;
 }
 
-.o-brick__button {
-  position: absolute;
-  bottom: 3em;
+.o-brick__top {
+  @include reset-children;
 }
