@@ -1,9 +1,12 @@
 .m-apply {
   color: white;
 
-  background: linear-gradient(45deg, tomato, gold);
-
   padding-bottom: 1.5em;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .m-apply__head {

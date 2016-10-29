@@ -2,7 +2,10 @@
   display: table;
   width: 100%;
 
-  background: linear-gradient(45deg, indigo, lightpink);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .m-xroad__link {
