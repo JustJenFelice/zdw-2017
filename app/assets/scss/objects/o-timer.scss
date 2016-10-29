@@ -7,8 +7,13 @@
 
   display: block;
 
-  font-size: 7vw;
+  font-family: $font__mono;
+  font-size: 10vw;
+
+  word-spacing: 1em;
   line-height: 1.25;
+
+  @include padding(null 1rem);
 
   color: currentColor;
   background-color: transparent;
