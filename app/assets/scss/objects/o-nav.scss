@@ -35,9 +35,30 @@
   }
 }
 
+.o-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  text-align: center;
+
+  transition: background-color $duration--s;
+
+  .nav--is-pinned & {
+    position: fixed;
+    top: 0;
+
+    background-color: black;
+  }
+}
+
 .o-nav__list {
   list-style-type: none;
-  padding-left: 0;
+  
+  @include padding(.25em null .25em 0);
 }
 
 .o-nav__item {

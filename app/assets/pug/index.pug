@@ -4,13 +4,14 @@ block template-content
   header.o-hud
     a.o-logo(href="javascript:") Best in Design
 
-    nav.o-nav
-      button.o-nav__toggle
-        span.o-nav__icon
-        | Menu
-      ul.o-nav__list
-        each page in ["O soutěži", "Pravidla", "Historie", "Kontakt"]
-          li.o-nav__item: a.o-nav__link(href="javascript:")= page
+    .o-hud__menu(data-menu)
+      nav.o-nav
+        button.o-nav__toggle
+          span.o-nav__icon
+          | Menu
+        ul.o-nav__list
+          each page in ["O soutěži", "Pravidla", "Historie", "Kontakt"]
+            li.o-nav__item: a.o-nav__link(href="javascript:")= page
 
   section.m-hero(style="background-image: url(assets/images/bg_1.jpg)")
     .m-hero__content

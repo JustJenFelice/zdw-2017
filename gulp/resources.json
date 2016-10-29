@@ -13,6 +13,7 @@
       "bower_components/jquery.easing/js/jquery.easing.js",
       "bower_components/moment/moment.js",
       "bower_components/moment/locale/cs.js",
+      "bower_components/waypoints/lib/jquery.waypoints.js",
 
       "app/assets/js/app.js"
     ]
