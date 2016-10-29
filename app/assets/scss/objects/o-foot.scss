@@ -5,10 +5,19 @@
   margin-bottom: 50vmin;
 }
 
+.o-foot__logo {
+  position: relative;
+  top: .5em;
+
+  float: left;
+
+  fill: white;
+}
+
 .o-foot__table {
   display: flex;
 
-  margin-left: 10em;
+  margin-left: 12em;
 }
 
 .o-foot__cell {
@@ -27,5 +36,8 @@
 }
 
 .o-foot__li {
+  text-transform: uppercase;
+  letter-spacing: em(1);
+
   white-space: nowrap;
 }

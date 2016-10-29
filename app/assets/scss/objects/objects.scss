@@ -1,3 +1,10 @@
+.o-logo {
+  font-weight: $font__sans--bold;
+
+  text-transform: uppercase;
+  letter-spacing: em(2);
+}
+
 .o-section--white {
   background-color: white;
 }
@@ -8,21 +15,35 @@
 
 .o-input {
   font-family: $font__sans;
+  font-size: em(20);
+
+  line-height: 1;
 
   color: currentColor;
   background-color: transparent;
 
-  padding: .75em 1em;
+  padding: 1em 1.5em;
 
   appearance: none;
   border-radius: 0;
   border: 2px solid;
+
+  &:focus {
+    outline: 0;
+  }
+
+  @include placeholder {
+    color: white;
+  }
 }
 
 .o-submit {
   font-family: $font__sans;
+  font-size: em(20);
 
-  padding: .875em 1.125em;
+  line-height: 1;
+
+  padding: 1.1em 1.5em;
 
   appearance: none;
   border-radius: 0;
@@ -32,4 +53,13 @@
   background-color: white;
 
   cursor: pointer;
+}
+
+.o-bullets {
+}
+
+.o-bullets__item {
+  &:not(:last-child) {
+    margin-bottom: .5em;
+  }
 }

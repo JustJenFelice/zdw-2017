@@ -41,5 +41,7 @@
 
   @include margin(0 null);
 
+  font-family: $font__mono;
+  font-weight: $font__mono--regular;
   font-size: 3em;
 }

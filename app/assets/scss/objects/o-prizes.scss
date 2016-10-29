@@ -3,6 +3,8 @@
   width: 100%;
 
   text-align: center;
+
+  margin-top: 4em;
 }
 
 .o-prizes__block {
@@ -10,26 +12,8 @@
 
   display: table-cell;
   width: 50%;
-  // @include padding(null 5em);
 
   vertical-align: middle;
-
-  // &:before, &:after {
-  //   position: absolute;
-  //   font-size: 5em;
-  //   top: 50%;
-
-  //   transform: translateY(-50%);
-  // }
-
-  // &:before {
-  //   left: .25em;
-  //   content: "(";
-  // }
-  // &:after {
-  //   right: .25em;
-  //   content: ")";
-  // }
 }
 
 .o-prizes__list {
@@ -43,9 +27,12 @@
 
   counter-reset: prizes-count;
 
+  font-family: $font__mono;
+
   &:before,
   &:after {
-    font-size: 5em;
+    font-size: 7em;
+    line-height: 1;
   }
 
   &:before {
@@ -66,6 +53,7 @@
     counter-increment: prizes-count;
 
     font-size: 2em;
+    font-weight: $font__mono--bold;
   }
   &:first-child {
     order: 1;
@@ -73,4 +61,22 @@
   &:last-child {
     order: 3;
   }
+}
+
+.o-prizes__caps {
+  @include margin(0 null);
+}
+
+[class^="o-prizes__fern"] {
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.o-prizes__fern--left {
+  left: .5em;
+}
+.o-prizes__fern--right {
+  right: .5em;
 }

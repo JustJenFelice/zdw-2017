@@ -1,3 +1,40 @@
+.o-nav__toggle {
+  display: none;
+
+  color: currentColor;
+  background-color: transparent;
+
+  padding: 1em;
+  border: none;
+
+  box-sizing: content-box;
+
+  overflow: hidden;
+
+  width: em(26);
+  height: em(20);
+}
+
+.o-nav__icon {
+  display: block;
+
+  border-top: em(4) solid currentColor;
+  border-bottom: em(4) solid currentColor;
+
+  margin-bottom: 1em;
+
+  &:before {
+    content: "";
+
+    display: block;
+    height: em(4);
+
+    background-color: currentColor;
+
+    @include margin(em(4) null);
+  }
+}
+
 .o-nav__list {
   list-style-type: none;
   padding-left: 0;

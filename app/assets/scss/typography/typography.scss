@@ -1,0 +1,45 @@
+.t-smallcaps {
+  font-weight: $font__sans--bold;
+
+  text-transform: uppercase;
+  letter-spacing: em(2);
+}
+
+.t-caps {
+  font-size: em(36);
+
+  font-family: $font__mono;
+  font-weight: $font__mono--bold;  
+
+  text-transform: uppercase;
+  letter-spacing: em(2);
+}
+
+.t-head--a {
+  font-size: em(58);
+
+  font-family: $font__mono;
+  font-weight: $font__mono--regular;
+
+  word-spacing: .5em;
+}
+
+.t-head--b {
+  font-size: em(28);
+  font-weight: $font__sans--medium;
+}
+
+.t-head--c {
+  font-size: em(36);
+
+  font-family: $font__mono;
+  font-weight: $font__mono--regular;
+}
+
+.t-text--big {
+  font-size: em(21);
+}
+
+.t-ulink {
+  border-bottom: 1px solid;
+}

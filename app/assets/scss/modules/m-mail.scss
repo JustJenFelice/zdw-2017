@@ -1,8 +1,6 @@
 .m-mail {
   background-color: $grey--100;
 
-  padding: 3em;
-
   color: white;
 }
 
@@ -17,7 +15,7 @@
   justify-content: center;
   width: 60%;
 
-  @include margin(null auto);
+  @include margin(2em auto null);
 }
 
 .m-mail__input {

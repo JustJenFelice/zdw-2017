@@ -4,7 +4,15 @@
   @include clearfix;
   @include reset-children;
 
-  padding: 4em 2em;
+  max-width: 70em;
+  padding: 4em 3em;
+}
+
+.l-wrap--no-bottom {
+  padding-bottom: 0;
+}
+.l-wrap--no-top {
+  padding-top: 0;
 }
 
 .l-table {
@@ -13,10 +21,19 @@
 }
 
 .l-table__cell {
+  position: relative;
+  
   display: table-cell;
   width: 50%;
 
   vertical-align: top;
 
   @include reset-children;
+
+  &:first-child {
+    padding-right: 1em;
+  }
+  &:last-child {
+    padding-left: 1em;
+  }
 }

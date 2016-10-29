@@ -1,8 +1,8 @@
 .o-timer {
-  margin-top: 2em;
+  @include margin(2em null);
 }
 
-.o-timer__time {
+.o-timer__text {
   position: relative;
 
   display: block;
@@ -25,27 +25,5 @@
 
     background: linear-gradient(to right, tomato, gold);
     mix-blend-mode: screen;
-  }
-}
-
-.o-timer__list {
-  display: flex;
-  justify-content: space-between;
-
-  list-style-type: none;
-  padding-left: 0;
-  @include margin(null -1em);
-
-  counter-reset: timer-count;
-}
-
-.o-timer__item {
-  @include padding(null 1em);
-
-  &:before {
-    display: block;
-
-    content: counter(timer-count);
-    counter-increment: timer-count;
   }
 }

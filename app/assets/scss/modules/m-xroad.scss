@@ -9,17 +9,21 @@
   display: table-cell;
   width: 50%;
 
-  padding: 2em;
+  padding: 3em 2em;
 
   font-size: 2em;
   text-align: center;
 
-  // border: .25em solid transparent;
 
   &:link, &:visited {
     color: white;
   }
-  &:hover, &:active {
-    // border-color: blue;
-  }
+}
+
+.m-xroad__arrow--left {
+  float: left;
+}
+
+.m-xroad__arrow--right {
+  float: right;
 }

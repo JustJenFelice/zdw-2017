@@ -3,7 +3,7 @@
   display: inline-block;
 
   text-transform: uppercase;
-  letter-spacing: em(1);
+  letter-spacing: em(2);
 
   font-weight: $font__sans--medium;
 }
@@ -11,11 +11,11 @@
 .o-button--outline {
   border: 2px solid;
 
-  @include padding(.5em 1em);
+  @include padding(.75em 1.75em);
 }
 
 .o-button--solid {
-  @include padding(.625em 1em);
+  @include padding(.875em 1.75em);
 
   background-color: black;
 

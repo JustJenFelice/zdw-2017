@@ -1,0 +1,33 @@
+.o-steps {
+  display: flex;
+  justify-content: space-between;
+
+  list-style-type: none;
+  padding-left: 0;
+  padding-top: 1.5em;
+  @include margin(0 -1.5em);
+
+  counter-reset: steps-count;
+}
+
+.o-steps__item {
+  position: relative;
+
+  @include padding(1em 1.5em null);
+  width: 25%;
+
+  &:before {
+    position: absolute;
+    left: 50%;
+    top: -1.5em;
+
+    transform: translateX(-50%);
+
+    content: counter(steps-count);
+    counter-increment: steps-count;
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid $grey--800;
+  }
+}
