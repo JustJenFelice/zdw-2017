@@ -52,7 +52,7 @@
     content: counter(prizes-count);
     counter-increment: prizes-count;
 
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: $font__mono--bold;
   }
   &:first-child {
@@ -65,6 +65,13 @@
 
 .o-prizes__caps {
   @include margin(0 null);
+}
+
+.o-prizes__note {
+  display: block;
+  margin-top: 1em;
+  
+  font-weight: $font__sans--regular;
 }
 
 [class^="o-prizes__fern"] {
