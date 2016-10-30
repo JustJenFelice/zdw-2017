@@ -1,0 +1,42 @@
+[class^="o-submit--"],
+[class*=" o-submit--"] {
+  font-family: $font__sans;
+  font-weight: $font__sans--medium;
+
+  text-transform: uppercase;
+  letter-spacing: em(2);
+  line-height: 1;
+
+  padding: 1.125em 1.5em;
+
+  border-radius: 0;
+  border: 2px solid;
+
+  cursor: pointer;
+
+  @include appearance(none);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.o-submit--black {
+  color: white;
+  background-color: black;
+
+  &:hover, &:active, &:focus {
+    background-color: rgba(black, .75);
+  }
+}
+
+.o-submit--white {
+  color: black;
+  background-color: white;
+  border-color: white;
+  
+  &:hover, &:active, &:focus {
+    color: white;
+    background-color: transparent;
+  }
+}

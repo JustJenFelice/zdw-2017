@@ -20,55 +20,6 @@
   background-color: $grey--900;
 }
 
-[class^="o-input--"],
-[class*=" o-input--"] {
-  width: 100%;
-  padding: 1em 1.5em;
-
-  appearance: none;
-  border-radius: 0;
-  border: 2px solid;
-
-  font-family: $font__sans;
-
-  line-height: 1;
-
-  color: currentColor;
-  background-color: transparent;
-
-  &:focus {
-    outline: 0;
-  }
-}
-
-.o-input--white {
-  @include placeholder {
-    color: white;
-  }
-}
-
-.o-submit {
-  font-family: $font__sans;
-
-  line-height: 1;
-
-  padding: 1em 1.5em;
-
-  appearance: none;
-  border-radius: 0;
-  border: 2px solid white;
-
-  color: black;
-  background-color: white;
-
-  cursor: pointer;
-
-  &:hover, &:active, &:focus {
-    color: white;
-    background-color: transparent;
-  }
-}
-
 .o-bullets__item {
   &:not(:last-child) {
     margin-bottom: .5em;

@@ -1,0 +1,27 @@
+[class^="o-input--"],
+[class*=" o-input--"] {
+  width: 100%;
+  padding: 1em 1.5em;
+
+  border-radius: 0;
+  border: 2px solid;
+
+  font-family: $font__sans;
+
+  line-height: 1;
+
+  color: currentColor;
+  background-color: transparent;
+
+  @include appearance(none);
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.o-input--white {
+  @include placeholder {
+    color: white;
+  }
+}
