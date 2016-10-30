@@ -134,13 +134,16 @@ block template-content
 
         .o-foot__cell
           h4.o-foot__head.t-smallcaps Odkazy
-          ul.o-foot__list
+          ul.o-foot__list--nobreak
             each link in ["Talent Designu", "Design Konference", "Design v Ulicích"]
               li.o-foot__li: a(href="javascript:")= link
 
         .o-foot__cell
           h4.o-foot__head.t-smallcaps Kontakt
-          p Adéla Bačová<br>adela.bacova@zlindesignweek.com<br>tel: +420 737 617 259
+          ul.o-foot__list
+            li.o-foot__li Michal Kinc
+            li.o-foot__li: a(href="javascript:") michal.kinc@zlindesignweek.com
+            li.o-foot__li +420 721 032 044
 
   .o-peek(style="background-image: url(assets/images/bg_1.jpg)")
     h5.o-peek__title.t-head--a Uvidíme se<br>ve Zlíně!

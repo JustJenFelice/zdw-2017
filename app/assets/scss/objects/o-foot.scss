@@ -30,14 +30,15 @@
   color: white;
 }
 
-.o-foot__list {
+[class^="o-foot__list"] {
   list-style-type: none;
   padding-left: 0;
+
+  a {
+    border-bottom: 1px solid;
+  }
 }
 
-.o-foot__li {
-  text-transform: uppercase;
-  letter-spacing: em(1);
-
+.o-foot__list--nobreak {
   white-space: nowrap;
 }
