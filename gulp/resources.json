@@ -15,7 +15,10 @@
       "bower_components/moment/locale/cs.js",
       "bower_components/waypoints/lib/jquery.waypoints.js",
 
-      "app/assets/js/app.js"
+      "app/assets/js/app.js",
+
+      "bower_components/chj-framework/app/assets/js/chj-detect.js",
+      "bower_components/chj-framework/app/assets/js/chj-device.js"
     ]
   },
   "injectDist": {
