@@ -1,7 +1,10 @@
 .m-mail {
-  background-color: $grey--100;
-
   color: white;
+  background-color: $grey--100;
+}
+
+.m-mail__wrap {
+  max-width: 50em;
 }
 
 .m-mail__title {
@@ -12,17 +15,12 @@
 
 .m-mail__form {
   display: flex;
-  justify-content: center;
-  width: 60%;
 
   @include margin(2em auto null);
 }
 
-.m-mail__input {
-  flex-grow: 1;
-
-  min-width: 15em;
-}
 .m-mail__submit {
+  min-width: em(300);
+
   margin-left: -2px;
 }
