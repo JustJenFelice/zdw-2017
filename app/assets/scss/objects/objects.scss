@@ -20,25 +20,28 @@
   background-color: $grey--900;
 }
 
-.o-input {
-  font-family: $font__sans;
-  font-size: em(20);
-
-  line-height: 1;
-
-  color: currentColor;
-  background-color: transparent;
-
+[class^="o-input--"],
+[class*=" o-input--"] {
+  width: 100%;
   padding: 1em 1.5em;
 
   appearance: none;
   border-radius: 0;
   border: 2px solid;
 
+  font-family: $font__sans;
+
+  line-height: 1;
+
+  color: currentColor;
+  background-color: transparent;
+
   &:focus {
     outline: 0;
   }
+}
 
+.o-input--white {
   @include placeholder {
     color: white;
   }
@@ -46,7 +49,6 @@
 
 .o-submit {
   font-family: $font__sans;
-  font-size: em(20);
 
   line-height: 1;
 
