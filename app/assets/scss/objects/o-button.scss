@@ -17,9 +17,11 @@
 .o-button--solid {
   @include padding(.875em 1.75em);
 
-  background-color: black;
-
   &:link, &:visited {
     color: white;
+    background-color: black;
+  }
+  &:hover, &:active {
+    background-color: rgba(black, .75);
   }
 }

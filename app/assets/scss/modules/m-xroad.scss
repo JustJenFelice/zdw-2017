@@ -17,16 +17,32 @@
   font-size: em(36);
   text-align: center;
 
-
   &:link, &:visited {
     color: white;
   }
+  &:hover, &:active {
+    background-color: rgba(black, .25);
+  }
+}
+
+[class^="m-xroad__arrow"] {
+  transition: transform $duration--s;
 }
 
 .m-xroad__arrow--left {
   float: left;
+
+  .m-xroad__link:hover &,
+  .m-xoard__link:active & {
+    transform: translateX(-.5em);
+  }
 }
 
 .m-xroad__arrow--right {
   float: right;
+
+  .m-xroad__link:hover &,
+  .m-xoard__link:active & {
+    transform: translateX(.5em);
+  }
 }

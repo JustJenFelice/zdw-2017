@@ -70,3 +70,7 @@
 .o-nav__item--lang {
   margin-left: 3em;
 }
+
+.o-nav__link {
+  @include link--white;
+}

@@ -25,6 +25,8 @@
 
 .m-hero__button {
   margin-top: 2em;
+
+  @include link--white;
 }
 
 .m-hero__stickers {

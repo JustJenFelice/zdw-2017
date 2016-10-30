@@ -48,16 +48,21 @@
 
   line-height: 1;
 
-  padding: 1.1em 1.5em;
+  padding: 1em 1.5em;
 
   appearance: none;
   border-radius: 0;
-  border: none;
+  border: 2px solid white;
 
   color: black;
   background-color: white;
 
   cursor: pointer;
+
+  &:hover, &:active, &:focus {
+    color: white;
+    background-color: transparent;
+  }
 }
 
 .o-bullets__item {

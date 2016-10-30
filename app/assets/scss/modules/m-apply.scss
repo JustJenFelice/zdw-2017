@@ -24,6 +24,8 @@
 
   font-size: em(36);
   font-weight: $font__sans--semibold;
+
+  @include link--white;
 }
 
 .m-apply__arrow {

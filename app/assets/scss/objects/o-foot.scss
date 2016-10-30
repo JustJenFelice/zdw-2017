@@ -36,6 +36,8 @@
 
   a {
     border-bottom: 1px solid;
+
+    @include link--white;
   }
 }
 
