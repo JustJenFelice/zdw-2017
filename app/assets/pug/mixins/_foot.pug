@@ -1,0 +1,22 @@
+mixin foot
+  footer.o-foot
+    .l-wrap
+      .o-foot__logo: include ../../svg/logo_zdw.svg
+      .o-foot__table
+        .o-foot__cell
+          h4.o-foot__head.t-smallcaps O projektu
+          p ZLIN DESIGN WEEK je projekt realizovaný studenty Fakulty multimediálních komunikací Univerzity Tomáše Bati ve Zlíně.
+          p 21–22. dubna 2017; Zlín, Česká republika
+
+        .o-foot__cell
+          h4.o-foot__head.t-smallcaps Odkazy
+          ul.o-foot__list--nobreak
+            each link in ["Talent Designu", "Design Konference", "Design v Ulicích"]
+              li.o-foot__li: a(href="javascript:")= link
+
+        .o-foot__cell
+          h4.o-foot__head.t-smallcaps Kontakt
+          ul.o-foot__list
+            li.o-foot__li Michal Kinc
+            li.o-foot__li: a(href="javascript:") michal.kinc@zlindesignweek.com
+            li.o-foot__li +420 721 032 044
