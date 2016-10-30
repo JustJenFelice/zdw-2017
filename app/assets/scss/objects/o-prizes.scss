@@ -52,7 +52,7 @@
     content: counter(prizes-count);
     counter-increment: prizes-count;
 
-    font-size: 2.5em;
+    font-size: em(36);
     font-weight: $font__mono--bold;
   }
   &:first-child {
