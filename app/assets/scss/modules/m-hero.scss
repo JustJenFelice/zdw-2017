@@ -1,5 +1,7 @@
-.m-hero {
+[class^="m-hero--"] {
   position: relative;
+
+  display: flex;
 
   min-height: 100vmin;
 
@@ -12,12 +14,23 @@
   background-size: cover;
 }
 
-.m-hero__content {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 10;
+.m-hero--full {
+  min-height: 100vmin;
 
+  align-items: flex-end;
+}
+
+.m-hero--half {
+  min-height: 50vmin;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.m-hero__content {
+  @include reset-children;
+
+  margin-top: 5em; // Reserved space for o-hud
   padding: 3em;
 
   max-width: 40em;
