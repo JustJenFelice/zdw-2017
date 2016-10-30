@@ -1,0 +1,51 @@
+.o-checkbox {
+  position: relative;
+}
+
+.o-checkbox__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include appearance(none);
+
+  width: em(24);
+  height: em(24);
+
+  border: 2px solid;
+  border-radius: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:after {
+    position: absolute;
+    top: .25em;
+    left: .25em;
+
+    display: block;
+    transform: rotate(-45deg);
+
+    width: .75em;
+    height: .5em;
+
+    border-width: 0 0 2px 2px;
+    border-style: solid;
+    border-color: white;
+
+  }
+
+  &:checked {
+    background-color: black;
+  }
+
+  &:checked:after {
+    content: "";
+  }
+}
+
+.o-checkbox__text {
+  display: block;
+  margin-left: 3em;
+}

@@ -1,0 +1,46 @@
+.m-application {
+  max-width: 40em;
+
+  counter-reset: form-count;
+}
+
+.m-application__title {
+  position: relative;
+
+  text-align: center;
+
+  margin-top: 2em;
+
+  &:before {
+    position: absolute;
+    left: -3em;
+    
+    width: 3em;
+
+    content: counter(form-count);
+    counter-increment: form-count;
+  }
+}
+
+.m-application__row {
+  &:not(:last-child) {
+    margin-bottom: 2em;
+  }
+}
+
+.m-application__note {
+  display: block;
+  margin-top: 1em;
+  
+  font-weight: $font__sans--regular;
+}
+
+.m-application__foot {
+  text-align: center;
+
+  margin-top: 5em;
+}
+
+.m-application__cancel {
+  margin-left: 1em;
+}

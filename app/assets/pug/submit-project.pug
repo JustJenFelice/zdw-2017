@@ -1,0 +1,64 @@
+extends templates/_site
+
+block template-content
+  +hud
+
+  section.m-hero--half(style="background-image: url(assets/images/bg_1.jpg)")
+    .m-hero__content
+      h1.t-head--a Přihláška
+
+  main
+    form.m-application.l-wrap
+      h1.m-application__title.t-head--c Kontaktní údaje
+      .m-application__section
+        each item in ["Jméno", "Příjmení", "Adresa", "Město", "PSČ", "Telefon", "E-mail"]
+          .m-application__row
+            input.o-input--black(type="text", placeholder=item)
+
+            if item == "Telefon"
+              strong.m-application__note Telefonní číslo zadejte ve formátu +XXX 123 456 789.
+
+      h1.m-application__title.t-head--c Detail školy
+      .m-application__section
+        .m-application__row
+          .o-dropdown
+            select.o-dropdown__select
+              option(disabled, selected) Země
+              option Česká Republika
+              option Polsko
+              option(disabled) A tak dále
+        each item in ["Město", "Název školy", "Obor"]
+          .m-application__row
+            input.o-input--black(type="text", placeholder=item)
+
+      h1.m-application__title.t-head--c Detail práce
+      .m-application__section
+        .m-application__row
+          .o-dropdown
+            select.o-dropdown__select
+              option(disabled, selected) Kategorie
+              option Kategorie 1
+              option Kategorie 2
+              option(disabled) A tak dále
+        each item in ["Vedoucí katedry", "Rok obhajoby"]
+          .m-application__row
+            input.o-input--black(type="text", placeholder=item)
+
+      h1.m-application__title.t-head--c Přílohy
+      .m-application__section
+        .m-application__row
+          input.o-upload(type="file")
+        .m-application__row
+          input.o-upload(type="file")
+        .m-application__row
+          label.o-checkbox
+            input.o-checkbox__input(type="checkbox")
+            span.o-checkbox__text Souhlasím se zpracováním osobních údajů uvedených ve formuláři za účelem zorganizování přehlídky, ve smyslu zákona České republiky na ochranu osobních údajů ze dne 29. 8. 1997. (Dz. U. z 2002 r. nr 101, poz. 926 ze zm.)
+
+      .m-application__foot
+        input.o-submit--black(type="submit", value="Odeslat přihlášku")
+        a.m-application__cancel.o-button--outline(href="javascript:") Zrušit
+
+  +supporters
+
+  +foot

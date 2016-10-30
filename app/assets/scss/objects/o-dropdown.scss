@@ -1,0 +1,37 @@
+.o-dropdown {
+  position: relative;
+
+  &:after {
+    content: "";
+
+    position: absolute;
+    right: 1.5em;
+    top: 45%;
+
+    width: .75em;
+    height: .75em;
+
+    border-width: 0 0 2px 2px;
+    border-style: solid;
+    border-color: black;
+
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+.o-dropdown__select {
+  width: 100%;
+
+  border: 2px solid;
+  border-radius: 0;
+  padding: 1em 1.5em;
+
+  font-family: $font__sans;
+
+  background-color: transparent;
+
+  @include appearance(none);
+
+  &:focus {
+    outline: none;
+  }
+}
