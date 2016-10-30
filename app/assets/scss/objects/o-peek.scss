@@ -9,7 +9,7 @@
   z-index: -1;
 
   width: 100%;
-  min-height: 51vmin;
+  height: 100vh;
   padding: 1em;
 
   color: white;
@@ -27,11 +27,11 @@
 
 .o-peek__title {
   position: absolute;
-  top: 50%;
+  bottom: 25%;
   left: 50%;
   z-index: 100;
 
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
 
   @include margin(0 null);
 }
