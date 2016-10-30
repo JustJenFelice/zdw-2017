@@ -1,4 +1,9 @@
 .o-logo {
+  margin-top: 1.5em;
+
+  display: inline-block;
+  padding: .5em 1.5em;
+
   font-weight: $font__sans--bold;
 
   text-transform: uppercase;
@@ -53,9 +58,6 @@
   background-color: white;
 
   cursor: pointer;
-}
-
-.o-bullets {
 }
 
 .o-bullets__item {
