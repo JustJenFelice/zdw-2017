@@ -8,6 +8,8 @@
 
   text-transform: uppercase;
   letter-spacing: em(2);
+
+  @include link--white;
 }
 
 .o-section--white {
