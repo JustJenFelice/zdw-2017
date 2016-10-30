@@ -1,0 +1,32 @@
+[class^="o-sticker--"] {
+  float: left;
+
+  max-width: 10em;
+  padding: 1.5em 1em;
+
+  box-sizing: content-box;
+
+  text-align: center;
+}
+
+.o-sticker--solid {
+  color: black;
+  background-color: white;
+
+  transform: rotate(15deg);
+}
+
+.o-sticker--outline {
+  border: 2px solid white;
+
+  transform: rotate(-10deg) translateY(-5em);
+}
+
+.o-sticker__title {
+  margin-top: 0;
+}
+
+.o-sticker__date {
+  text-transform: uppercase;
+  letter-spacing: em(1);
+}

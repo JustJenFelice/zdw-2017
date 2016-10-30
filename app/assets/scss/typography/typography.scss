@@ -18,7 +18,6 @@
 
 .t-head--a {
   font-size: em(58);
-
   font-family: $font__mono;
   font-weight: $font__mono--regular;
 
@@ -32,18 +31,25 @@
 
 .t-head--c {
   font-size: em(36);
-
   font-family: $font__mono;
   font-weight: $font__mono--regular;
 }
 
 .t-head--d {
-  font-size: em(21);
+  font-size: em(22);
   font-weight: $font__sans--medium;
 }
 
+.t-head--e {
+  font-size: em(20);
+  font-family: $font__mono;
+  font-weight: $font__mono--regular;
+
+  @include margin(.5em null);
+}
+
 .t-text--big {
-  font-size: em(21);
+  font-size: em(22);
 }
 
 .t-ulink {
