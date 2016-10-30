@@ -61,7 +61,12 @@
   @include padding(.25em null .25em 0);
 }
 
-.o-nav__item {
+[class^="o-nav__item"] {
   display: inline-block;
+
   @include margin(null 1em);
+}
+
+.o-nav__item--lang {
+  margin-left: 3em;
 }
