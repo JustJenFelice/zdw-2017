@@ -17,9 +17,12 @@
   text-align: center;
 
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center;
   background-size: cover;
+
+  .device--is-desktop & {
+    background-attachment: fixed;
+  }
 }
 
 .o-peek__title {

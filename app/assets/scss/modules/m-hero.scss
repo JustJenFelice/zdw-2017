@@ -9,9 +9,12 @@
   background-color: $grey--100;
 
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center;
   background-size: cover;
+
+  .device--is-desktop & {
+    background-attachment: fixed;
+  }
 }
 
 .m-hero--full {

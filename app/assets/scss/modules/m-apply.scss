@@ -4,9 +4,12 @@
   padding-bottom: 1.5em;
 
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center;
   background-size: cover;
+
+  .device--is-desktop & {
+    background-attachment: fixed;
+  }
 }
 
 .m-apply__head {
