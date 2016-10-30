@@ -6,7 +6,7 @@
   @include clearfix;
 }
 
-.o-brick__image {
+.o-brick__frame {
   position: absolute;
   left: 0;
   top: 0;
@@ -15,9 +15,32 @@
   width: 50%;
 
   background-color: $grey--900;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+
+  overflow: hidden;
+}
+
+.o-brick__stretch {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+
+  width: 200%;
+  height: 200%;
+}
+
+.o-brick__image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+
+  min-width: 50%;
+  min-height: 50%;
+
+  max-width: initial;
 }
 
 .o-brick__content {
@@ -39,4 +62,6 @@
 
 .o-brick__top {
   @include reset-children;
+
+  max-width: 40em;
 }
