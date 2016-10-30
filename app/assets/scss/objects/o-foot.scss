@@ -20,6 +20,8 @@
 
 .o-foot__cell {
   @include padding(null 1em);
+
+  max-width: em(300);
 }
 
 .o-foot__head {
