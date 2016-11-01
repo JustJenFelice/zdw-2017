@@ -25,6 +25,13 @@
   letter-spacing: em(2);
 }
 
+/* HEADLINES */
+
+@mixin head--b {
+  font-size: em(28);
+  font-weight: $font__sans--medium;
+}
+
 .t-head--a {
   font-size: em(58);
   font-family: $font__mono;
@@ -34,8 +41,7 @@
 }
 
 .t-head--b {
-  font-size: em(28);
-  font-weight: $font__sans--medium;
+  @include head--b;
 }
 
 .t-head--c {
