@@ -18,35 +18,9 @@ block template-content
         h2.o-sticker__title.t-head--e Otevřená registrace
         span.o-sticker__date Do 15/2/16
 
-  main.m-article.o-section--white
-    .l-wrap
-      .l-table
-        .m-article__cell.l-table__cell
-            h2.t-head--b Jsme tvůj odrazový můstek do světa designu
-            a.m-article__link.t-ulink(href="javascript:") Více o soutěži
-        .l-table__cell
-          ul.o-bullets
-            li.o-bullets__item Víme, jak je těžké se v dnešní době prosadit.
-            li.o-bullets__item Proto už 6. rokem dáváme šanci studentům designu ukázat svůj talent.
-            li.o-bullets__item Přidej se k ostatním designérům a bojuj o obnos 4 000 €, ale především taky o velkou slávu a uznání na poli designu.
-            li.o-bullets__item Soutěže se každoročně účastní studenti z univerzit po celém světě. Změř s nimi své síly a staň se talentem designu 2015!
+  +intro("homepage")
 
-  section.m-part.o-section--light
-    .l-wrap
-      h2.m-part__title.t-head--c Co je ve hře?
-      .o-prizes
-        .o-prizes__block
-          .o-prizes__main
-            span.o-prizes__fern--left: include ../svg/shape_fern_left.svg
-            h3.o-prizes__caps.t-caps Hlavní cena
-            strong.o-prizes__note 4 000 € + stáž k tomu
-            span.o-prizes__fern--right: include ../svg/shape_fern_right.svg
-        .o-prizes__block
-          ol.o-prizes__list
-            li.o-prizes__item 1000 €<br>+ stáž
-            li.o-prizes__item 300 €
-            li.o-prizes__item 200 €
-      a.m-part__button.o-button--solid(href="javascript:") Všechny ceny
+  +prizes
 
   section.m-part.o-section--white
     .l-wrap.l-wrap--no-bottom
@@ -65,36 +39,11 @@ block template-content
 
       a.m-part__button.o-button--solid(href="javascript:") Úplná pravidla
 
-  section.m-apply(style="background-image: url(assets/images/bg_2.jpg)")
-    .l-wrap
-      .m-apply__head
-        h2.m-part__title--fitted.t-head--c Připraven stát se talentem designu?
-        strong.m-part__subtitle: +dummy(10)
+  +apply-form
 
-      .m-apply__content
-        a.m-apply__button(href="submit-project.html")
-          | Přihlásit práci 
-          span.m-apply__arrow &rarr;
+  +short-history
 
-  section.o-brick
-    .o-brick__frame
-      .o-brick__stretch
-        img.o-brick__image(src="assets/images/responsive/bg_history_640.jpg", srcset="assets/images/responsive/bg_history_1613.jpg 1613w, assets/images/responsive/bg_history_2283.jpg 2283w, assets/images/responsive/bg_history_2740.jpg 2740w, assets/images/responsive/bg_history_2880.jpg 2880w", sizes="50vw", alt="Best in Design 2014")
-    .o-brick__content
-      .o-brick__top
-        h2.t-head--c Jaký byl Talent designu 2014?
-        .o-brick__text
-          p Autor soutěžního návrhu, který obsadí 2. místo v jednotlivé soutěžní kategorii, získá finanční odměnu ve výši 300 €.
-      .o-brick__bottom
-        a.o-button--outline(href="javascript:") Historie talentu
-
-  section.m-xroad(style="background-image: url(assets/images/bg_3.jpg)")
-    a.m-xroad__link(href="javascript:")
-      span.m-xroad__arrow--left &larr; 
-      | Zlín Design Week
-    a.m-xroad__link(href="javascript:")
-      | Design konference
-      span.m-xroad__arrow--right  &rarr;
+  +crossroad
 
   section.m-mail
     .m-mail__wrap.l-wrap
