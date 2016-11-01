@@ -27,15 +27,19 @@
 
 /* HEADLINES */
 
+@mixin head--a {
+  font-size: em(58);
+  font-family: $font__mono;
+  font-weight: $font__mono--regular;
+}
+
 @mixin head--b {
   font-size: em(28);
   font-weight: $font__sans--medium;
 }
 
 .t-head--a {
-  font-size: em(58);
-  font-family: $font__mono;
-  font-weight: $font__mono--regular;
+  @include head--a;
 
   word-spacing: .5em;
 }
