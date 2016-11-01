@@ -1,17 +1,3 @@
-.m-part {
-  text-align: center;
-}
-.m-part__title--fitted {
-  @include margin(0 null .5em);
-}
-.m-part__subtitle {
-  font-weight: $font__sans--regular;
-}
-
-.m-part__button {
-  margin-top: 4em;
-}
-
 .m-article__cell {
   position: relative;
 }
