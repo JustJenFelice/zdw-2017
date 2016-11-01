@@ -1,0 +1,28 @@
+{
+  "winners": [
+    {
+      "thumbnail": "img_winner_2012.jpg",
+      "title": "Denisa Lukáčová",
+      "year": "2012",
+      "link": "https://www.youtube.com/watch?v=0OwBykRV8Cs"
+    },
+    {
+      "thumbnail": "img_winner_2011.jpg",
+      "title": "Štěpán Soutner",
+      "year": "2011",
+      "link": "https://www.youtube.com/watch?v=scrG6WqTYaE"
+    },
+    {
+      "thumbnail": "img_winner_2010.jpg",
+      "title": "Jana Nováková",
+      "year": "2010",
+      "link": "https://www.youtube.com/watch?v=hXSE3IILwNg"
+    },
+    {
+      "thumbnail": "img_winner_2009.jpg",
+      "title": "Lenka Svatošová",
+      "year": "2009",
+      "link": "https://www.youtube.com/watch?v=3PTKLscoDN0"
+    }
+  ]
+}

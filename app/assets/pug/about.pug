@@ -24,9 +24,21 @@ block template-content
       .m-part__text
         p Do osmého ročníku Talent designu 2016 se přihlásilo celkem 633 prací. Daří se tak dodržovat trend vzrůstajícího počtu přihášených prací každý rok. Soutěžní práce k nám putovaly z Bulharska, Maďarska, Itálie, Španělska, Dánska, Polska, Slovenska, ale i z daleké Indie a Brazílie. Slavnostní galavečer, a tedy vyhlášení vítězů, TALENT DESIGNU 2014 proběhl 24. dubna v Kongresovém centru ve Zlíně.
 
-  section.o-section--black
-    .l-wrap
+  section.m-carousel.o-section--black
+    .m-carousel__header.l-wrap
       h1.t-head--c Medailonky vítězů
+    .m-carousel__list(data-carousel)
+      each item in winners
+        .m-carousel__item
+          a.m-carousel__link(href=item.link)
+            .m-carousel__thumbnail
+              img.m-carousel__image(src="assets/images/" + item.thumbnail, alt=item.title)
+            h2.m-carousel__title.t-head--d
+              | Video: 
+              = item.title
+            strong.m-carousel__strong
+              | Talent designu 
+              = item.year
 
   +intro
 
