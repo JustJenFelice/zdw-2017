@@ -8,7 +8,7 @@ mixin hud
           span.o-nav__icon
           | Menu
         ul.o-nav__list
-          each page in ["O soutěži", "Pravidla", "Historie", "Kontakt"]
-            li.o-nav__item: a.o-nav__link(href="javascript:")= page
+          each page in pages
+            li.o-nav__item: a.o-nav__link(href=page.link)= page.title
           li.o-nav__item--lang
             a.o-nav__link(href="javascript:") English

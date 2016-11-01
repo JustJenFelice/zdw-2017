@@ -1,0 +1,20 @@
+{
+  "pages": [
+    {
+      "title": "O soutěži",
+      "link": "about.html"
+    },
+    {
+      "title": "Pravidla",
+      "link": "javascript:"
+    },
+    {
+      "title": "Historie",
+      "link": "javascript:"
+    },
+    {
+      "title": "Kontakt",
+      "link": "javascript:"
+    }
+  ]
+}
