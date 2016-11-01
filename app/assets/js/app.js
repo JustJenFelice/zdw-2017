@@ -13,3 +13,9 @@ new Waypoint({
     $body.toggleClass("nav--is-pinned", direction == "down");
   }
 });
+
+$("[data-carousel]").flickity({
+  contain: true,
+  imagesLoaded: true,
+  pageDots: false
+});
