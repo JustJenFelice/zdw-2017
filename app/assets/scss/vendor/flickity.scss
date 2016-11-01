@@ -1,0 +1,33 @@
+.flickity-prev-next-button {
+  background: transparent;
+
+  z-index: 200;
+
+  padding: 2em;
+
+  transition: opacity $duration--s;
+
+  svg {
+    width: 2em;
+    height: 2em;
+  }
+  
+  .arrow {
+    fill: white;
+  }
+
+  &.previous {
+    left: 3em;
+  }
+  &.next {
+    right: 3em;
+  }
+
+  &:disabled {
+    opacity: 0;
+  }
+
+  &:hover {
+    background: transparent;
+  }
+}

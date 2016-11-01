@@ -8,17 +8,20 @@
   "injectDev": {
     "site": [
       "bower_components/normalize-css/normalize.css",
+      "bower_components/flickity/dist/flickity.css",
       "app/assets/css/style.css",
 
       "bower_components/jquery.easing/js/jquery.easing.js",
       "bower_components/moment/moment.js",
       "bower_components/moment/locale/cs.js",
+      "bower_components/flickity/dist/flickity.pkgd.js",
       "bower_components/waypoints/lib/jquery.waypoints.js",
 
       "app/assets/js/app.js",
 
       "bower_components/chj-framework/app/assets/js/chj-detect.js",
-      "bower_components/chj-framework/app/assets/js/chj-device.js"
+      "bower_components/chj-framework/app/assets/js/chj-device.js",
+      "bower_components/chj-framework/app/assets/js/chj-external.js"
     ]
   },
   "injectDist": {
