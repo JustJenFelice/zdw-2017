@@ -1,0 +1,27 @@
+.o-triplet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  list-style-type: none;
+  padding-left: 0;
+
+  text-align: center;
+}
+
+.o-triplet__item {
+  width: 33.333%;
+
+  min-width: 15em;
+
+  @include padding(null 1em);
+}
+
+.o-triplet__emphasis {
+  display: block;
+  
+  @include head--b;
+
+  color: currentColor;
+  background-color: transparent;
+}

@@ -1,0 +1,43 @@
+extends templates/_site
+
+block template-content
+  +hud
+
+  section.m-hero--half(style="background-image: url(assets/images/bg_1.jpg)")
+    .m-hero__content
+      h1.t-head--a O soutěži
+      a.m-hero__button.o-button--outline(href="https://www.facebook.com/talentdesignu/videos/910960188957580/?theater") Přehrát video
+
+  main.m-part
+    .l-wrap
+      ul.o-triplet
+        li.o-triplet__item
+          mark.o-triplet__emphasis 14 000 €
+          |  jsme rozdali
+        li.o-triplet__item
+          mark.o-triplet__emphasis 633 prací
+          |  bylo zasláno
+        li.o-triplet__item
+          mark.o-triplet__emphasis 540 návštěvníků
+          |  se zúčastnilo galavečeru
+
+      .m-part__text
+        p Do osmého ročníku Talent designu 2016 se přihlásilo celkem 633 prací. Daří se tak dodržovat trend vzrůstajícího počtu přihášených prací každý rok. Soutěžní práce k nám putovaly z Bulharska, Maďarska, Itálie, Španělska, Dánska, Polska, Slovenska, ale i z daleké Indie a Brazílie. Slavnostní galavečer, a tedy vyhlášení vítězů, TALENT DESIGNU 2014 proběhl 24. dubna v Kongresovém centru ve Zlíně.
+
+  section.o-section--black
+    .l-wrap
+      h1.t-head--c Medailonky vítězů
+
+  +intro
+
+  +prizes
+
+  +short-history
+
+  +apply-form
+
+  +supporters
+
+  +crossroad
+
+  +foot

@@ -20,6 +20,11 @@
   background-color: $grey--900;
 }
 
+.o-section--black {
+  color: white;
+  background-color: black;
+}
+
 .o-bullets__item {
   &:not(:last-child) {
     margin-bottom: .5em;

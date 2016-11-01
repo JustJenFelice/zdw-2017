@@ -13,3 +13,9 @@
 .m-part__button {
   margin-top: 4em;
 }
+
+.m-part__text {
+  max-width: 52em;
+
+  @include margin(3em auto);
+}
