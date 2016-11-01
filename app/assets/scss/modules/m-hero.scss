@@ -24,10 +24,12 @@
 }
 
 .m-hero--half {
-  min-height: 50vmin;
+  min-height: 60vmin;
 
   justify-content: center;
   align-items: center;
+
+  text-align: center;
 }
 
 .m-hero__content {
@@ -39,9 +41,11 @@
   max-width: 40em;
 }
 
-.m-hero__button {
-  margin-top: 2em;
+.m-hero__text {
+  margin-bottom: 3em;
+}
 
+.m-hero__button {
   @include link--white;
 }
 
