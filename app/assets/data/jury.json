@@ -1,0 +1,64 @@
+{
+  "jury": [
+    {
+      "name": "Ladislav Škoda",
+      "portrait": "jury_skoda.jpg",
+      "title": "Šéfdesignér firmy Tescoma",
+      "description": "Držitel prestižního ocenění Red Dot Design Award vede Design centrum firmy Tescoma, ve které vznikají produkty s&nbsp;nezaměnitelným rukopisem."
+    },
+    {
+      "name": "Radek Hegmon",
+      "portrait": "jury_hegmon.jpg",
+      "title": "Designér a&nbsp;zakladatel mmcité",
+      "description": "Zlínský designér, podnikatel a&nbsp;jeden ze zakladatelů firmy mmcité, která se stará o&nbsp;zkrášlování veřejných prostor."
+    },
+    {
+      "name": "Filip Streit",
+      "portrait": "jury_streit.jpg",
+      "title": "Senior Designér Divan Studia",
+      "description": "Člověk s&nbsp;výborným technickým a&nbsp;kreativním myšlením, jenž dokáže nacházet nové postupy. Jeho potenciál tkví v chytrém designu."
+    },
+    {
+      "name": "Ludmila Boháčová",
+      "portrait": "jury_bohacova.jpg",
+      "title": "Design konzultantka CZECHDESIGNU",
+      "description": "Zástupkyně portálu CZECHDESIGN se zabývá projekty design konzultací pro firmy a&nbsp;organizací designérských soutěží."
+    },
+    {
+      "name": "Libor Jelínek",
+      "portrait": "jury_jelinek.png",
+      "title": "Zakladatel a&nbsp;creative director Dynamo design",
+      "description": "Jako grafický designér se specializuje především na branding a&nbsp;vizuální komunikaci. Takové zaměření má i&nbsp;firma Dynamo design, jejímž je spoluzakladatelem."
+    },
+    {
+      "name": "Ivana Kaňovská",
+      "portrait": "jury_kanovska.png",
+      "title": "Fashion a&nbsp;jewellery designérka",
+      "description": "Ráda používá netradiční materiály - například kov nebo laminát. Upozornila na sebe především kovovým brněním z&nbsp;řady Tension a&nbsp;“nositelnou” kolekcí Pandora."
+    },
+    {
+      "name": "Marcel Holubec",
+      "portrait": "jury_holubec.png",
+      "title": "Módní návrhář",
+      "description": "Svou první soutěž absolvoval v pouhých 15 letech. Postupně se z něj stal uznávaný a&nbsp;oceňovaný návrhář slovenské scény. Možná i&nbsp;proto, že do své tvorby vkládá srdce a&nbsp;duši."
+    },
+    {
+      "name": "Radek Laube",
+      "portrait": "jury_laube.png",
+      "title": "Asistent šéfdesignéra Škoda Auto",
+      "description": "Jeho vášní jsou auta a&nbsp;motorky. Několik let byl šéfredaktorem prémiového časopisu Auto Design & Styling, nyní se ve Škoda Auto podílel například na výrobě Superbu Black Crystal."
+    },
+    {
+      "name": "Michael Vasku",
+      "portrait": "jury_vasku.png",
+      "title": "Designér, architekt a&nbsp;pedagog",
+      "description": "Svými projekty ve vídeňském studiu Vasku & Klug propojuje design a&nbsp;architekturu. Kromě toho se úspěšně věnuje například pedagogické činnosti na Univerzitě Tomáše Bati ve Zlíně."
+    },
+    {
+      "name": "Vojtěch Říha",
+      "portrait": "jury_riha.jpg",
+      "title": "Typograf",
+      "description": "Mladý český typograf byl již dvakrát oceněn v rámci, European Design Award. Nové rodiny písma vytváří od roku 2014 ve své vlastní společnosti Superior Type."
+    }
+  ]
+}
