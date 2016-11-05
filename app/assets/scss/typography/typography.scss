@@ -14,15 +14,22 @@
   letter-spacing: em(2);
 }
 
-.t-caps {
-  font-size: em(36);
-
+[class^="t-caps--"],
+[class*=" t-caps--"] {
   font-family: $font__mono;
   font-weight: $font__mono--bold;
 
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: em(2);
+}
+
+.t-caps--large {
+  font-size: em(36);
+}
+
+.t-caps--small {
+  font-size: em(28);
 }
 
 /* HEADLINES */

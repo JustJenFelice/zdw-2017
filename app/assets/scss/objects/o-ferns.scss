@@ -1,0 +1,32 @@
+[class^="o-ferns--"],
+[class*=" o-ferns--"] {
+  position: relative;
+}
+
+.o-ferns--small {
+  @include padding(.5em null);
+
+  margin-bottom: 1.125em;
+
+  svg {
+    width: 1.75em;
+  } 
+}
+
+.o-ferns__title {
+  @include margin(0 null);
+}
+
+[class^="o-ferns__item"] {
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.o-ferns__item--left {
+  left: .5em;
+}
+.o-ferns__item--right {
+  right: .5em;
+}

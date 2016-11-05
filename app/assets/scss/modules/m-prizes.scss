@@ -65,27 +65,9 @@
   }
 }
 
-.m-prizes__caps {
-  @include margin(0 null);
-}
-
 .m-prizes__note {
   display: block;
   margin-top: 1em;
   
   font-weight: $font__sans--regular;
-}
-
-[class^="m-prizes__fern"] {
-  position: absolute;
-  top: 50%;
-
-  transform: translateY(-50%);
-}
-
-.m-prizes__fern--left {
-  left: .5em;
-}
-.m-prizes__fern--right {
-  right: .5em;
 }
