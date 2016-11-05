@@ -12,6 +12,10 @@
   border: 2px solid;
 
   @include padding(.75em 1.75em);
+
+  .o-section--black & {
+    @include link--white;
+  }
 }
 
 .o-button--solid {
