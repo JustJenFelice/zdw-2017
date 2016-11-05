@@ -8,7 +8,7 @@
 }
 
 .t-smallcaps {
-  font-weight: $font__sans--bold;
+  font-weight: $font__sans--semibold;
 
   text-transform: uppercase;
   letter-spacing: em(2);
@@ -59,6 +59,8 @@
   font-size: em(36);
   font-family: $font__mono;
   font-weight: $font__mono--regular;
+
+  @include margin(1.25em null);
 }
 
 .t-head--d {
