@@ -1,0 +1,22 @@
+.m-hilite__title {
+  text-align: center;
+}
+
+.m-hilite__content {
+  @include clearfix;
+}
+
+.m-hilite__image {
+  float: left;
+
+  max-width: 40%;
+  margin-right: 2em;
+}
+
+.m-hilite__info {
+  overflow: auto;
+}
+
+.m-hilite__list {
+  margin-top: 3em;
+}

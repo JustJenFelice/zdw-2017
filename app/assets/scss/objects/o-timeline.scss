@@ -1,0 +1,21 @@
+.o-timeline {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.o-timeline__item {
+  display: inline-block;
+
+  @include margin(null .5em);
+}
+
+.o-timeline__active {
+  font-weight: $font__sans--bold;
+
+  color: currentColor;
+  background-color: transparent;
+}
+
+.o-timeline__link {
+  @include link--white;
+}

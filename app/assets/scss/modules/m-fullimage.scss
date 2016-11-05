@@ -1,0 +1,16 @@
+.m-fullimage {
+  display: flex;
+  align-items: center;
+
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+  text-align: center;
+
+  min-height: 45vmin;
+}
+
+.m-fullimage__button {
+  @include link--white;
+}

@@ -1,0 +1,83 @@
+extends templates/_site
+
+block template-content
+  +hud
+
+  section.m-hero--half
+    .m-hero__content
+      h1.t-head--a Talent designu 2016
+
+    .m-hero__pin
+      ul.o-timeline
+        li.o-timeline__item
+          mark.o-timeline__active 2016
+        each year in ["2015", "2014", "2013", "2012", "2011", "2010", "2009"]
+          li.o-timeline__item
+            a.o-timeline__link(href="javascript:")= year
+
+  section.m-fullimage(style="background-image: url('assets/images/history_2014.jpg')")
+    .m-fullimage__content.l-wrap
+      a.m-fullimage__button.o-button--outline(href="https://www.youtube.com/watch?v=r_654PozdKg") Přehrát video
+
+  +stats
+
+  section.m-hilite.o-section--black
+    .l-wrap
+      h1.m-hilite__title.t-head--c Hlavní výhra
+      .m-hilite__content
+        img.m-hilite__image(src="assets/images/highlight_2014.jpg", alt="Winner of 2014")
+        .m-hilite__info
+          h2.t-head--b Cornelius Comanns
+          p Hlavním vítězem soutěže se stal student Royal College of Art v Londýně Cornelius Comanns za svůj návrh Expanded Stairs v&nbsp;kategorii Design interiéru a&nbsp;veřejného prostoru. Mezinárodní odborná porota mu udělila titul „Talent designu 2014“.
+
+  section.o-section--white
+    .l-wrap
+      each instance in ["Průmyslový design", "Fashion design", "Grafický design", "Design interiéru a veřejného prostoru", "Produktový design"]
+        article.m-podium
+          h1.m-podium__title.t-head--c= instance
+          ol.m-podium__list
+            each item in ["Lucie Rožanská", "Cornelius Comanns", "Monika Bartošová"]
+              li.m-podium__item
+                .m-podium__thumbnail
+                  img.m-podium__image(src="http://unsplash.it/640/640/?random", alt="unsplash.it")
+                h2.m-podium__name.t-head--d= item
+                strong.m-podium__subtitle: +dummy(5)
+
+  section.m-hilite.o-section--black(style="background-image: url(assets/images/bg_1.jpg)")
+    .l-wrap
+      .o-section__bar
+        h2.o-section__title.t-head--c Speciální ocenění
+        strong.o-section__subtitle Mimo ocenění v kategoriích porota udělila dvě zvláštní ceny obvzlášť hodnotným soutěžním návrhům.
+
+      ul.m-hilite__list.o-flexlist
+        li.o-flexlist__item--tri
+          h2.t-head--d Kateřina Šuterová
+          strong.o-flexlist__strong Vizuální styl čajovny
+          p Zvláštní cena Dynamo design za významný počin v oblasti grafického designu
+        li.o-flexlist__item--tri
+          h2.t-head--d Saurav Rastogi
+          strong.o-flexlist__strong Prime Minister of India (PMOI) App Design
+
+  section.m-carousel.o-section--black
+    .m-carousel__header.l-wrap
+      h1.t-head--c Fotogalerie
+    .m-carousel__list(data-carousel)
+      each item in winners
+        .m-carousel__item
+          a.m-carousel__link(href=item.link)
+            .m-carousel__thumbnail
+              img.m-carousel__image(src="assets/images/" + item.thumbnail, alt=item.title)
+            h2.m-carousel__title.t-head--d
+              | Video: 
+              = item.title
+            strong.m-carousel__strong
+              | Talent designu 
+              = item.year
+
+  +supporters
+
+  +crossroad
+
+  +foot
+
+  +peek
