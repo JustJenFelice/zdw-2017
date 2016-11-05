@@ -3,13 +3,7 @@
 
   padding-bottom: 1.5em;
 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  .device--is-desktop & {
-    background-attachment: fixed;
-  }
+  @include fixed-background;
 }
 
 .m-apply__button {

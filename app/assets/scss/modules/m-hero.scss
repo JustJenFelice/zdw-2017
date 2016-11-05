@@ -6,15 +6,9 @@
   min-height: 100vmin;
 
   color: white;
-  background-color: $grey--100;
+  background-color: black;
 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  .device--is-desktop & {
-    background-attachment: fixed;
-  }
+  @include fixed-background;
 }
 
 .m-hero--full {
@@ -24,7 +18,7 @@
 }
 
 .m-hero--half {
-  min-height: 60vmin;
+  min-height: 50vmin;
 
   justify-content: center;
   align-items: center;
@@ -37,8 +31,6 @@
 
   margin-top: 5em; // Reserved space for o-hud
   padding: 3em;
-
-  max-width: 40em;
 }
 
 .m-hero__text {
@@ -53,4 +45,9 @@
   position: absolute;
   bottom: 15%;
   right: 10%;
+}
+
+.m-hero__pin {
+  position: absolute;
+  bottom: 0;
 }

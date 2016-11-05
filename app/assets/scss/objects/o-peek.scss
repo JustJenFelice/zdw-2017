@@ -16,13 +16,7 @@
 
   text-align: center;
 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  .device--is-desktop & {
-    background-attachment: fixed;
-  }
+  @include fixed-background;
 }
 
 .o-peek__title {

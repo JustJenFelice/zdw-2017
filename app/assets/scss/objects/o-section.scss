@@ -9,6 +9,8 @@
 .o-section--black {
   color: white;
   background-color: black;
+
+  @include fixed-background;
 }
 
 .o-section__bar {
