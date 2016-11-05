@@ -1,0 +1,23 @@
+.m-article__cell {
+  position: relative;
+}
+
+.m-article__link {
+  position: absolute;
+  bottom: 0;
+}
+
+.m-article__columns {
+  column-count: 2;
+  column-gap: 3em;
+
+  @include reset-children;
+}
+
+.m-article__runin {
+  margin-top: 1em;
+}
+
+.m-article__foot {
+  text-align: center;
+}

@@ -53,6 +53,8 @@
 
 .t-head--b {
   @include head--b;
+
+  @include margin(.25em null);
 }
 
 .t-head--c {

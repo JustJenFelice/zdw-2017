@@ -11,3 +11,26 @@
 
   @include link--white;
 }
+
+.o-ranking {
+  display: block;
+
+  color: currentColor;
+  background-color: transparent;
+
+  margin-bottom: 2rem;
+
+  @include head--a;
+  line-height: 1;
+
+  &:before {
+    content: "(";
+    margin-right: .5em;
+
+  }
+  &:after {
+    content: ")";
+    margin-left: .5em;
+  }
+
+}

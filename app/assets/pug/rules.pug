@@ -1,0 +1,124 @@
+extends templates/_site
+
+block template-content
+  +hud
+
+  section.m-hero--half(style="background-image: url(assets/images/bg_1.jpg)")
+    .m-hero__content
+      h1.t-head--a Pravidla
+
+  main.o-section--white
+    .l-wrap
+      ul.o-flexlist
+        li.o-flexlist__item--quad
+          .o-ferns--small
+            span.o-ferns__item--left: include ../svg/shape_fern_left.svg
+            h1.o-ferns__title.t-caps--small Hlavní cena
+            span.o-ferns__item--right: include ../svg/shape_fern_right.svg
+          p Pro nejlepšího z nejlepších máme titul Talent designu 2017. Titul zajišťující nesmazatelnou slávu a&nbsp;renomé. Titul, který otevře spoustu dveří. Titul, jehož držitel si spolu s odměnou za vítězství v&nbsp;jedné z&nbsp;kategorií odnese částku 3&nbsp;000&nbsp;€.
+        li.o-flexlist__item--quad
+          mark.o-ranking 1
+          strong.t-smallcaps  v&nbsp;jednotlivé soutěžní kategorii
+          p Vítězný návrh z&nbsp;každé soutěžní kategorie obdrží finanční odměnu ve výši 1&nbsp;000&nbsp;€ + možnost zúčastnit se stáže v&nbsp;přední designerské firmě daného oboru.
+        li.o-flexlist__item--quad
+          mark.o-ranking 2
+          strong.t-smallcaps  v&nbsp;jednotlivé soutěžní kategorii
+          p Autor soutěžního návrhu, který obsadí 2.&nbsp;místo v&nbsp;jednotlivé soutěžní kategorii, získá finanční odměnu ve výši 300&nbsp;€.
+        li.o-flexlist__item--quad
+          mark.o-ranking 3
+          strong.t-smallcaps  v&nbsp;jednotlivé soutěžní kategorii
+          p Návrh umístěný na třetím místě v&nbsp;každé soutěžní kategorii získá finanční obnos ve výši 100&nbsp;€.
+
+  section.o-section--black
+    .l-wrap
+      h1.o-section__title.t-head--c Speciální ocenění poroty
+      .m-article__columns
+        p Prvními třemi příčkami to nekončí. Porota oceňuje i&nbsp;ty práce, které se nevešly na první místa v&nbsp;kategoriích, přesto dosahují vysokých kvalit. Finanční odměna ve výši 200&nbsp;€ je udělena dvěma návrhům v&nbsp;následujících kategoriích:
+        p #[strong Award for Innovation] — Sociální, ekologická, technologická, materiální inovace napříč kategoriemi. 
+        p #[strong Expert Award] — Cena je určena pro autory výstav, teoretiky designu a&nbsp;autory knih, kteří se výrazně zasloužili o&nbsp;vnitřní diskuzi v&nbsp;oboru nebo mapují jeho historii.
+
+  section.o-section--light
+    .l-wrap
+      h1.o-section__title.t-head--c 5 soutěžních kategorií
+      ul.m-categories.o-flexlist
+        li.o-flexlist__item--quint
+          span.m-categories__icon
+          h2.t-head--e Industrial design
+          p Design strojů a zařízení, design nástrojů, transportní design a&nbsp;jiné.
+        li.o-flexlist__item--quint
+          span.m-categories__icon
+          h2.t-head--e Product design
+          p Design velkosériových výrobků, design interiéru a&nbsp;nábytku apod.
+        li.o-flexlist__item--quint
+          span.m-categories__icon
+          h2.t-head--e Fashion design
+          p Design oděvu, design textilní tvorby, design obuvi a&nbsp;galanterie, design šperků atd.
+        li.o-flexlist__item--quint
+          span.m-categories__icon
+          h2.t-head--e Art design
+          p Design malosériových produktů, autorský design, konceptuální a&nbsp;kritický design, design skla, design porcelánu, design keramiky a&nbsp;další.
+        li.o-flexlist__item--quint
+          span.m-categories__icon
+          h2.t-head--e Communication design
+          p Design grafiky a&nbsp;ilustrace, nová média, vizuální komunikace a&nbsp;intermedia, webové animace a další.
+
+  section.o-section--white
+    .l-wrap
+      h1.o-section__title.t-head--c Data soutěže
+
+      ul.o-flexlist
+        li.o-flexlist__item--quad
+          mark.o-flexlist__emphasis 16. 11. 2016
+          strong.t-smallcaps Zahájení soutěže
+          p Brána k&nbsp;přihlašování prací je otevřena! Právě ty se můžeš stát vítězem.
+        li.o-flexlist__item--quad
+          mark.o-flexlist__emphasis 15. 2. 2017
+          strong.t-smallcaps Uzávěrka přihlášek
+          p Tohle datum by ti v&nbsp;diáři nemělo chybět. Poslední možnost přihlásit Tvou práci!
+        li.o-flexlist__item--quad
+          mark.o-flexlist__emphasis 17. 3. 2017
+          strong.t-smallcaps Zasedání poroty
+          p Zasedání odborné poroty k&nbsp;hodnocení soutěžních návrhů proběhne v&nbsp;březnu 2016.
+        li.o-flexlist__item--quad
+          mark.o-flexlist__emphasis 29. 4. 2016
+          strong.t-smallcaps Vyhlášení vítězů
+          p V&nbsp;tento den všichni do gala! Finále Talent designu a&nbsp;slavnostní vyhlášení výherních prací.
+
+  section.o-section--black
+    .l-wrap
+      h1.o-section__title.t-head--c Souhrn pravidel
+
+      .m-article__columns
+        h2.m-article__runin.t-head--b Kdo?
+        p Přihlásit se můžeš v týmu nebo sám, ať už jsi student, začínající designér nebo nadšenec designu. Žádná omezení soutěž nemá. Jedinou podmínkou je věk. Nesmí ti být víc než 30 let.
+        h2.m-article__runin.t-head--b Co?
+        p Abychom tvůj soutěžní návrh přijali, musíš ke své práci nahrát i přihlášku. Tvá práce ale nesmí být staršího data, než je 1.1. 2011. Mezi přílohami nesmí chybět kromě přihlášky i fotografie práce ve formátu .jpg a textový dokument se stručným komentářem práce.
+        h2.m-article__runin.t-head--b Jak?
+        p ​Nezapomeň, že hlavním faktorem je kreativita a neotřelost tvého návrhu. Hodí se mít inovativní a originální přístup k řešení, ale také jde o funkčnost a použití materiálu. Ber v úvahu, že se hodnotí i ekologičnost návrhu.
+        h2.m-article__runin.t-head--b Kolik?
+        p Počet prací, které můžeš nahrát, je neomezený. Tvé dílo není ohraničeno žádným tématem, libovolně můžeš poslat třeba to, co najdeš doma v šuplíku. Přihlášky jsou navíc zdarma!
+
+      .m-article__foot
+        a.o-section__button.o-button--outline(href="javascript:") Kompletní pravidla
+
+  section.o-section--white
+    .l-wrap
+      h1.o-section__title.t-head--c Odborná porota
+      .o-jury
+        each item in jury
+          article.o-jury__item
+            img.o-jury__image(src="assets/images/jury/" + item.portrait, alt=item.name)
+            .o-jury__info
+              h2.o-jury__name.t-head--b= item.name
+              strong.o-jury__title!= item.title
+              p.o-jury__description!= item.description
+
+  +apply-form
+
+  +supporters
+
+  +crossroad
+
+  +foot
+
+  +peek
