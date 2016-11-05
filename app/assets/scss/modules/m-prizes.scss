@@ -1,13 +1,15 @@
-.o-prizes {
+.m-prizes {
+  text-align: center;
+}
+
+.m-prizes__container {
   display: table;
   width: 100%;
-
-  text-align: center;
 
   margin-top: 4em;
 }
 
-.o-prizes__block {
+.m-prizes__block {
   position: relative;
 
   display: table-cell;
@@ -16,7 +18,7 @@
   vertical-align: middle;
 }
 
-.o-prizes__list {
+.m-prizes__list {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -45,7 +47,7 @@
   }
 }
 
-.o-prizes__item {
+.m-prizes__item {
   &:before {
     display: block;
 
@@ -63,27 +65,27 @@
   }
 }
 
-.o-prizes__caps {
+.m-prizes__caps {
   @include margin(0 null);
 }
 
-.o-prizes__note {
+.m-prizes__note {
   display: block;
   margin-top: 1em;
   
   font-weight: $font__sans--regular;
 }
 
-[class^="o-prizes__fern"] {
+[class^="m-prizes__fern"] {
   position: absolute;
   top: 50%;
 
   transform: translateY(-50%);
 }
 
-.o-prizes__fern--left {
+.m-prizes__fern--left {
   left: .5em;
 }
-.o-prizes__fern--right {
+.m-prizes__fern--right {
   right: .5em;
 }
