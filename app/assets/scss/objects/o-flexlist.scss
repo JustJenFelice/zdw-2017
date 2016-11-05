@@ -1,0 +1,41 @@
+.o-flexlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  list-style-type: none;
+  padding-left: 0;
+
+  text-align: center;
+}
+
+[class^="o-flexlist__item"],
+[class*=" o-flexlist__item"] {
+  @include padding(null 1em);
+
+  @include reset-children;
+}
+
+.o-flexlist__item--tri {
+  width: 33.333%;
+  min-width: 16em;
+}
+
+.o-flexlist__item--quad {
+  width: 25%;
+  min-width: 13em;
+}
+
+.o-flexlist__item--quint {
+  width: 20%;
+  min-width: 10em;
+}
+
+.o-flexlist__emphasis {
+  display: block;
+  
+  @include head--b;
+
+  color: currentColor;
+  background-color: transparent;
+}
