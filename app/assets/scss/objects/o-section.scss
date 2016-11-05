@@ -1,0 +1,36 @@
+.o-section--white {
+  background-color: white;
+}
+
+.o-section--light {
+  background-color: $grey--900;
+}
+
+.o-section--black {
+  color: white;
+  background-color: black;
+}
+
+.o-section__bar {
+  @include reset-children;
+}
+
+.o-section__title {
+  text-align: center;
+
+  .o-section__bar & {
+    margin-bottom: .5em;
+  }
+}
+
+.o-section__subtitle {
+  display: block;
+
+  text-align: center;
+
+  font-weight: $font__sans--regular;
+}
+
+.o-section__button {
+  margin-top: 4em;
+}
