@@ -1,0 +1,37 @@
+
+extends templates/_site
+
+block template-content
+  +hud
+
+  section.m-hero--half(style="background-image: url(assets/images/bg_2.jpg)")
+    .m-hero__content
+      h1.t-head--a Kontakt
+
+  main.m-contact.o-section--light
+    .l-wrap
+      .l-table
+        .l-table__cell
+          h1.t-head--b Manažerka projektu
+          ul.o-nolist
+            li.o-nolist__item: strong.t-bold Veronika Sotáková
+            li.o-nolist__item E-mail: #[a(href="mailto:veronika.sotakova@zlindesignweek.com") veronika.sotakova@zlindesignweek.com]
+            li.o-nolist__item Tel.: +421 908 315 883
+
+        .l-table__cell
+          h1.t-head--b Adresa
+          ul.o-nolist
+            li.o-nolist__item: strong.t-bold Nadační fond Martiny a Martina Růžičkových
+            li.o-nolist__item 2. května 2384
+            li.o-nolist__item 760 01 Zlín
+
+      .m-contact__foot
+        p Pro více informací nás prosím kontaktujte na #[a(href="mailto:info@talentdesignu.cz") info@talentdesignu.cz].
+
+  +supporters
+
+  +crossroad
+
+  +foot
+
+  +peek
