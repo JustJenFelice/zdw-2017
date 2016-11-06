@@ -31,6 +31,10 @@
 
   margin-top: 5em; // Reserved space for o-hud
   padding: 3em;
+
+  .m-hero--full & {
+    max-width: 40em;
+  }
 }
 
 .m-hero__text {
