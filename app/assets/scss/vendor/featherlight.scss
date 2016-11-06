@@ -1,0 +1,39 @@
+.featherlight {
+  z-index: 6000;
+
+    -webkit-overflow-scrolling: touch;
+
+  &:last-of-type {
+    background: rgba(black, .85);
+  }
+
+  .featherlight-content {
+    @include margin(null 2em);
+    border: 0;
+    padding: 0;
+    
+    background-color: transparent;
+  }
+
+  .featherlight-close-icon {
+    width: auto;
+    height: auto;
+
+    top: 0;
+    right: 0;
+
+    font-family: $font__mono;
+    font-weight: $font__mono--bold;
+    font-size: 1.5em;
+    line-height: 1;
+
+    padding: 1em;
+
+    color: white;
+    background-color: transparent;
+
+    &:hover {
+      color: rgba(white, .75);
+    }
+  }
+}

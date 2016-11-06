@@ -9,6 +9,7 @@
     "site": [
       "bower_components/normalize-css/normalize.css",
       "bower_components/flickity/dist/flickity.css",
+      "bower_components/featherlight/src/featherlight.css",
       "app/assets/css/style.css",
 
       "bower_components/jquery.easing/js/jquery.easing.js",
@@ -16,6 +17,7 @@
       "bower_components/moment/locale/cs.js",
       "bower_components/flickity/dist/flickity.pkgd.js",
       "bower_components/waypoints/lib/jquery.waypoints.js",
+      "bower_components/featherlight/src/featherlight.js",
 
       "app/assets/js/app.js",
 

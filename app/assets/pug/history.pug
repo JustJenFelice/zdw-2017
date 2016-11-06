@@ -62,17 +62,11 @@ block template-content
     .m-carousel__header.l-wrap
       h1.t-head--c Fotogalerie
     .m-carousel__list(data-carousel)
-      each item in winners
+      each item in [211, 111, 332, 59, 366, 106, 99, 123, 234, 345]
         .m-carousel__item
-          a.m-carousel__link(href=item.link)
-            .m-carousel__thumbnail
-              img.m-carousel__image(src="assets/images/" + item.thumbnail, alt=item.title)
-            h2.m-carousel__title.t-head--d
-              | Video: 
-              = item.title
-            strong.m-carousel__strong
-              | Talent designu 
-              = item.year
+          a.m-carousel__link(href="http://unsplash.it/1920/1080/?image=" + item, data-featherlight="image")
+            .m-carousel__thumbnail--photo
+              img.m-carousel__image(src="http://unsplash.it/800/500/?image=" + item, alt="Gallery image")
 
   +supporters
 

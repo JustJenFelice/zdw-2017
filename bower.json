@@ -21,6 +21,7 @@
     "chj-framework": "^0.7.2",
     "moment": "^2.15.2",
     "waypoints": "^4.0.1",
-    "flickity": "^2.0.5"
+    "flickity": "^2.0.5",
+    "featherlight": "^1.5.1"
   }
 }
