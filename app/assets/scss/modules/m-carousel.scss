@@ -54,6 +54,8 @@
   @include link--white;
 }
 
+[class^="m-carousel__thumbnail--"],
+[class*=" m-carousel__thumbnail--"]
 .m-carousel__thumbnail {
   position: relative;
 
@@ -63,23 +65,37 @@
 
   &:after {
     position: absolute;
-
     top: 50%;
     left: 50%;
 
-    @include triangle(3em 2em, white, right);
-    transform: translate(-50%, -50%);
-
-    content: "";
+    color: white;
 
     opacity: 0;
 
+    transform: translate(-50%, -50%);
+    
     transition: opacity $duration--s;
   }
-
   .m-carousel__link:hover &:after,
   .m-carousel__link:active &:after {
     opacity: 1;
+  }
+}
+
+.m-carousel__thumbnail--video {
+  &:after {
+    content: "";
+
+    @include triangle(3em 2em, white, right);
+  }
+}
+
+.m-carousel__thumbnail--photo {
+  &:after {
+    content: "+";
+
+    font-weight: $font__sans--bold;
+    font-size: 5em;
   }
 }
 
