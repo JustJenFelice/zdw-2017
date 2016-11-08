@@ -5,17 +5,13 @@
 }
 
 .m-application__title {
-  position: relative;
-
   text-align: center;
 
   margin-top: 2em;
 
   &:before {
     position: absolute;
-    left: -3em;
-    
-    width: 3em;
+    left: 2em;
 
     content: counter(form-count);
     counter-increment: form-count;
@@ -43,4 +39,10 @@
 
 .m-application__cancel {
   margin-left: 1em;
+}
+
+.m-application__numbering {
+  display: inline-block;
+
+  width: em(40);
 }

@@ -47,9 +47,36 @@ block template-content
       h1.m-application__title.t-head--c Přílohy
       .m-application__section
         .m-application__row
+          strong.t-bold
+            span.m-application__numbering 1 
+            | Prezentační poster
+          ul
+            li Formát: PDF (CMYK)
+            li Rozměr: 700 &times; 1000 mm (na výšku)
+            li Kvalita: 300 dpi
+          input.o-upload(type="file")
+
+        .m-application__row
+          strong.t-bold
+            span.m-application__numbering 2 
+            | Textová část
+          p Stručný popis koncepce – stručný komentář – záměr autora – objasnění základních východisek při tvorbě soutěžního návrhu a způsob jeho využití v praxi. 
+          ul
+            li Formát: DOC, TXT
           input.o-upload(type="file")
         .m-application__row
+          strong.t-bold
+            span.m-application__numbering 3 
+            | Reprezentativní fotografie
+          ul
+            li Formát: JPG
+            li Rozměr: 1600 &times; 1200 px (na šířku)
+            li Kvalita: 300 dpi
+            li Počet: max. 3 ks
           input.o-upload(type="file")
+          input.o-upload(type="file")
+          input.o-upload(type="file")
+
         .m-application__row
           label.o-checkbox
             input.o-checkbox__input(type="checkbox")
