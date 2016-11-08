@@ -99,15 +99,7 @@ block template-content
 
   section.o-section--white
     .l-wrap
-      h1.o-section__title.t-head--c Odborná porota
-      .o-jury
-        each item in jury
-          article.o-jury__item
-            img.o-jury__image(src="assets/images/jury/" + item.portrait, alt=item.name)
-            .o-jury__info
-              h2.o-jury__name.t-head--b= item.name
-              strong.o-jury__title!= item.title
-              p.o-jury__description!= item.description
+      h1.o-section__title.t-head--c Odborná porota bude brzy odhalena
 
   +apply-form
 
