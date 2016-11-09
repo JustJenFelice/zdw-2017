@@ -19,6 +19,7 @@ block template-content
               strong.m-application__note Telefonní číslo zadejte ve formátu +XXX 123 456 789.
 
       h1.m-application__title.t-head--c Detail školy
+      mark.m-application__disclaimer Vyplňte pouze v případě, zda jste student.
       .m-application__section
         .m-application__row
           .o-dropdown
@@ -27,7 +28,7 @@ block template-content
               option Česká Republika
               option Polsko
               option(disabled) A tak dále
-        each item in ["Město", "Název školy", "Obor"]
+        each item in ["Město", "Název školy", "Obor", "Vedoucí katedry"]
           .m-application__row
             input.o-input--black(type="text", placeholder=item)
 
@@ -40,9 +41,10 @@ block template-content
               option Kategorie 1
               option Kategorie 2
               option(disabled) A tak dále
-        each item in ["Vedoucí katedry", "Rok obhajoby"]
-          .m-application__row
-            input.o-input--black(type="text", placeholder=item)
+        .m-application__row
+          label.o-label
+            span.o-label__text Datum vzniku
+            input.o-input--black(type="date", min="2015-01-01")
 
       h1.m-application__title.t-head--c Přílohy
       .m-application__section
