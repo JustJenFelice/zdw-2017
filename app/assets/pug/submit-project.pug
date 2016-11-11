@@ -17,6 +17,15 @@ block template-content
 
             if item == "Telefon"
               strong.m-application__note Telefonní číslo zadejte ve formátu +XXX 123 456 789.
+          
+          if item == "PSČ"
+            .m-application__row
+              .o-dropdown
+                select.o-dropdown__select
+                  option(disabled, selected) Země
+                  option Česká Republika
+                  option Polsko
+                  option(disabled) A tak dále
 
       h1.m-application__title.t-head--c Detail školy
       mark.m-application__disclaimer Vyplňte pouze v případě, zda jste student.
@@ -34,6 +43,8 @@ block template-content
 
       h1.m-application__title.t-head--c Detail práce
       .m-application__section
+        .m-application__row
+          input.o-input--black(type="text", placeholder="Úplný název práce")
         .m-application__row
           .o-dropdown
             select.o-dropdown__select
