@@ -11,33 +11,17 @@ block template-content
     form.m-application.l-wrap
       h1.m-application__title.t-head--c Kontaktní údaje
       .m-application__section
-        each item in ["Jméno", "Příjmení", "Adresa", "Město", "PSČ", "Telefon", "E-mail"]
+        each item in ["Jméno", "Příjmení", "Adresa", "Město", "PSČ", "Země", "Telefon", "E-mail"]
           .m-application__row
             input.o-input--black(type="text", placeholder=item)
 
             if item == "Telefon"
               strong.m-application__note Telefonní číslo zadejte ve formátu +XXX 123 456 789.
-          
-          if item == "PSČ"
-            .m-application__row
-              .o-dropdown
-                select.o-dropdown__select
-                  option(disabled, selected) Země
-                  option Česká Republika
-                  option Polsko
-                  option(disabled) A tak dále
 
       h1.m-application__title.t-head--c Detail školy
       mark.m-application__disclaimer Vyplňte pouze v případě, zda jste student.
       .m-application__section
-        .m-application__row
-          .o-dropdown
-            select.o-dropdown__select
-              option(disabled, selected) Země
-              option Česká Republika
-              option Polsko
-              option(disabled) A tak dále
-        each item in ["Město", "Název školy", "Obor", "Vedoucí katedry"]
+        each item in ["Země", "Město", "Název školy", "Obor", "Vedoucí katedry"]
           .m-application__row
             input.o-input--black(type="text", placeholder=item)
 
