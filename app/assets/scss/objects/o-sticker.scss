@@ -1,12 +1,14 @@
 [class^="o-sticker--"] {
   float: left;
 
-  max-width: 10em;
+  max-width: 12em;
   padding: 1.5em 1em;
 
   box-sizing: content-box;
 
   text-align: center;
+
+  @include reset-children;
 }
 
 .o-sticker--solid {
@@ -22,11 +24,9 @@
   transform: rotate(-10deg) translate(4em, -10em);
 }
 
-.o-sticker__title {
-  margin-top: 0;
-}
+.o-sticker__caps {
+  font-size: em(12);
 
-.o-sticker__date {
   text-transform: uppercase;
   letter-spacing: em(1);
 }
