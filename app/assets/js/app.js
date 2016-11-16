@@ -19,3 +19,7 @@ $("[data-carousel]").flickity({
   imagesLoaded: true,
   pageDots: false
 });
+
+$("[data-nav-toggle]").on("click", function() {
+  $body.toggleClass("nav--is-open");
+});
