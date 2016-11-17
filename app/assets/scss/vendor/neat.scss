@@ -3,10 +3,10 @@ $dev__tablet:  720;
 $dev__desktop: 980;
 
 // Breakpoints
-$bp__phone:   new-breakpoint(max-width em($dev__phablet - 1), $col__phone);
-$bp__phablet: new-breakpoint(min-width em($dev__phablet) max-width em($dev__tablet - 1), $col__phablet);
-$bp__tablet:  new-breakpoint(min-width em($dev__tablet) max-width em($dev__desktop - 1), $col__tablet);
-$bp__desktop: new-breakpoint(min-width em($dev__desktop), $col__desktop);
+$bp__phone:   new-breakpoint(max-width em($dev__phablet - 1));
+$bp__phablet: new-breakpoint(min-width em($dev__phablet) max-width em($dev__tablet - 1));
+$bp__tablet:  new-breakpoint(min-width em($dev__tablet) max-width em($dev__desktop - 1));
+$bp__desktop: new-breakpoint(min-width em($dev__desktop));
 
 // Device ranges
 
