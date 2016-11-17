@@ -1,7 +1,10 @@
 [class^="o-submit--"],
 [class*=" o-submit--"] {
+  width: 100%;
+
+  font-size: em(14);
   font-family: $font__sans;
-  font-weight: $font__sans--medium;
+  font-weight: $font__sans--semibold;
 
   text-transform: uppercase;
   letter-spacing: em(2);
@@ -18,6 +21,11 @@
 
   &:focus {
     outline: none;
+  }
+
+  @include media($dr__large) {
+    font-size: 1em;
+    font-weight: $font__sans--medium;
   }
 }
 

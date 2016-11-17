@@ -3,7 +3,9 @@
 }
 
 .m-supporters__title {
-  margin-bottom: 1.5em;
+  @include media($dr__large) {
+    margin-bottom: 1.5em;
+  }
 }
 
 .m-countdown {

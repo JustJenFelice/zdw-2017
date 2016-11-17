@@ -13,6 +13,19 @@
   } 
 }
 
+.o-ferns--large {
+  svg {
+    width: 1.75em;
+  }
+
+  @include media($bp__desktop) {
+    svg {
+      width: 4em;
+    }
+  }
+
+}
+
 .o-ferns__title {
   @include margin(0 null);
 }
@@ -25,8 +38,8 @@
 }
 
 .o-ferns__item--left {
-  left: .5em;
+  left: 0;
 }
 .o-ferns__item--right {
-  right: .5em;
+  right: 0;
 }

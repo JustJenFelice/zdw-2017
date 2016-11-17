@@ -4,24 +4,43 @@
 }
 
 .o-foot__logo {
-  position: relative;
-  top: .5em;
-
-  float: left;
+  text-align: center;
 
   fill: white;
+
+  @include media($dr__portable) {
+    position: relative;
+    top: .375em;
+
+    float: left;
+  }
 }
 
 .o-foot__table {
   display: flex;
+  flex-wrap: wrap;
 
-  margin-left: 12em;
+  @include margin(-.75em -1em);
+
+  @include media($bp__phone) {
+    margin-top: .75em;
+  }
+  @include media($bp__phablet) {
+    margin-left: 8em;
+  }
+  @include media($dr__large) {
+    margin-left: 11em;
+
+    justify-content: space-around;
+  }
 }
 
 .o-foot__cell {
-  @include padding(null 1em);
+  @include padding(.75em 1em);
 
   max-width: em(300);
+
+  @include reset-children;
 }
 
 .o-foot__head {

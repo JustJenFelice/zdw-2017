@@ -1,6 +1,4 @@
 [class^="o-sticker--"] {
-  float: left;
-
   max-width: 12em;
   padding: 1.5em 1em;
 
@@ -15,13 +13,17 @@
   color: black;
   background-color: white;
 
-  transform: rotate(15deg);
+  transform: rotate(10deg);
+
+  @include media($dr__large) {
+    margin-left: 7vw;
+  }
 }
 
 .o-sticker--outline {
   border: 2px solid white;
 
-  transform: rotate(-10deg) translate(4em, -10em);
+  transform: rotate(-5deg);
 }
 
 .o-sticker__caps {

@@ -1,11 +1,11 @@
 .o-steps {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
 
   list-style-type: none;
   padding-left: 0;
-  padding-top: 1.5em;
-  @include margin(0 -1.5em);
+  @include margin(0 null -1.5em);
 
   counter-reset: steps-count;
 }
@@ -13,13 +13,15 @@
 .o-steps__item {
   position: relative;
 
-  @include padding(1em 1.5em null);
-  width: 25%;
+  @include padding(2em 1em null);
+  margin-bottom: 1.5em;
+
+  max-width: em(360);
 
   &:before {
     position: absolute;
     left: 50%;
-    top: -1.5em;
+    top: 0;
 
     transform: translateX(-50%);
 
@@ -27,7 +29,7 @@
     counter-increment: steps-count;
   }
 
-  &:not(:last-child) {
-    border-right: 1px solid $grey--800;
+  @include media($dr__large) {
+    width: 25%;
   }
 }

@@ -10,6 +10,8 @@
   letter-spacing: em(2);
 
   @include link--white;
+
+  fill: white;
 }
 
 .o-ranking {

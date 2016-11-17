@@ -4,13 +4,12 @@
   }
 }
 
-.m-article__cell {
-  position: relative;
-}
-
 .m-article__link {
-  position: absolute;
-  bottom: 0;
+  @include media($dr__large) {
+    position: absolute;
+
+    bottom: 0;
+  }
 }
 
 .m-article__columns {

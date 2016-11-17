@@ -1,17 +1,21 @@
 .m-xroad {
-  display: table;
-  width: 100%;
-
   @include fixed-background;
+
+  @include media($dr__large) {
+    display: table;
+
+    width: 100%;
+  }
 }
 
 .m-xroad__link {
-  display: table-cell;
-  width: 50%;
+  position: relative;
 
-  padding: 3em 1.5em;
+  display: block;
 
-  font-size: em(36);
+  padding: 1.5em 1.75em;
+
+  font-size: 1.5em;
   text-align: center;
 
   &:link, &:visited {
@@ -21,20 +25,41 @@
     background-color: rgba(black, .25);
   }
 
-  &:first-child {
-    padding-right: .5em;
+  @include media($dr__small) {
+    &:first-child {
+      padding-bottom: .5em;
+    }
+    &:last-child {
+      padding-top: .5em;
+    }
   }
-  &:last-child {
-    padding-left: .5em;
+
+  @include media($dr__large) {
+    display: table-cell;
+
+    width: 50%;
+
+    &:first-child {
+      padding-right: .5em;
+    }
+    &:last-child {
+      padding-left: .5em;
+    }
+  }
+
+  @include media($bp__desktop) {
+    font-size: 2.25em;
   }
 }
 
 [class^="m-xroad__arrow"] {
   transition: transform $duration--s;
+  
+  position: absolute;
 }
 
 .m-xroad__arrow--left {
-  float: left;
+  left: 1em;
 
   .m-xroad__link:hover &,
   .m-xoard__link:active & {
@@ -43,7 +68,7 @@
 }
 
 .m-xroad__arrow--right {
-  float: right;
+  right: 1em;
 
   .m-xroad__link:hover &,
   .m-xoard__link:active & {

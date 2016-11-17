@@ -5,7 +5,11 @@
   @include reset-children;
 
   max-width: 70em;
-  padding: 4em 3em;
+  padding: 2em 1.5em;
+
+  @include media($dr__large) {
+    padding: 4em 3em;
+  }
 }
 
 .l-wrap--no-bottom {
@@ -16,24 +20,34 @@
 }
 
 .l-table {
-  display: table;
-  width: 100%;
+  @include media($dr__large) {
+    display: table;
+    width: 100%;
+  }
 }
 
 .l-table__cell {
   position: relative;
-  
-  display: table-cell;
-  width: 50%;
-
-  vertical-align: top;
 
   @include reset-children;
 
-  &:first-child {
-    padding-right: 1em;
+  @include media($dr__small) {
+    &:not(:first-child) {
+      margin-top: 1.5em;
+    }
   }
-  &:last-child {
-    padding-left: 1em;
+
+  @include media($dr__large) {
+    display: table-cell;
+    width: 50%;
+
+    vertical-align: top;
+
+    &:first-child {
+      padding-right: 1em;
+    }
+    &:last-child {
+      padding-left: 1em;
+    }
   }
 }

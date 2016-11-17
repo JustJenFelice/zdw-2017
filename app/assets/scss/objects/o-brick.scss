@@ -7,16 +7,24 @@
 }
 
 .o-brick__frame {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-
-  width: 50%;
+  position: relative;
 
   background-color: $grey--900;
 
   overflow: hidden;
+
+  @include media($dr__mobile) {
+    height: 100vmin;
+  }
+
+  @include media($bp__desktop) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 50%;
+  }
 }
 
 .o-brick__stretch {
@@ -26,7 +34,7 @@
 
   width: 200%;
   height: 200%;
-}
+ }
 
 .o-brick__image {
   position: absolute;
@@ -48,12 +56,18 @@
   flex-direction: column;
   justify-content: space-between;
 
-  width: 50%;
-  float: right;
+  padding: 2em 1.5em;
 
-  min-height: 75vmin;
+  @include media($dr__large) {
+    padding: 3em;
+  }
 
-  padding: 3em;
+  @include media($bp__desktop) {
+    width: 50%;
+    float: right;
+
+    min-height: 75vmin;
+  }
 }
 
 .o-brick__text {

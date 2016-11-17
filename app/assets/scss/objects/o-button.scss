@@ -5,7 +5,13 @@
   text-transform: uppercase;
   letter-spacing: em(2);
 
-  font-weight: $font__sans--medium;
+  font-size: em(14);
+  font-weight: $font__sans--semibold;
+
+  @include media($dr__large) {
+    font-size: 1em;
+    font-weight: $font__sans--medium;
+  }
 }
 
 .o-button--outline {

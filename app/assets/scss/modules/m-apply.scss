@@ -1,24 +1,37 @@
 .m-apply {
   color: white;
 
-  padding-bottom: 1.5em;
-
   @include fixed-background;
+
+  @include media($dr__large) {
+    padding-bottom: 1.5em;
+  }
+}
+
+.m-apply__content {
+  max-width: 35em;
+
+  @include margin(null auto);
 }
 
 .m-apply__button {
   display: block;
 
-  max-width: 60%;
-  @include margin(2em auto null);
+  margin-top: 1.5em;
+
   padding: .75em 1.5em;
 
-  border: 4px solid;
+  border: 2px solid;
 
-  font-size: em(36);
   font-weight: $font__sans--semibold;
 
   @include link--white;
+
+  @include media($dr__large) {
+    font-size: 2.25em;
+
+    border-width: 4px;
+  }
 }
 
 .m-apply__arrow {
