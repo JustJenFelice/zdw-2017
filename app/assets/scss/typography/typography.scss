@@ -61,6 +61,8 @@
 
 .t-head--a {
   @include head--a;
+
+  @include margin(.25em null);
 }
 
 .t-head--b {
@@ -97,8 +99,6 @@
 }
 
 .t-text--big {
-  font-size: 1.125em;
-
   @include media($dr__large) {
     font-size: 1.375em;
   }
