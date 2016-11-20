@@ -3,18 +3,22 @@
 
   display: flex;
 
-  min-height: 100vmin;
-
   color: white;
   background-color: black;
+
+  overflow: hidden;
 
   @include fixed-background;
 }
 
 .m-hero--full {
-  min-height: 100vmin;
+  min-height: 100vh;
 
   align-items: flex-end;
+
+  @include media($dr__large) {
+    min-height: 100vmin;
+  }
 }
 
 .m-hero--half {
@@ -30,25 +34,27 @@
   @include reset-children;
 
   margin-top: 5em; // Reserved space for o-hud
-  padding: 3em;
+  padding: 2em 1.5em;
 
   .m-hero--full & {
-    max-width: 40em;
+    max-width: 42.5em;
+  }
+
+  @include media($dr__large) {
+    padding: 3em;
   }
 }
 
 .m-hero__text {
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
+
+  @include media($bp__desktop) {
+    margin-bottom: 3em;
+  }
 }
 
 .m-hero__button {
   @include link--white;
-}
-
-.m-hero__stickers {
-  position: absolute;
-  bottom: 15%;
-  right: 10%;
 }
 
 .m-hero__pin {

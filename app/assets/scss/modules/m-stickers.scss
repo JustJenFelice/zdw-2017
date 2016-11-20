@@ -1,0 +1,24 @@
+.m-stickers {
+  color: white;
+
+  @include media($dr__small) {
+    @include clearfix;
+
+    background-color: black;
+
+    padding: 2.5em 2em;
+  }
+
+  @include media($dr__large) {
+    position: absolute;
+
+    top: 12.5%;
+    right: 15%;
+  }
+}
+
+.m-stickers__second {
+  @include media($dr__small) {
+    float: right;
+  }
+}

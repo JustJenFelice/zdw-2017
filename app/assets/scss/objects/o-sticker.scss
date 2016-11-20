@@ -1,4 +1,5 @@
-[class^="o-sticker--"] {
+[class^="o-sticker--"],
+[class*=" o-sticker--"] {
   max-width: 12em;
   padding: 1.5em 1em;
 
@@ -16,7 +17,7 @@
   transform: rotate(10deg);
 
   @include media($dr__large) {
-    margin-left: 7vw;
+    transform: translateX(5em) rotate(10deg);
   }
 }
 
@@ -26,7 +27,17 @@
   transform: rotate(-5deg);
 }
 
+.o-sticker__title {
+  font-size: em(20);
+  font-family: $font__mono;
+  font-weight: $font__mono--regular;
+
+  @include margin(.5em null);
+}
+
 .o-sticker__caps {
+  display: block;
+
   font-size: em(12);
 
   text-transform: uppercase;
