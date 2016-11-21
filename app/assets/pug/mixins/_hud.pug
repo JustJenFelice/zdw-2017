@@ -1,5 +1,5 @@
 mixin hud
-  header.o-hud
+  header.o-hud#js-headroom
     .o-hud__head
       .o-hud__cell
         a.o-logo(href="index.html"): include ../../svg/logo_bid.svg
@@ -13,7 +13,7 @@ mixin hud
           span.o-nav__cross
           | Close
 
-    nav.o-nav(data-menu)
+    nav.o-nav
       ul.o-nav__list
         each page in pages
           li.o-nav__item: a.o-nav__link(href=page.link)= page.title

@@ -10,7 +10,6 @@
   width: 100%;
 
   color: white;
-  background-color: black;
 
   .nav--is-open & {
     height: 100%;
@@ -18,6 +17,10 @@
     overflow-y: scroll;
 
     flex-direction: column;
+  }
+
+  @include media($dr__mobile) {
+    background-color: black;
   }
 
   @include media($bp__desktop) {

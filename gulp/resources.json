@@ -15,11 +15,12 @@
       "bower_components/jquery.easing/js/jquery.easing.js",
       "bower_components/moment/moment.js",
       "bower_components/moment/locale/cs.js",
+      "bower_components/headroom.js/dist/headroom.js",
       "bower_components/flickity/dist/flickity.pkgd.js",
-      "bower_components/waypoints/lib/jquery.waypoints.js",
       "bower_components/featherlight/src/featherlight.js",
 
       "app/assets/js/app.js",
+      "app/assets/js/zdw-headroom.js",
       "app/assets/js/zdw-external.js",
 
       "bower_components/chj-framework/app/assets/js/chj-detect.js",

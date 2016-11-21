@@ -20,8 +20,8 @@
     "normalize-css": "^5.0.0",
     "chj-framework": "^0.7.2",
     "moment": "^2.15.2",
-    "waypoints": "^4.0.1",
     "flickity": "^2.0.5",
-    "featherlight": "^1.5.1"
+    "featherlight": "^1.5.1",
+    "headroom.js": "https://unpkg.com/headroom.js/bower.zip"
   }
 }

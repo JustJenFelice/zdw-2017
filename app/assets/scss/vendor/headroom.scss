@@ -1,0 +1,13 @@
+@include media($bp__desktop) {
+  .headroom {
+    transition: transform $duration--b, background-color $duration--b;
+  }
+
+  .headroom--not-top {
+    background-color: black;
+  }
+
+  .headroom--unpinned {
+    transform: translateY(-100%);
+  }  
+}
