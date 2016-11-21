@@ -30,7 +30,13 @@
   }
   @include media($dr__large) {
     margin-left: 11em;
+  }
 
+  @include media($bp__tablet) {
+    justify-content: space-between;
+  }
+
+  @include media($bp__desktop) {
     justify-content: space-around;
   }
 }
