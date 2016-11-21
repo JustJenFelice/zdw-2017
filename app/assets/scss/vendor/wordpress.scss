@@ -1,0 +1,16 @@
+#menu-hlavni-menu-container {
+  @extend .o-nav;
+}
+
+#menu-hlavni-menu {
+  @extend .o-nav__list;
+
+  .menu-item {
+    @extend .o-nav__item;
+  }
+
+  a {
+    @extend .o-nav__link;
+  }
+}
+
