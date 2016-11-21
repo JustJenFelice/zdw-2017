@@ -32,16 +32,12 @@
 
 .m-hero__content {
   @include reset-children;
+  @include wrap-padding;
 
   margin-top: 5em; // Reserved space for o-hud
-  padding: 2em 1.5em;
 
   .m-hero--full & {
     max-width: 42.5em;
-  }
-
-  @include media($dr__large) {
-    padding: 3em;
   }
 }
 
