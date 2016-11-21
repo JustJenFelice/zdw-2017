@@ -12,8 +12,15 @@
   @include media($dr__large) {
     position: absolute;
 
-    top: 12.5%;
     right: 15%;
+  }
+
+  @include media($bp__tablet) {
+    top: 12.5%;
+  }
+
+  @include media($bp__desktop) {
+    top: 25%;
   }
 }
 
