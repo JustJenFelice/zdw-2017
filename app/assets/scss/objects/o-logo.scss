@@ -1,8 +1,9 @@
 .o-logo {
-  margin-top: 1.5em;
-
   display: inline-block;
-  padding: .5em 1.5em;
+
+  box-sizing: content-box;
+
+  padding: 1em $wrap-padding-horz--1;
 
   font-weight: $font__sans--bold;
 
@@ -12,4 +13,14 @@
   @include link--white;
 
   fill: white;
+
+  svg {
+    display: block;
+    width: em(64);
+    height: em(32);
+  }
+
+  @include media($dr__large) {
+    padding: 1em $wrap-padding-horz--2;
+  }
 }

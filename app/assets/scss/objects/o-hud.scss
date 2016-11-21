@@ -1,5 +1,8 @@
 .o-hud {
-  position: absolute;
+  display: flex;
+  justify-content: space-between;
+
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 5000;
@@ -7,10 +10,37 @@
   width: 100%;
 
   color: white;
+  background-color: black;
 
-  text-align: center;
+  .nav--is-open & {
+    height: 100%;
+
+    overflow-y: scroll;
+
+    flex-direction: column;
+  }
+
+  @include media($bp__desktop) {
+    align-items: center;
+  }
 }
 
-.o-hud__menu {
-  position: relative;
+.o-hud__head {
+  line-height: 1;
+
+  @include media($dr__mobile) {
+    display: table;
+    width: 100%;
+  }
+}
+
+.o-hud__cell {
+  @include media($dr__mobile) {
+    display: table-cell;
+    vertical-align: middle;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
 }

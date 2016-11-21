@@ -7,3 +7,29 @@
     background-attachment: fixed;
   }
 }
+
+@mixin ui-toggle {
+  color: currentColor;
+  background-color: transparent;
+
+  padding: 1em $wrap-padding-horz--1;
+  border: none;
+
+  box-sizing: content-box;
+
+  text-transform: uppercase;
+  letter-spacing: em(1);
+
+  font-family: $font__mono;
+  font-weight: $font__mono--bold;
+
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+
+  @include media($dr__large) {
+    padding: 1em $wrap-padding-horz--2;
+  }
+}

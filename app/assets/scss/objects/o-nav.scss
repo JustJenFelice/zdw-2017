@@ -1,74 +1,144 @@
-.o-nav__toggle {
-  display: none;
-
-  color: currentColor;
-  background-color: transparent;
-
-  padding: 1em;
-  border: none;
-
-  box-sizing: content-box;
-
-  overflow: hidden;
-
-  width: em(26);
-  height: em(20);
+[class^="o-nav__toggle"],
+[class*=" o-nav__toggle"] {
+  @include ui-toggle;
 }
 
-.o-nav__icon {
-  display: block;
+.o-nav__toggle--open {
+  .nav--is-open & {
+    display: none;
+  }
 
-  border-top: em(4) solid currentColor;
-  border-bottom: em(4) solid currentColor;
+  @include media($bp__desktop) {
+    display: none;
+  }
+}
 
-  margin-bottom: 1em;
+.o-nav__toggle--close {
+  display: none;
+
+  .nav--is-open & {
+    display: inline-block;
+  }
+}
+
+.o-nav__trigram {
+  position: relative;
+
+  display: inline-block;
+  vertical-align: middle;
+
+  width: em(23);
+  height: em(23);
+
+  margin-right: 1em;
+
+  background-image: linear-gradient(to left, white, white);
+  background-size: 100% em(3);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+
+    position: absolute;
+
+    width: 100%;
+    height: em(3);
+
+    background-color: currentColor;
+  }
 
   &:before {
+    top: em(2);
+  }
+  &:after {
+    bottom: em(2);
+  }
+}
+
+.o-nav__cross {
+  position: relative;
+
+  display: inline-block;
+  vertical-align: middle;
+
+  width: em(23);
+  height: em(23);
+  margin-right: .75em;
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: .625em;
     content: "";
 
     display: block;
-    height: em(4);
+    width: 100%;
+    height: em(3);
 
     background-color: currentColor;
+  }
 
-    @include margin(em(4) null);
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
   }
 }
 
 .o-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  padding: $wrap-padding-horz--1;
 
-  width: 100%;
+  @include media($dr__mobile) {
+    display: none;
+  }
 
-  text-align: center;
-
-  transition: background-color $duration--s;
-
-  .nav--is-pinned & {
-    position: fixed;
-    top: 0;
-
-    background-color: black;
+  .nav--is-open & {
+    display: block;
   }
 }
 
 .o-nav__list {
+  font-family: $font__mono;
+
   list-style-type: none;
   
-  @include padding(.25em null .25em 0);
+  @include margin(0 null);
+  padding-left: 0;
+
+  @include media($dr__mobile) {
+    line-height: 2.5;
+  }
 }
 
 [class^="o-nav__item"] {
-  display: inline-block;
+  display: block;
 
-  @include margin(null 1em);
+  @include media($dr__mobile) {
+    font-size: 1.25em;
+  }
+
+  @include media($bp__desktop) {
+    display: inline-block;
+
+    @include margin(null 1em);
+  }
 }
 
 .o-nav__item--lang {
-  margin-left: 3em;
+  @include media($dr__mobile) {
+    font-size: em(14);
+    
+    margin-top: .75em;
+  }
+
+  @include media($bp__desktop) {
+    margin-left: 3em;
+  }
 }
 
 .o-nav__link {

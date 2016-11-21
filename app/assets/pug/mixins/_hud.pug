@@ -1,14 +1,21 @@
 mixin hud
   header.o-hud
-    a.o-logo(href="index.html"): include ../../svg/logo_bid.svg
+    .o-hud__head
+      .o-hud__cell
+        a.o-logo(href="index.html"): include ../../svg/logo_bid.svg
 
-    .o-hud__menu(data-menu)
-      nav.o-nav
-        button.o-nav__toggle(data-nav-toggle)
-          span.o-nav__icon
+      .o-hud__cell
+        button.o-nav__toggle--open(data-nav-toggle)
+          span.o-nav__trigram
           | Menu
-        ul.o-nav__list
-          each page in pages
-            li.o-nav__item: a.o-nav__link(href=page.link)= page.title
-          li.o-nav__item--lang
-            a.o-nav__link(href="javascript:") English
+
+        button.o-nav__toggle--close(data-nav-toggle)
+          span.o-nav__cross
+          | Close
+
+    nav.o-nav(data-menu)
+      ul.o-nav__list
+        each page in pages
+          li.o-nav__item: a.o-nav__link(href=page.link)= page.title
+        li.o-nav__item--lang
+          a.o-nav__link(href="javascript:") English
