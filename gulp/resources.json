@@ -20,10 +20,10 @@
       "bower_components/featherlight/src/featherlight.js",
 
       "app/assets/js/app.js",
+      "app/assets/js/zdw-external.js",
 
       "bower_components/chj-framework/app/assets/js/chj-detect.js",
-      "bower_components/chj-framework/app/assets/js/chj-device.js",
-      "bower_components/chj-framework/app/assets/js/chj-external.js"
+      "bower_components/chj-framework/app/assets/js/chj-device.js"
     ]
   },
   "injectDist": {

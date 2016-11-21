@@ -6,7 +6,7 @@ block template-content
   section.m-hero--half(style="background-image: url(assets/images/bg_1.jpg)")
     .m-hero__content
       h1.t-head--a O soutěži
-      a.m-hero__button.o-button--outline(href="https://www.facebook.com/talentdesignu/videos/910960188957580/?theater") Přehrát video
+      a.m-hero__button.o-button--outline(href="https://www.facebook.com/talentdesignu/videos/910960188957580/?theater", data-external) Přehrát video
 
   +stats
 
@@ -16,7 +16,7 @@ block template-content
     .m-carousel__list(data-carousel)
       each item in winners
         .m-carousel__item
-          a.m-carousel__link(href=item.link)
+          a.m-carousel__link(href=item.link, data-external)
             .m-carousel__thumbnail--video
               img.m-carousel__image(src="assets/images/" + item.thumbnail, alt=item.title)
             h2.m-carousel__title.t-head--d
