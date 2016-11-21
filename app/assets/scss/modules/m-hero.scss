@@ -34,7 +34,7 @@
   @include reset-children;
   @include wrap-padding;
 
-  margin-top: 5em; // Reserved space for o-hud
+  margin-top: 4.25em; // Reserved space for o-hud
 
   .m-hero--full & {
     max-width: 42.5em;
