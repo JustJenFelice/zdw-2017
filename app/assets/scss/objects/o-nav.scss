@@ -115,7 +115,7 @@
   }
 }
 
-[class^="o-nav__item"] {
+.o-nav__item {
   display: block;
 
   @include media($dr__mobile) {
@@ -126,18 +126,6 @@
     display: inline-block;
 
     @include margin(null 1em);
-  }
-}
-
-.o-nav__item--lang {
-  @include media($dr__mobile) {
-    font-size: em(14);
-    
-    margin-top: .75em;
-  }
-
-  @include media($bp__desktop) {
-    margin-left: 3em;
   }
 }
 
