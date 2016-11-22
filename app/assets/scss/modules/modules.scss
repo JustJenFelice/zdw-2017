@@ -31,11 +31,8 @@
 .m-categories__icon {
   display: block;
 
-  width: 4em;
-  height: 4em;
+  font-family: $font__mono;
+  font-size: 3.5em;
 
-  border: 4px solid black;
-  border-radius: 50%;
-
-  @include margin(null auto 2em);
+  line-height: 1;
 }
