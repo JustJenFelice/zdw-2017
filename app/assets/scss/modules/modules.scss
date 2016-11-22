@@ -1,3 +1,15 @@
+.m-history__image {
+  background-image: url("../images/responsive/bg_history_640.jpg");
+  
+  @include media($dr__medium) {
+    background-image: url("../images/responsive/bg_history_1613.jpg");
+  }
+
+  @include media($dr__large) {
+    background-image: url("../images/responsive/bg_history_2283.jpg");
+  }
+}
+
 .m-supporters {
   text-align: center;
 }
