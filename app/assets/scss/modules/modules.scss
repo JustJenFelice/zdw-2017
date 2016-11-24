@@ -25,7 +25,9 @@
 }
 
 .m-categories {
-  margin-top: 2em;
+  @include media($dr__large) {
+    margin-top: 2em;
+  }
 }
 
 .m-categories__icon {

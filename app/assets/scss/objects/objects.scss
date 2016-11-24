@@ -4,7 +4,7 @@
   color: currentColor;
   background-color: transparent;
 
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   @include head--a;
   line-height: 1;
@@ -17,6 +17,10 @@
   &:after {
     content: ")";
     margin-left: .5em;
+  }
+
+  @include media($dr__large) {
+    margin-bottom: 2rem;
   }
 }
 

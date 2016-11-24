@@ -6,14 +6,14 @@
 
   list-style-type: none;
   padding-left: 0;
-  @include margin(-.5em null);
+  @include margin(-.75em null);
 
   text-align: center;
 }
 
 [class^="o-flexlist__item"],
 [class*=" o-flexlist__item"] {
-  @include padding(.5em 1em);
+  @include padding(.75em 1em);
 
   @include reset-children;
 }
@@ -24,8 +24,14 @@
 }
 
 .o-flexlist__item--quad {
-  width: 25%;
-  min-width: 13em;
+  min-width: 13.5em;
+
+  @include media($dr__medium) {
+    width: 50%;
+  }
+  @include media($bp__desktop) {
+    width: 25%;
+  }
 }
 
 .o-flexlist__emphasis {
