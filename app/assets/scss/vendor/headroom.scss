@@ -1,9 +1,13 @@
 @include media($bp__desktop) {
   .headroom {
-    transition: transform $duration--b, background-color $duration--b;
+    @include padding(1.5em null);
+
+    transition: transform $duration--b, background-color $duration--b, padding $duration--b;
   }
 
   .headroom--not-top {
+    @include padding(0 null);
+
     background-color: black;
   }
 

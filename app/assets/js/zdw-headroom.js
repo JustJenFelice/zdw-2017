@@ -3,7 +3,7 @@ var
 
 var zdwHeadroom = new Headroom(jsHeadroom, {
   "tolerance": {
-    down: 50,
-    up: 50
+    down: 200,
+    up: 100
   }
 }).init();
