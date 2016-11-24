@@ -2,7 +2,6 @@
   position: relative;
 
   display: flex;
-  flex-direction: column;
 
   color: white;
   background-color: black;
@@ -27,6 +26,7 @@
 
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   text-align: center;
 
