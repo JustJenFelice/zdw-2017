@@ -2,6 +2,7 @@
   position: relative;
 
   display: flex;
+  flex-direction: column;
 
   color: white;
   background-color: black;
@@ -58,6 +59,8 @@
 }
 
 .m-hero__pin {
-  position: absolute;
-  bottom: 0;
+  @include media($dr__large) {
+    position: absolute;
+    bottom: 0;
+  }
 }

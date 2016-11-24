@@ -7,14 +7,20 @@
 }
 
 .m-hilite__image {
-  float: left;
+  @include margin(null auto 1em);
 
-  max-width: 40%;
-  margin-right: 2em;
+  @include media($dr__large) {
+    float: left;
+
+    max-width: 40%;
+    margin-right: 2em;
+  }
 }
 
 .m-hilite__info {
   overflow: auto;
+
+  @include reset-children;
 }
 
 .m-hilite__list {

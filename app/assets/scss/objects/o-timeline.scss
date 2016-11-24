@@ -1,12 +1,14 @@
 .o-timeline {
   list-style-type: none;
-  padding-left: 0;
+  @include padding(null $wrap-padding-horz--1);
+
+  line-height: 2;
 }
 
 .o-timeline__item {
   display: inline-block;
 
-  @include margin(null .5em);
+  @include margin(null .75em);
 }
 
 .o-timeline__active {
