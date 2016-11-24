@@ -1,17 +1,17 @@
-@include media($bp__desktop) {
-  .headroom {
+.headroom {
+  transition: transform $duration--b, background-color $duration--b, padding $duration--b;
+
+  @include media($bp__desktop) {
     @include padding(1.5em null);
-
-    transition: transform $duration--b, background-color $duration--b, padding $duration--b;
   }
+}
 
-  .headroom--not-top {
-    @include padding(0 null);
+.headroom--not-top {
+  @include padding(0 null);
 
-    background-color: black;
-  }
+  background-color: black;
+}
 
-  .headroom--unpinned {
-    transform: translateY(-100%);
-  }  
+body:not(.nav--is-open) .headroom--unpinned {
+  transform: translateY(-100%);
 }
