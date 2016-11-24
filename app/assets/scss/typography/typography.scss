@@ -57,6 +57,16 @@
   font-weight: $font__sans--medium;
 }
 
+@mixin head--c {
+  font-size: 1.5em;
+  font-family: $font__mono;
+  font-weight: $font__mono--regular;
+
+  @include media($dr__large) {
+    font-size: 2.25em;
+  }
+}
+
 .t-head--a {
   @include head--a;
 
@@ -70,15 +80,11 @@
 }
 
 .t-head--c {
-  font-size: 1.5em;
-  font-family: $font__mono;
-  font-weight: $font__mono--regular;
+  @include head--c;
 
   @include margin(.75em null);
 
   @include media($dr__large) {
-    font-size: 2.25em;
-    
     @include margin(1em null);
   }
 }
