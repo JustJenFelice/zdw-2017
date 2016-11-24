@@ -1,9 +1,16 @@
 .m-part {
-  text-align: center;
 }
 
 .m-part__text {
+  @include reset-children;
+
   max-width: 52em;
 
-  @include margin(3em auto);
+  @include margin(2em auto);
+
+  @include media($dr__large) {
+    @include margin(3em null);
+
+    text-align: center;
+  }
 }

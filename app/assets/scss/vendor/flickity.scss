@@ -3,13 +3,20 @@
 
   z-index: 200;
 
-  padding: 2em;
+  width: auto;
+  height: auto;
+
+  padding: 1.5em;
+  box-sizing: content-box;
 
   transition: opacity $duration--s;
 
   svg {
-    width: 2em;
-    height: 2em;
+    position: relative;
+
+    display: block;
+    width: 1em;
+    height: 1em;
   }
   
   .arrow {
@@ -17,10 +24,10 @@
   }
 
   &.previous {
-    left: 3em;
+    left: 0;
   }
   &.next {
-    right: 3em;
+    right: 0;
   }
 
   &:disabled {
@@ -29,5 +36,19 @@
 
   &:hover {
     background: transparent;
+  }
+
+  @include media($dr__large) {
+    &.previous {
+      left: 2em;
+    }
+    &.next {
+      right: 2em;
+    }
+
+    svg {
+      width: 2em;
+      height: 2em;
+    }
   }
 }

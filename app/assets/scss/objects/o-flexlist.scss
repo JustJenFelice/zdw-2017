@@ -2,16 +2,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: top;
 
   list-style-type: none;
   padding-left: 0;
+  @include margin(-.5em null);
 
   text-align: center;
 }
 
 [class^="o-flexlist__item"],
 [class*=" o-flexlist__item"] {
-  @include padding(null 1em);
+  @include padding(.5em 1em);
 
   @include reset-children;
 }

@@ -19,12 +19,13 @@ block template-content
           a.m-carousel__link(href=item.link, data-external)
             .m-carousel__thumbnail--video
               img.m-carousel__image(src="assets/images/" + item.thumbnail, alt=item.title)
-            h2.m-carousel__title.t-head--d
-              | Video: 
-              = item.title
-            strong.m-carousel__strong
-              | Talent designu 
-              = item.year
+            .m-carousel__content
+              h2.m-carousel__title.t-head--d
+                | Video: 
+                = item.title
+              strong.m-carousel__strong
+                | Talent designu 
+                = item.year
 
   +intro
 

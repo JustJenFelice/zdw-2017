@@ -15,7 +15,7 @@
     bottom: 0;
     z-index: 100;
 
-    width: 10em;
+    width: 3.5em;
 
     content: "";
     pointer-events: none;
@@ -23,26 +23,39 @@
 
   &:before {
     left: 0;
-    background-image: linear-gradient(to right, black, transparent);
+    background-image: linear-gradient(to right, black, rgba(black, 0));
   }
 
   &:after {
     right: 0;
-    background-image: linear-gradient(to left, black, transparent);
+    background-image: linear-gradient(to left, black, rgba(black, 0));
+  }
+
+  @include media($dr__large) {
+    &:before,
+    &:after {
+      width: 10em;
+    }
   }
 }
 
 .m-carousel__item {
-  width: em(300);
+  width: em(200);
   box-sizing: content-box;
 
-  @include margin(null 1em);
+  @include margin(null .5em);
 
-  &:first-child {
-    padding-left: 10em;
-  }
-  &:last-child {
-    padding-right: 10em;
+  @include media($dr__large) {
+    width: em(300);
+
+    @include margin(null 1em);
+
+    &:first-child {
+      padding-left: 10em;
+    }
+    &:last-child {
+      padding-right: 10em;
+    }
   }
 }
 
@@ -55,8 +68,7 @@
 }
 
 [class^="m-carousel__thumbnail--"],
-[class*=" m-carousel__thumbnail--"]
-.m-carousel__thumbnail {
+[class*=" m-carousel__thumbnail--"] {
   position: relative;
 
   padding-bottom: 62%;
@@ -70,11 +82,13 @@
 
     color: white;
 
-    opacity: 0;
-
     transform: translate(-50%, -50%);
     
     transition: opacity $duration--s;
+  }
+
+  .device--is-desktop &:after {
+    opacity: 0;
   }
   .m-carousel__link:hover &:after,
   .m-carousel__link:active &:after {
@@ -105,6 +119,31 @@
   left: 0;
 }
 
+.m-carousel__content {
+  @include padding(null .5em);
+
+  @include media($dr__small) {
+    opacity: 0;
+    
+    transition: opacity $duration--b;
+
+    .is-selected & {
+      opacity: 1;
+    }
+  }
+
+}
+
+.m-carousel__title {
+  margin-top: 1.25em;
+
+  margin-bottom: .5em;
+}
+
 .m-carousel__strong {
   font-weight: $font__sans--regular;
+  
+  @include media($dr__small) {
+    font-size: em(12);
+  }
 }

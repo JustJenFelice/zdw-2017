@@ -90,8 +90,12 @@
 }
 
 .t-head--d {
-  font-size: em(22);
+  font-size: 1.125em;
   font-weight: $font__sans--medium;
+
+  @include media($dr__large) {
+    font-size: 1.375em;
+  }
 }
 
 .t-head--e {

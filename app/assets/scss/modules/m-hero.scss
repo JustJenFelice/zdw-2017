@@ -22,12 +22,16 @@
 }
 
 .m-hero--half {
-  min-height: 50vmin;
+  min-height: 75vh;
 
   justify-content: center;
   align-items: center;
 
   text-align: center;
+
+  @include media($dr__large) {
+    min-height: 50vmin;
+  }
 }
 
 .m-hero__content {
