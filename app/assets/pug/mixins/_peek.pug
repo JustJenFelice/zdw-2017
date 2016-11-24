@@ -1,4 +1,14 @@
 mixin peek
-  .o-peek
-    .o-peek__frame(style="background-image: url(assets/images/bg_1.jpg)")
-      h5.o-peek__title.t-head--a Uvidíme se<br>ve Zlíně!
+  .o-peek(style="background-image: url(assets/images/bg_1.jpg)")
+    .o-peek__content
+      p.o-peek__text Uvidíme se ve Zlíně! Mezitím nás můžete sledovat na #[a.o-peek__link--fb(href="https://www.facebook.com/talentdesignu/", data-external) Facebooku].
+    ul.o-peek__credits
+      li.o-peek__item
+        strong.o-peek__term Design 
+        | Jan Břeský
+      li.o-peek__item
+        strong.o-peek__term Front-end 
+        | Christian Jánský
+      li.o-peek__item
+        strong.o-peek__term Back-end 
+        | Michal Černý
