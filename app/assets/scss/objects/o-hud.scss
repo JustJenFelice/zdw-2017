@@ -12,15 +12,14 @@
   color: white;
 
   .nav--is-open & {
+    background-color: black;
+    transition-duration: 0s;
+
     height: 100%;
 
     overflow-y: scroll;
 
     flex-direction: column;
-  }
-
-  @include media($dr__mobile) {
-    background-color: black;
   }
 
   @include media($bp__desktop) {
