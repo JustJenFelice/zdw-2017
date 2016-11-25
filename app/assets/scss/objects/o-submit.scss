@@ -33,6 +33,8 @@
   color: white;
   background-color: black;
 
+  border-width: 0;
+
   &:hover, &:active, &:focus {
     background-color: rgba(black, .75);
   }

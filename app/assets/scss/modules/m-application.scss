@@ -10,17 +10,28 @@
   margin-top: 2em;
 
   &:before {
-    position: absolute;
-    left: 2em;
+    float: left;
+
+    margin-right: .5em;
 
     content: counter(form-count);
     counter-increment: form-count;
+
+    @include media($dr__large) {
+      position: absolute;
+      left: 2em;
+      left: 1em;
+    }
   }
 }
 
 .m-application__row {
   &:not(:last-child) {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+
+    @include media($dr__large) {
+      margin-bottom: 2em;
+    }
   }
 }
 
@@ -38,7 +49,7 @@
 }
 
 .m-application__cancel {
-  margin-left: 1em;
+  margin-top: 1em;
 }
 
 .m-application__numbering {
