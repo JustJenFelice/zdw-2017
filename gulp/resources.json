@@ -1,6 +1,8 @@
 {
   "toMove": [
-    "app/assets/favicon*",
+    "app/favicon*",
+    "app/apple-touch*",
+    "app/android-chrome*",
     "!app/assets/**/*.html",
     "app/**/*.html",
     "app/assets/fonts/*"
