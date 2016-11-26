@@ -16,8 +16,7 @@
 
   svg {
     display: block;
-    width: em(64);
-    height: em(32);
+    width: 4em;
   }
 
   @include media($dr__large) {

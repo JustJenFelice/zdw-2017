@@ -24,6 +24,8 @@
 
   @include media($bp__desktop) {
     align-items: center;
+
+    @include padding(1.5em null);
   }
 }
 

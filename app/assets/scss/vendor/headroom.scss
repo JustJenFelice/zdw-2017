@@ -1,16 +1,13 @@
 .headroom {
   transition: transform $duration--b, background-color $duration--b, padding $duration--b;
 
-  @include media($bp__desktop) {
-    @include padding(1.5em null);
+  &.headroom--not-top {
+    @include padding(0 null);
+
+    background-color: black;
   }
 }
 
-.headroom--not-top {
-  @include padding(0 null);
-
-  background-color: black;
-}
 
 body:not(.nav--is-open) .headroom--unpinned {
   transform: translateY(-100%);
