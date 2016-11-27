@@ -57,3 +57,16 @@
 
   width: em(40);
 }
+
+.m-application__disclaimer {
+  max-width: 40em;
+}
+
+.m-application__afterword {
+  font-weight: $font__sans--regular;
+
+  a {
+    border-bottom: 1px solid;
+  }
+}
+
