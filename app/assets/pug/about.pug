@@ -16,7 +16,7 @@ block template-content
     .m-carousel__list(data-carousel)
       each item in winners
         .m-carousel__item
-          a.m-carousel__link(href=item.link, data-external)
+          a.m-carousel__link(href=item.link, data-featherlight="iframe")
             .m-carousel__thumbnail--video
               img.m-carousel__image(src="assets/images/" + item.thumbnail, alt=item.title)
             .m-carousel__content
