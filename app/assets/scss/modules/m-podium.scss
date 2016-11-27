@@ -49,10 +49,9 @@
 .m-podium__thumbnail {
   position: relative;
 
-  max-width: 10em;
   @include margin(null auto);
 
-  @include media($bp__desktop) {
+  @include media($dr__small) {
     max-width: 15em;
   }
 
