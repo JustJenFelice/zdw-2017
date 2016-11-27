@@ -1,23 +1,35 @@
 .featherlight {
   z-index: 6000;
 
-    -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 
   &:last-of-type {
     background: rgba(black, .85);
   }
 
   .featherlight-content {
-    @include margin(null 2em);
+    @include margin(null .625em);
     border: 0;
     padding: 0;
+
+    max-height: calc(100% - 7em);
     
-    background-color: transparent;
+    background: transparent;
+
+    @include media($dr__large) {
+      @include margin(null 3.5em);
+
+      max-height: calc(100% - 2em);
+    }
   }
 
   .featherlight-close-icon {
-    width: auto;
+    position: fixed;
+    width: 1em;
     height: auto;
+
+    box-sizing: content-box;
 
     top: 0;
     right: 0;
@@ -27,13 +39,30 @@
     font-size: 1.5em;
     line-height: 1;
 
-    padding: 1em;
+    padding: .75em;
 
     color: white;
     background-color: transparent;
 
     &:hover {
       color: rgba(white, .75);
+    }
+  }
+}
+
+.featherlight-iframe {
+  .featherlight-content {
+    max-height: none;
+  }
+
+  iframe {
+    height: em(168);
+  }
+
+  @include media($dr__large) {
+    iframe {
+      width: em(600);
+      height: em(336);
     }
   }
 }
