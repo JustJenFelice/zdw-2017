@@ -1,0 +1,12 @@
+@keyframes animGlow {
+  from {
+    background-color: gold;
+  }
+  to {
+    background-color: lemonchiffon;
+  }
+}
+
+.animate--glow {
+  animation: animGlow 5s forwards;
+}

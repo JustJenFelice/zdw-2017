@@ -64,14 +64,12 @@ block template-content
           strong.t-bold
             span.m-application__numbering 3 
             | Reprezentativní fotografie
-          ul
+          ul(data-upload-info)
             li Formát: JPG
             li Rozměr: 1600 &times; 1200 px (na šířku)
             li Kvalita: 300 dpi
-            li Počet: max. 3 ks
-          input.o-upload(type="file")
-          input.o-upload(type="file")
-          input.o-upload(type="file")
+            li Počet: max. 20 ks
+          input.o-upload(data-upload, type="file", name="project-photos[]", multiple)
 
         .m-application__row
           label.o-checkbox
