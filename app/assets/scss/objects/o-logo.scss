@@ -17,9 +17,15 @@
   svg {
     display: block;
     width: 4em;
+
+    transition: width $duration--s;
   }
 
   @include media($dr__large) {
     padding: 1em $wrap-padding-horz--2;
+
+    svg {
+      width: 6em;
+    }
   }
 }

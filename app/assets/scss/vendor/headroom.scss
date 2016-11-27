@@ -5,6 +5,10 @@
     @include padding(0 null);
 
     background-color: black;
+
+    svg {
+      width: 4em;
+    }
   }
 }
 
