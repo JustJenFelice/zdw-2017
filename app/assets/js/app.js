@@ -1,11 +1,15 @@
 var
   $body = $("body");
 
-var
-  endDate = moment("2017-01-31"),
-  deadDate = endDate.fromNow();
+$("[data-countdown]").each(function() {
+  var
+    momentLang = $(this).data("countdown") || "cs",
+    endDate = moment("2017-01-31").lang(momentLang),
+    deadDate = endDate.fromNow(),
+    countdownText = momentLang == "en" ? "Deadline " : "Uzávěrka ";
 
-$("[data-countdown]").text("Uzávěrka " + deadDate);
+  $(this).text(countdownText + deadDate);
+});
 
 $("[data-nav-toggle]").on("click", function() {
   $body.toggleClass("nav--is-open");
