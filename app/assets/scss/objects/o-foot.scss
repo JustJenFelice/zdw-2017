@@ -6,7 +6,10 @@
 .o-foot__logo {
   text-align: center;
 
-  fill: white;
+  svg {
+    width: em(108);
+    fill: white;
+  }
 
   @include media($dr__portable) {
     position: relative;
