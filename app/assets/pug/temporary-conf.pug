@@ -1,0 +1,80 @@
+extends templates/_site
+
+block template-content
+  header.o-hud#js-headroom
+    .o-hud__head
+      .o-hud__cell
+        a.o-logo--zdw(href="temporary-conf.html"): include ../svg/logo_zdw.svg
+
+    .o-switcher
+      button.o-switcher__toggle(data-switcher)
+        | Všechny projekty
+        svg.o-switcher__icon(viewBox="0 0 16 10", xmlns="http://www.w3.org/2000/svg")
+          path(d="M2,2 L8,8 L14,2")
+      strong.o-switcher__title Další projekty
+      .o-switcher__content
+        a.o-switcher__link(href="temporary-zdw.html") Zlin Design Week
+        a.o-switcher__link(href="index.html") Best in Design
+        mark.o-switcher__link--active Konference Design &amp; Marketing
+
+  span.o-switcher-close(data-switcher)
+
+  section.m-hero--full(style="background-image: url(assets/images/bg_1.jpg)")
+    .m-hero__content
+      h1.t-head--a Konference Design &amp; Marketing
+      p.m-hero__details
+        strong.m-hero__date 26. dubna 2017 
+        span.m-hero__location Zlín, CZE
+
+  section.m-intro-sticker
+    a.o-sticker--round(href="javascript:")
+      h1.o-sticker__title Student Design Wanted!
+      span.o-sticker__caps Pro výstavy hledáme designéry
+
+      mark.o-sticker__foot (.pdf)
+
+  main.m-article.o-section--white
+    .l-wrap
+      .l-table
+        .l-table__cell
+            h2.t-head--b Připravujeme pro Vás další ročník!
+            a.m-article__link.o-anchor(href="about.html")
+              span.o-anchor__text Náš blog
+              svg.o-anchor__icon(width="12px", viewBox="0 0 12 12", xmlns="http://www.w3.org/2000/svg")
+                path(d="M0.5,0.5 L11.5,0.5 L11.5,11.5")
+                path(d="M0.5,11.5 L11.5,0.5")
+
+        .l-table__cell
+          p Propojení těchto dvou světů, spousta inspirace, řečníci ze světa designu i&nbsp;marketingu z&nbsp;Česka i&nbsp;zahraničí, kteří mají opravdu co říct a&nbsp;skvělá příležitost rozšířit si obzory, navázat kontakty nebo poznat nové lidi&hellip; To všechno ve středu 26.&nbsp;dubna 2017 na Konferenci Design &amp; Marketing ve Zlíně!
+
+  section.o-brick--black
+    .m-history__image.o-brick__image
+
+    .o-brick__content
+      .o-brick__top
+        h2.t-head--c Jaký byl minulý ročník?
+        .o-brick__text
+          p.t-text--big Pokud se chcete naladit už teď, pusťte si sestřih z minulého ročníku.
+      .o-brick__bottom
+        a.o-button--outline(href="history.html") Přehrát video
+
+  section.m-xroad(style="background-image: url(assets/images/bg_3.jpg)")
+    a.m-xroad__link(href="temporary-zdw.html")
+      span.m-xroad__arrow--left &larr; 
+      | Zlin Design Week
+    a.m-xroad__link(href="index.html")
+      | Best in Design
+      span.m-xroad__arrow--right  &rarr;
+
+  section.m-mail
+    .m-mail__wrap.l-wrap
+      h1.m-mail__title.t-head--c Chceš zůstat v obraze?
+      form.m-mail__form
+        input.m-mail__input.o-input--white(type="email", placeholder="Tvůj email")
+        input.m-mail__submit.o-submit--white(type="submit", value="Přihlásit se k odběru")
+
+  +supporters
+
+  +foot
+
+  +peek

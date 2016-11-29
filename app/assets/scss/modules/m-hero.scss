@@ -64,3 +64,13 @@
     bottom: 0;
   }
 }
+
+.m-hero__details {
+  @include head--e;
+}
+
+.m-hero__date {
+  display: block;
+
+  font-weight: $font__mono--regular;
+}
