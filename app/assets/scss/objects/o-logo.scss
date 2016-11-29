@@ -1,4 +1,5 @@
-.o-logo {
+[class^="o-logo--"],
+[class*=" o-logo--"] {
   display: inline-block;
 
   box-sizing: content-box;
@@ -16,15 +17,30 @@
 
   svg {
     display: block;
-    width: 4em;
 
     transition: width $duration--s;
   }
 
   @include media($dr__large) {
     padding: 1em $wrap-padding-horz--2;
+  }
+}
 
-    svg {
+.o-logo--zdw {
+  svg {
+    width: 3em;
+
+    @include media($dr__large) {
+      width: 5em;
+    }
+  }
+}
+
+.o-logo--bid {
+  svg {
+    width: 4em;
+
+    @include media($dr__large) {
       width: 6em;
     }
   }
