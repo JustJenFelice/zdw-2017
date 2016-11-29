@@ -27,6 +27,21 @@
 
     @include padding(1.5em null);
   }
+
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+    background-color: black;
+  }
+
+  .switcher--is-open &:after {
+    content: "";
+  }
 }
 
 .o-hud__head {

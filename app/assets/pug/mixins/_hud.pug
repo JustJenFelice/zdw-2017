@@ -17,3 +17,16 @@ mixin hud
       ul.o-nav__list
         each page in pages
           li.o-nav__item: a.o-nav__link(href=page.link)= page.title
+
+    .o-switcher
+      button.o-switcher__toggle(data-switcher)
+        | Všechny projekty
+        svg.o-switcher__icon(viewBox="0 0 16 10", xmlns="http://www.w3.org/2000/svg")
+          path(d="M2,2 L8,8 L14,2")
+      strong.o-switcher__title Další projekty
+      .o-switcher__content
+        mark.o-switcher__link--active Best in Design
+        a.o-switcher__link(href="javascript:") Zlin Design Week
+        a.o-switcher__link(href="javascript:") Konference Design &amp; Marketing
+
+  span.o-switcher-close(data-switcher)

@@ -10,9 +10,13 @@
       width: 4em;
     }
   }
+
+  .nav--is-open &,
+  .switcher--is-open & {
+    transform: translateY(0);
+  }
 }
 
-
-body:not(.nav--is-open) .headroom--unpinned {
+.headroom--unpinned {
   transform: translateY(-100%);
 }
