@@ -1,9 +1,21 @@
-.o-brick {
+[class^="o-brick--"],
+[class*=" o-brick--"] {
   position: relative;
 
-  background-color: white;
-
   @include clearfix;
+}
+
+.o-brick--white {
+  background-color: white;
+}
+
+.o-brick--black {
+  color: white;
+  background-color: black;
+
+  a {
+    @include link--white;
+  }
 }
 
 .o-brick__image {
@@ -46,7 +58,7 @@
 }
 
 .o-brick__text {
-  color: $grey--400;
+  opacity: .5;
 }
 
 .o-brick__top {
