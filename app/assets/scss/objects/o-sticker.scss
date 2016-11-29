@@ -1,0 +1,55 @@
+[class^="o-sticker--"],
+[class*=" o-sticker--"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 14em;
+  height: 14em;
+  padding: 1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+.o-sticker--round {
+  color: black;
+  background-color: white;
+
+  transform: rotate(10deg);
+
+  transition: transform $duration--s;
+
+  border-radius: 50%;
+
+  &:hover, &:active {
+    transform: rotate(0);
+  }
+}
+
+.o-sticker__title {
+  font-size: em(20);
+  font-family: $font__mono;
+  font-weight: $font__mono--regular;
+
+  @include margin(1.25em null .5em);
+}
+
+.o-sticker__caps {
+  display: block;
+
+  font-size: em(12);
+
+  text-transform: uppercase;
+  letter-spacing: em(1);
+}
+
+.o-sticker__foot {
+  margin-top: 1em;
+
+  color: currentColor;
+  background-color: transparent;
+
+  font-family: $font__mono;
+}
