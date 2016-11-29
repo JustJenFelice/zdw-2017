@@ -67,6 +67,12 @@
   }
 }
 
+@mixin head--e {
+  font-size: em(20);
+  font-family: $font__mono;
+  font-weight: $font__mono--regular;
+}
+
 .t-head--a {
   @include head--a;
 
@@ -99,9 +105,7 @@
 }
 
 .t-head--e {
-  font-size: em(20);
-  font-family: $font__mono;
-  font-weight: $font__mono--regular;
+  @include head--e;
 
   @include margin(.5em null);
 }
