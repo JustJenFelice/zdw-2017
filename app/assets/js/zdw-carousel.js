@@ -7,4 +7,10 @@ if (matchMedia("screen and (min-width: 740px)").matches) {
   carouselOptions.contain = true;
 }
 
-$("[data-carousel]").flickity(carouselOptions);
+$("[data-carousel]").each(function() {
+  $(this).flickity(carouselOptions);
+
+  this.focus();
+});
+
+
