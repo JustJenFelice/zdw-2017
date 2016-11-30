@@ -46,6 +46,16 @@
 .m-intro-sticker {
   position: absolute;
 
-  top: 40%;
-  right: 15%;
+  right: 10%;
+
+  @include media($dr__mobile) {
+    transform: scale(.5);
+    transform-origin: right top;
+
+    top: 10%;
+  }
+
+  @include media($bp__desktop) {
+    top: 30%;
+  }
 }
