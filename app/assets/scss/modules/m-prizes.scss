@@ -58,6 +58,7 @@
 }
 
 .m-prizes__item {
+  max-width: 6em;
   line-height: $leading--s;
 
   &:before {
