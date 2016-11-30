@@ -3,10 +3,10 @@ var
 
 $("[data-countdown]").each(function() {
   var
-    momentLang = $(this).data("countdown") || "cs",
-    endDate = moment("2017-01-31").lang(momentLang),
+    momentLocale = $(this).data("countdown") || "cs",
+    endDate = moment("2017-01-31").locale(momentLocale),
     deadDate = endDate.fromNow(),
-    countdownText = momentLang == "en" ? "Deadline " : "Uzávěrka ";
+    countdownText = momentLocale == "en" ? "Deadline " : "Uzávěrka ";
 
   $(this).text(countdownText + deadDate);
 });
