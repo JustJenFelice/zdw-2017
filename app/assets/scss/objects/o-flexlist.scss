@@ -19,8 +19,11 @@
 }
 
 .o-flexlist__item--tri {
-  width: 33.333%;
   min-width: 16em;
+
+  @include media($dr__large) {
+    width: 33.333%;
+  }
 }
 
 .o-flexlist__item--quad {
