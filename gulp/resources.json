@@ -27,6 +27,7 @@
       "app/assets/js/app.js",
       "app/assets/js/zdw-headroom.js",
       "app/assets/js/zdw-carousel.js",
+      "app/assets/js/zdw-featherlight.js",
       "app/assets/js/zdw-external.js",
 
       "bower_components/chj-framework/app/assets/js/chj-detect.js",
