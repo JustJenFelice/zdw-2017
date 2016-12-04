@@ -1,6 +1,6 @@
 [class^="o-nav__toggle"],
 [class*=" o-nav__toggle"] {
-  @include ui-toggle;
+  @include ui-toggle("padded");
 }
 
 .o-nav__toggle--open {

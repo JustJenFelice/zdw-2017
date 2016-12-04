@@ -8,11 +8,10 @@
   }
 }
 
-@mixin ui-toggle {
+@mixin ui-toggle($type: "without") {
   color: currentColor;
   background-color: transparent;
 
-  padding: 1em $wrap-padding-horz--1;
   border: none;
 
   box-sizing: content-box;
@@ -29,7 +28,13 @@
     outline: 0;
   }
 
-  @include media($dr__large) {
-    padding: 1em $wrap-padding-horz--2;
+  @if ($type == "padded") {
+    padding: 1em $wrap-padding-horz--1;
+
+    @include media($dr__large) {
+      padding: 1em $wrap-padding-horz--2;
+    }
+  } @else {
+    padding: 0;
   }
 }
