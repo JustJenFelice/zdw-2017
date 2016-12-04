@@ -61,10 +61,10 @@ block template-content
   section.m-carousel.o-section--black
     .m-carousel__header.l-wrap
       h1.t-head--c Fotogalerie
-    .m-carousel__list(data-carousel)
-      each item in [212, 112, 335, 59, 366, 106]
+    .m-carousel__list(data-carousel, data-featherlight-gallery, data-featherlight-filter="[data-gallery]")
+      each item in [106, 112, 212, 335, 366]
         .m-carousel__item
-          a.m-carousel__link(href="http://unsplash.it/1920/1080/?image=" + item, data-featherlight="image")
+          a.m-carousel__link(href="assets/images/gallery/img_gallery_" + item + ".jpeg", data-gallery)
             .m-carousel__thumbnail--photo
               img.m-carousel__image(src="http://unsplash.it/800/500/?image=" + item, alt="Gallery image")
 

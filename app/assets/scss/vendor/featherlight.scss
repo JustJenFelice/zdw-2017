@@ -5,7 +5,7 @@
   -webkit-overflow-scrolling: touch;
 
   &:last-of-type {
-    background: rgba(black, .85);
+    background: black;
   }
 
   .featherlight-content {
@@ -65,4 +65,55 @@
       height: em(336);
     }
   }
+}
+
+// Featherlight Gallery
+.featherlight-previous,
+.featherlight-next {
+  top: 0;
+  bottom: 0;
+
+  min-width: 15vw;
+
+  padding: 2.5em;
+
+  span {
+    display: block;
+
+    top: 50%;
+    left: 50%;
+    right: auto;
+
+    transform: translate(-50%, -50%);
+
+    width: 3em;
+    height: 3em;
+    margin-top: 0;
+
+    font-size: 1em;
+    line-height: 3.125em;
+    text-shadow: none;
+
+    border-radius: 50%;
+
+    transition: background-color $duration--s;
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  .device--is-desktop &:hover span {
+    background-color: black;
+  }
+}
+
+.featherlight-previous {
+  left: 0;
+  right: auto;
+}
+
+.featherlight-next {
+  right: 0;
+  left: auto;
 }

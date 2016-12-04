@@ -22,6 +22,7 @@
     "moment": "^2.15.2",
     "flickity": "^2.0.5",
     "featherlight": "^1.5.1",
-    "headroom.js": "https://unpkg.com/headroom.js/bower.zip"
+    "headroom.js": "https://unpkg.com/headroom.js/bower.zip",
+    "jquery-detect-swipe": "^2.1.3"
   }
 }

@@ -12,14 +12,17 @@
       "bower_components/normalize-css/normalize.css",
       "bower_components/flickity/dist/flickity.css",
       "bower_components/featherlight/src/featherlight.css",
+      "bower_components/featherlight/src/featherlight.gallery.css",
       "app/assets/css/style.css",
 
+      "bower_components/jquery-detect-swipe/jquery.detect_swipe.js",
       "bower_components/jquery.easing/js/jquery.easing.js",
       "bower_components/moment/moment.js",
       "bower_components/moment/locale/cs.js",
       "bower_components/headroom.js/dist/headroom.js",
       "bower_components/flickity/dist/flickity.pkgd.js",
       "bower_components/featherlight/src/featherlight.js",
+      "bower_components/featherlight/src/featherlight.gallery.js",
 
       "app/assets/js/app.js",
       "app/assets/js/zdw-headroom.js",
