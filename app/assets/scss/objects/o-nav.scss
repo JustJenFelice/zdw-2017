@@ -16,8 +16,10 @@
 .o-nav__toggle--close {
   display: none;
 
-  .nav--is-open & {
-    display: inline-block;
+  @include media($dr__mobile) {
+    .nav--is-open & {
+      display: inline-block;
+    }
   }
 }
 
