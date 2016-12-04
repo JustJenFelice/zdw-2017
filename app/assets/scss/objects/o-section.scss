@@ -1,3 +1,8 @@
+[class^="o-section--"],
+[class*=" o-section--"] {
+  @include fixed-background;
+}
+
 .o-section--white {
   background-color: white;
 }
@@ -6,11 +11,14 @@
   background-color: $grey--900;
 }
 
+.o-section--dark {
+  color: white;
+  background-color: $grey--100;
+}
+
 .o-section--black {
   color: white;
   background-color: black;
-
-  @include fixed-background;
 }
 
 .o-section__bar {
