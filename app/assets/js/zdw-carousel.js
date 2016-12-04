@@ -9,8 +9,6 @@ if (matchMedia("screen and (min-width: 740px)").matches) {
 
 $("[data-carousel]").each(function() {
   $(this).flickity(carouselOptions);
-
-  this.focus();
 });
 
 
