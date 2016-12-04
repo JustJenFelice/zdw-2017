@@ -6,11 +6,11 @@
 
     background-color: black;
 
-    .o-logo--bid svg {
-      width: 4em;
-    }
     .o-logo--zdw svg {
-      width: 3em;
+      width: $logo-default--zdw;
+    }
+    .o-logo--bid svg {
+      width: $logo-default--bid;
     }
   }
 

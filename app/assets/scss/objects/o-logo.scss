@@ -28,9 +28,9 @@
 
 .o-logo--zdw {
   svg {
-    width: 3em;
+    width: $logo-default--zdw;
 
-    @include media($dr__large) {
+    @include media($bp__desktop) {
       width: 5em;
     }
   }
@@ -38,9 +38,9 @@
 
 .o-logo--bid {
   svg {
-    width: 4em;
+    width: $logo-default--bid;
 
-    @include media($dr__large) {
+    @include media($bp__desktop) {
       width: 8em;
     }
   }
