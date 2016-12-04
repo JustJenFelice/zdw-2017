@@ -1,5 +1,6 @@
 .m-xroad {
   @include fixed-background;
+  background-color: black;
 
   @include media($dr__large) {
     display: table;
