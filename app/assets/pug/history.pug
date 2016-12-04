@@ -32,14 +32,14 @@ block template-content
 
   section.o-section--white
     .l-wrap
-      each instance in ["Průmyslový design", "Fashion design", "Grafický design", "Design interiéru a veřejného prostoru", "Produktový design"]
+      each category, catIndex in ["Průmyslový design", "Fashion design", "Grafický design", "Design interiéru a veřejného prostoru", "Produktový design"]
         article.m-podium
-          h1.m-podium__title.t-head--c= instance
+          h1.m-podium__title.t-head--c= category
           ol.m-podium__list
-            each item in ["Lucie Rožanská", "Cornelius Comanns", "Monika Bartošová"]
+            each item, itemIndex in ["Lucie Rožanská", "Cornelius Comanns", "Monika Bartošová"]
               li.m-podium__item
                 .m-podium__thumbnail
-                  img.m-podium__image(src="http://unsplash.it/640/640/?random", alt="unsplash.it")
+                  img.m-podium__image(src="http://unsplash.it/640/640/?image=" + catIndex + 1 * itemIndex, alt="unsplash.it")
                 h2.m-podium__name.t-head--d= item
                 strong.m-podium__subtitle: +dummy(5)
 
@@ -62,7 +62,7 @@ block template-content
     .m-carousel__header.l-wrap
       h1.t-head--c Fotogalerie
     .m-carousel__list(data-carousel)
-      each item in [211, 111, 332, 59, 366, 106, 99, 123, 234, 345]
+      each item in [212, 112, 335, 59, 366, 106]
         .m-carousel__item
           a.m-carousel__link(href="http://unsplash.it/1920/1080/?image=" + item, data-featherlight="image")
             .m-carousel__thumbnail--photo
