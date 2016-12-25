@@ -2,7 +2,7 @@ mixin hud(type)
   header.o-hud#js-headroom
     .o-hud__head
       .o-hud__cell
-        if type = "zdw"
+        if type == "zdw"
           a.o-logo--zdw(href="index.html"): include ../../svg/logo_zdw.svg
         else
           a.o-logo--bid(href="index.html"): include ../../svg/logo_bid.svg
@@ -16,16 +16,15 @@ mixin hud(type)
           span.o-nav__cross
           | Close
 
-    - var pageObject
-    case type
-      when "zdw"
-        - pageObject = pages[0]
-      when "bid"
-      default
-        - pageObject = pages[1]
-
     nav.o-nav
       ul.o-nav__list
+        - var pageObject
+        case type
+          when "zdw"
+            - pageObject = pages[0]
+          when "bid"
+          default
+            - pageObject = pages[1]
         each page in pageObject
           li.o-nav__item: a.o-nav__link(href=page.link)= page.title
 
@@ -35,9 +34,37 @@ mixin hud(type)
         svg.o-switcher__icon(viewBox="0 0 16 10", xmlns="http://www.w3.org/2000/svg")
           path(d="M2,2 L8,8 L14,2")
       strong.o-switcher__title Další projekty
+
+      -
+        var switcherObject = [
+          {
+            "name": "Zlin Design Week",
+            "href": "/temporary/temp-zdw.html"
+          },
+          {
+            "name": "Konference Design &amp; Marketing",
+            "href": "/temporary/temp-conf.html"
+          },
+          {
+            "name": "Best in Design",
+            "href": "http://www.bestindesign.cz"
+          }
+        ],
+        switcherActive
+
+      case type
+        when "zdw"
+          - switcherActive = 0
+        when "conf"
+          - switcherActive = 1
+        default
+          - switcherActive = 2
+
       .o-switcher__content
-        a.o-switcher__link(href="temporary-zdw.html") Zlin Design Week
-        mark.o-switcher__link--active Best in Design
-        a.o-switcher__link(href="temporary-conf.html") Konference Design &amp; Marketing
+        each item, index in switcherObject
+          if switcherActive == index
+            mark.o-switcher__link--active!= item.name
+          else
+            a.o-switcher__link(href=item.href)!= item.name
 
   span.o-switcher-close(data-switcher)
