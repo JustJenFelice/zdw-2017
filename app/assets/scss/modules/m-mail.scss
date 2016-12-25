@@ -1,6 +1,8 @@
 .m-mail {
   color: white;
   background-color: $grey--100;
+
+  text-align: center;
 }
 
 .m-mail__wrap {
@@ -8,9 +10,7 @@
 }
 
 .m-mail__title {
-  margin-top: 0;
-
-  text-align: center;
+  @include head--e;
 }
 
 .m-mail__form {
@@ -37,4 +37,14 @@
 
     margin-left: -2px;
   }
+}
+
+.m-mail__foot {
+  margin-top: 4em;
+}
+
+.m-mail__link {
+  border-bottom: 1px solid currentColor;
+
+  @include link--white;
 }
