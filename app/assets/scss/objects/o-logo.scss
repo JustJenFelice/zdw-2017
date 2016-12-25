@@ -2,16 +2,7 @@
 [class*=" o-logo--"] {
   display: inline-block;
 
-  box-sizing: content-box;
-
   padding: 1em $wrap-padding-horz--1;
-
-  font-weight: $font__sans--bold;
-
-  text-transform: uppercase;
-  letter-spacing: em(2);
-
-  @include link--white;
 
   fill: white;
 
