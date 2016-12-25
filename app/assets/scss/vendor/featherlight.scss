@@ -1,7 +1,7 @@
 .featherlight {
   z-index: 6000;
 
-  overflow-y: scroll;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 
   &:last-of-type {
