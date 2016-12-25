@@ -11,7 +11,7 @@
   font-weight: $font__sans--semibold;
 
   text-transform: uppercase;
-  letter-spacing: em(2);
+  letter-spacing: em(1);
 }
 
 [class^="t-caps--"],
@@ -21,7 +21,7 @@
 
   line-height: 1;
   text-transform: uppercase;
-  letter-spacing: em(2);
+  letter-spacing: em(1);
 }
 
 .t-caps--large {
@@ -71,6 +71,15 @@
   font-size: em(20);
   font-family: $font__mono;
   font-weight: $font__mono--regular;
+}
+
+@mixin head--f {
+  font-size: em(20);
+  font-family: $font__mono;
+  font-weight: $font__mono--regular;
+
+  text-transform: uppercase;
+  letter-spacing: em(1);
 }
 
 .t-head--a {
