@@ -1,0 +1,40 @@
+extends ../_templates/_site
+
+block template-content
+  +hud("zdw")
+
+  section.m-hero--full(style="background-image: url(/assets/images/bg_bid_1.jpg)")
+    .m-hero__content
+      h1.m-hero__title.t-head--a Zlin Design Week 2017
+      p.m-hero__details
+        strong.m-hero__date 24.&ndash;30. dubna 2017 
+        span.m-hero__location Zlín, CZE
+      a.m-hero__button.o-button--outline(href="program.html") Přejít na program
+
+  main.o-section--white
+    .l-wrap
+      .m-article.l-table
+        .l-table__cell
+            h2.t-head--b Ročník 2017 a jeho téma
+            a.m-article__link.o-anchor(href="javascript:", data-external)
+              span.o-anchor__text Více o ZDW
+              svg.o-anchor__icon(width="12px", viewBox="0 0 12 12", xmlns="http://www.w3.org/2000/svg")
+                path(d="M0.5,0.5 L11.5,0.5 L11.5,11.5")
+                path(d="M0.5,11.5 L11.5,0.5")
+        .l-table__cell
+          p Napříč městem bude možné obdivovat nápaditý design. Městské divadlo Zlín se stane domovem odborníků, kteří budou v rámci Konference design &amp; marketing sdílet své zkušenosti a poznatky. V Kongresovém centru se zase dozvíme nositele titulu Talent designu pro rok 2016.
+
+      ul.m-cards
+        each card in ["Výstavy", "Party", "Vepřo Knedlo Design"]
+          li.m-cards__item
+            a.m-cards__link(href="javascript:")= card
+
+  +crossroad("zdw")
+
+  +mail("full")
+
+  +supporters
+
+  +foot
+
+  +peek("bg_bid_3.jpg", "talentdesignu")

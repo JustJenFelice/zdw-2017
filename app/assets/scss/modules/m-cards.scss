@@ -1,0 +1,33 @@
+.m-cards {
+  @include clearfix;
+
+  list-style-type: none;
+  padding-left: 0;
+
+  margin-top: 3em;
+  margin-left: -.5em;
+  margin-right: -.5em;
+}
+
+.m-cards__item {
+  float: left;
+  width: 33.333%;
+
+  padding: .5em;
+}
+
+.m-cards__link {
+  display: block;
+
+  @include head--f;
+
+  border: 2px solid currentColor;
+
+  padding: 1em;
+  padding-bottom: 60%;
+
+  &:hover,
+  &:active {
+    color: $grey--400;
+  }
+}
