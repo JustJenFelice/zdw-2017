@@ -1,9 +1,9 @@
-extends templates/_site
+extends ../templates/_site
 
 block template-content
   header.o-hud#js-headroom
     .o-hud__head
-      a.o-logo--zdw(href="index.html"): include ../svg/logo_zdw.svg
+      a.o-logo--zdw(href="index.html"): include ../../svg/logo_zdw.svg
 
     .o-switcher
       button.o-switcher__toggle(data-switcher)
@@ -12,17 +12,17 @@ block template-content
           path(d="M2,2 L8,8 L14,2")
       strong.o-switcher__title Další projekty
       .o-switcher__content
-        mark.o-switcher__link--active Zlin Design Week
+        a.o-switcher__link(href="http://www.zlindesignweek.com") Zlin Design Week
         a.o-switcher__link(href="http://www.bestindesign.cz") Best in Design
-        a.o-switcher__link(href="http://www.zlindesignweek.com/konference/") Konference Design &amp; Marketing
+        mark.o-switcher__link--active Konference Design &amp; Marketing
 
   span.o-switcher-close(data-switcher)
 
-  section.m-hero--full(style="background-image: url(assets/images/bg_zdw_1.jpg)")
+  section.m-hero--full(style="background-image: url(/assets/images/bg_conf_1.jpg)")
     .m-hero__content
-      h1.m-hero__title.t-head--a Zlin Design Week 2017
+      h1.m-hero__title.t-head--a Konference Design &amp; Marketing
       p.m-hero__details
-        strong.m-hero__date 24.&ndash;30. dubna 2017 
+        strong.m-hero__date 26. dubna 2017 
         span.m-hero__location Zlín, CZE
 
   section.m-intro-sticker
@@ -44,25 +44,25 @@ block template-content
                 path(d="M0.5,11.5 L11.5,0.5")
 
         .l-table__cell
-          p Intenzivně pracujeme na třetím ročníku Zlin Design Weeku. Do kalendářů si zaznačte poslední dubnový týden, tedy 24.&ndash;30.&nbsp;4. 2017. To se totiž ulice Zlína opět zaplní designem, přinese několiv výstav, další ročník Konference Design &amp; Marketing, desítky přednášek a&nbsp;workshopů, ale i&nbsp;designérskou soutěž Best in Design.
+          p Propojení těchto dvou světů, spousta inspirace, řečníci ze světa designu i&nbsp;marketingu z&nbsp;Česka i&nbsp;zahraničí, kteří mají opravdu co říct a&nbsp;skvělá přiležitost rozšířit si obzory, navázat kontakty nebo poznat nové lidi&hellip; To všechno ve středu 26.&nbsp;dubna 2017 na Konferenci Design &amp; Marketing ve Zlíně!
 
   section.o-brick--black
-    .o-brick__image(style="background-image: url(assets/images/history_zdw.jpg)")
+    .o-brick__image(style="background-image: url(/assets/images/history_conf.jpg)")
 
     .o-brick__content
       .o-brick__top
         h2.t-head--c Jaký byl minulý ročník?
         .o-brick__text
-          p.t-text--big Pokud se chcete naladit už teď, pusťte si sestřih z&nbsp;minulého ročníku.
+          p.t-text--big Pokud se chcete naladit už teď, pusťte si sestřih z minulého ročníku.
       .o-brick__bottom
         a.o-button--outline(href="https://www.youtube.com/embed/xlQKuP_RgI4", data-featherlight="iframe") Přehrát video
 
-  section.m-xroad(style="background-image: url(assets/images/bg_zdw_2.jpg)")
-    a.m-xroad__link(href="http://www.bestindesign.cz")
+  section.m-xroad(style="background-image: url(/assets/images/bg_conf_2.jpg)")
+    a.m-xroad__link(href="http://www.zlindesignweek.com")
       span.m-xroad__arrow--left &larr; 
+      | Zlin Design Week
+    a.m-xroad__link(href="http://www.bestindesign.cz")
       | Best in Design
-    a.m-xroad__link(href="http://www.zlindesignweek.com/konference/")
-      | Konference D&nbsp;&amp;&nbsp;M
       span.m-xroad__arrow--right  &rarr;
 
   +mail
@@ -71,7 +71,7 @@ block template-content
 
   footer.o-foot
     .l-wrap
-      .o-foot__logo: include ../svg/logo_zdw.svg
+      .o-foot__logo: include ../../svg/logo_zdw.svg
       .o-foot__table
         .o-foot__cell
           h4.o-foot__head.t-smallcaps O projektu
@@ -87,12 +87,8 @@ block template-content
         .o-foot__cell
           h4.o-foot__head.t-smallcaps Kontakt
           ul.o-foot__list
-            li.o-foot__li Nikola Timkovičová
-            li.o-foot__li: a(href="mailto:nikola.timkovicova@zlindesignweek.com") nikola.timkovicova@zlindesignweek.com
-            li.o-foot__li +420 776 343 310
-          ul.o-foot__list
-            li.o-foot__li Tereza Konečná
-            li.o-foot__li: a(href="mailto:tereza.konecna@zlindesignweek.com") tereza.konecna@zlindesignweek.com
-            li.o-foot__li +420 728 876 653
+            li.o-foot__li Aneta Oulehlová
+            li.o-foot__li: a(href="mailto:aneta.oulehlova@zlindesignweek.com") aneta.oulehlova@zlindesignweek.com
+            li.o-foot__li +420 736 222 423
 
-  +peek("bg_zdw_3.jpg", "zlindesignweek")
+  +peek("bg_conf_3.jpg", "zlindesignweek")
