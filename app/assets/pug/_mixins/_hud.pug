@@ -1,4 +1,4 @@
-mixin hud
+mixin hud(type)
   header.o-hud#js-headroom
     .o-hud__head
       .o-hud__cell
@@ -13,9 +13,17 @@ mixin hud
           span.o-nav__cross
           | Close
 
+    - var pageObject
+    case type
+      when "zdw"
+        - pageObject = pages[0]
+      when "bid"
+      default
+        - pageObject = pages[1]
+
     nav.o-nav
       ul.o-nav__list
-        each page in pages
+        each page in pageObject
           li.o-nav__item: a.o-nav__link(href=page.link)= page.title
 
     .o-switcher

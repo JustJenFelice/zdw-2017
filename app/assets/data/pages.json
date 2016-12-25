@@ -1,20 +1,48 @@
 {
   "pages": [
-    {
-      "title": "O soutěži",
-      "link": "about.html"
-    },
-    {
-      "title": "Pravidla",
-      "link": "rules.html"
-    },
-    {
-      "title": "Historie",
-      "link": "history.html"
-    },
-    {
-      "title": "Kontakt",
-      "link": "contact.html"
-    }
+    [
+      {
+        "title": "O ZDW",
+        "link": "javascript:"
+      },
+      {
+        "title": "Program",
+        "link": "javascript:"
+      },
+      {
+        "title": "Blog",
+        "link": "javascript:"
+      },
+      {
+        "title": "Kontakt",
+        "link": "javascript:"
+      },
+      {
+        "title": "English",
+        "link": "javascript:"
+      }
+    ],
+    [
+      {
+        "title": "O soutěži",
+        "link": "about.html"
+      },
+      {
+        "title": "Pravidla",
+        "link": "rules.html"
+      },
+      {
+        "title": "Historie",
+        "link": "history.html"
+      },
+      {
+        "title": "Kontakt",
+        "link": "contact.html"
+      },
+      {
+        "title": "English",
+        "link": "javascript:"
+      }
+    ]
   ]
 }
