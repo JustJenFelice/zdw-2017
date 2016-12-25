@@ -1,8 +1,38 @@
-mixin crossroad
+mixin crossroad(type)
+
+  -
+    var tempProject = [
+      {
+        "name": "Zlin Design Week",
+        "href": "/temporary/temp-zdw.html"
+      },
+      {
+        "name": "Konference D&nbsp;&amp;&nbsp;M",
+        "href": "/temporary/temp-conf.html"
+      },
+      {
+        "name": "Best in Design",
+        "href": "http://www.bestindesign.cz"
+      }
+    ],
+    tempProjectA, tempProjectB
+
+  case type
+    when "zdw"
+      - tempProjectA = tempProject[1]
+      - tempProjectB = tempProject[2]
+    when "conf"
+      - tempProjectA = tempProject[0]
+      - tempProjectB = tempProject[2]
+    when "bid"
+    default
+      - tempProjectA = tempProject[0]
+      - tempProjectB = tempProject[1]
+
   section.m-xroad(style="background-image: url(/assets/images/bg_bid_1.jpg)")
-    a.m-xroad__link(href="/temporary/temp-zdw.html")
+    a.m-xroad__link(href=tempProjectA.href)
       span.m-xroad__arrow--left &larr; 
-      | Zlin Design Week
-    a.m-xroad__link(href="/temporary/temp-conf.html")
-      | Konference D&nbsp;&amp;&nbsp;M
+      != tempProjectA.name
+    a.m-xroad__link(href=tempProjectB.href)
+      != tempProjectB.name
       span.m-xroad__arrow--right  &rarr;
