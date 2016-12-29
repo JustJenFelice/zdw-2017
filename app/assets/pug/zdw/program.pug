@@ -71,16 +71,16 @@ block template-content
         include ../_partials/_google-maps.html
       button.o-map__button(data-toggle="map") Zobrazit mapu
 
-    .m-events
+    .m-program
       each day in ["Monday", "Tuesday", "Wednesday"]
-        .m-events__section
-          h1.m-events__title= day
-          .m-events__list
+        .m-program__section
+          h1.m-program__title= day
+          .m-program__list
             - var groupCount = Math.ceil(Math.random() * 4) + 1
             - var i = 0
             while groupCount > i
               - var randomIndex = Math.round(Math.random() * 4)
-              +mediaItem("m-events__item", "event-detail.html", eventArray[randomIndex])
+              +mediaItem("m-program__item", "event-detail.html", eventArray[randomIndex])
               - groupCount--
 
   +crossroad("zdw")

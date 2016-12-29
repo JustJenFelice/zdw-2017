@@ -1,18 +1,18 @@
-.m-events {
+.m-program {
   margin-top: 4em;
 }
 
-.m-events__title {
+.m-program__title {
   @include head--b;
 }
 
-.m-events__section {
+.m-program__section {
   &:not(:first-child) {
     margin-top: 3em;
   }
 }
 
-.m-events__list {
+.m-program__list {
   @include clearfix;
 
   margin-top: -2em;
@@ -20,7 +20,7 @@
   margin-right: -1em;
 }
 
-.m-events__item {
+.m-program__item {
   float: left;
 
   width: 33.333%;
