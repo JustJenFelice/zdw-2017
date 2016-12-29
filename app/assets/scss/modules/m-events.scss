@@ -1,0 +1,27 @@
+.m-events {
+  margin-top: 4em;
+}
+
+.m-events__title {
+  @include head--b;
+}
+
+.m-events__section {
+  &:not(:first-child) {
+    margin-top: 3em;
+  }
+}
+
+.m-events__list {
+  @include clearfix;
+
+  margin-top: -2em;
+  margin-left: -1em;
+  margin-right: -1em;
+}
+
+.m-events__item {
+  float: left;
+
+  width: 33.333%;
+}
