@@ -1,5 +1,55 @@
 extends ../_templates/_site
 
+append template-variables
+  -
+    var eventArray = [
+      {
+        "title": "Kreativní dílna s Nenudou",
+        "image": "Oi_Utj7dKZg",
+        "info": {
+          "what": "Workshop",
+          "when": "26. 4. 08:30",
+          "where": "Lighthouse KOMA, parkoviště u 34. budovy Svitu"
+        }
+      },
+      {
+        "title": "Konference Design & marketing",
+        "image": "0WQOCx1g8hw",
+        "info": {
+          "what": "Konference",
+          "when": "26. 4. 09:30",
+          "where": "Městské divadlo Zlín"
+        }
+      },
+      {
+        "title": "Zlin Design Week party",
+        "image": "TBVsc-XxnUw",
+        "info": {
+          "what": "Party",
+          "when": "26. 4. 21:00",
+          "where": "Blok 12"
+        }
+      },
+      {
+        "title": "Jarní kino",
+        "image": "-NNyXVQH9Ho",
+        "info": {
+          "what": "Doprovodný program",
+          "when": "28. 4. 20:30",
+          "where": "Park Komenského"
+        }
+      },
+      {
+        "title": "Kreativní dílna",
+        "image": "F9o7u-CnDJk",
+        "info": {
+          "what": "Workshop",
+          "when": "29. 4. 15:00",
+          "where": "64. budova Svitu"
+        }
+      }
+    ]
+
 block template-content
   +hud("zdw")
 
@@ -26,21 +76,12 @@ block template-content
         .m-events__section
           h1.m-events__title= day
           .m-events__list
-            - var eventCount = Math.ceil(Math.random() * 4) + 1
+            - var groupCount = Math.ceil(Math.random() * 4) + 1
             - var i = 0
-            - var randomImages = ["Oi_Utj7dKZg", "0WQOCx1g8hw", "TBVsc-XxnUw", "-NNyXVQH9Ho", "F9o7u-CnDJk"]
-            while eventCount > i
-              - var randomImageIndex = Math.round(Math.random() * 4)
-              a.o-event(href="javascript:")
-                .o-event__thumbnail
-                  .o-event__overlay
-                    strong.o-event__title: +dummy(3, "words")
-                  img.o-event__image(src="https://source.unsplash.com/" + randomImages[randomImageIndex] + "/640x430", alt="Unsplash")
-                .o-event__content
-                  .o-event__info--what Vepřo knedlo design, Workshop
-                  .o-event__info--when Út 29. 5.
-                  .o-event__info--where Lighthouse KOMA, parkoviště 34. budova Svit
-              - eventCount--
+            while groupCount > i
+              - var randomIndex = Math.round(Math.random() * 4)
+              +mediaItem("event-detail.html", eventArray[randomIndex])
+              - groupCount--
 
   +crossroad("zdw")
 

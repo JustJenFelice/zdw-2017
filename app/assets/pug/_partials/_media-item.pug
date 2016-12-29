@@ -1,0 +1,10 @@
+mixin mediaItem(link, object)
+  a.o-media(href=link)
+    .o-media__thumbnail
+      .o-media__overlay
+        strong.o-media__title= object.title
+      img.o-media__image(src="https://source.unsplash.com/" + object.image + "/800x500", alt="Unsplash")
+    .o-media__content
+      .o-media__info--what= object.info.what
+      .o-media__info--when= object.info.when
+      .o-media__info--where= object.info.where
