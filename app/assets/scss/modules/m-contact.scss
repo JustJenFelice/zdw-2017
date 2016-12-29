@@ -2,6 +2,18 @@
   a {
     border-bottom: 1px solid;
   }
+
+  h1 {
+    @include head--b;
+  }
+
+  ul {
+    @include a-nolist;
+  }
+
+  strong {
+    @include a-bold;
+  }
 }
 
 .m-contact__foot {
