@@ -1,0 +1,56 @@
+.o-facts {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+
+    background-color: black;
+
+    height: 2em;
+  }
+}
+
+.o-facts__wrap {
+  max-width: 70em;
+  
+  @include wrap-padding(horizontal);
+  @include margin(null auto);
+  @include reset-children();
+}
+
+.o-facts__list {
+  display: flex;
+
+  list-style-type: none;
+  padding-left: 0;
+
+  margin-left: -1em;
+  margin-right: -1em;
+}
+
+
+.o-facts__item {
+  width: 25%;
+
+  padding: .5em 1em;
+
+  margin-left: 1em;
+  margin-right: 1em;
+
+  border: 1px solid;
+  background-color: white;
+}
+
+.o-facts__title {
+  display: block;
+
+  font-family: $font__mono;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: em(1);
+}

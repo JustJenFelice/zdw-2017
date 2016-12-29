@@ -1,0 +1,37 @@
+.m-event {
+  display: table;
+  width: 100%;
+
+  ul {
+    @include a-nolist;
+  }
+
+  h2 {
+    @include head--c;
+  }
+  h3 {
+    @include head--e;
+  }
+
+  time {
+    font-family: $font__mono;
+
+    margin-right: .5em;
+  }
+}
+
+.m-event__main {
+  display: table-cell;
+  vertical-align: top;
+
+  padding-right: 2em;
+
+  @include reset-children;
+}
+
+.m-event__aside {
+  display: table-cell;
+  vertical-align: top;
+
+  width: 33.333%;
+}

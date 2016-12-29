@@ -1,0 +1,124 @@
+extends ../_templates/_site
+
+append template-variables
+  -
+    var relatedArray = [
+      {
+        "title": "Kreativní dílna s Nenudou",
+        "image": "Oi_Utj7dKZg",
+        "info": {
+          "what": "Workshop",
+          "when": "26. 4. 08:30",
+          "where": "Lighthouse KOMA, parkoviště u 34. budovy Svitu"
+        }
+      },
+      {
+        "title": "Konference Design & marketing",
+        "image": "0WQOCx1g8hw",
+        "info": {
+          "what": "Konference",
+          "when": "26. 4. 09:30",
+          "where": "Městské divadlo Zlín"
+        }
+      },
+      {
+        "title": "Zlin Design Week party",
+        "image": "TBVsc-XxnUw",
+        "info": {
+          "what": "Party",
+          "when": "26. 4. 21:00",
+          "where": "Blok 12"
+        }
+      },
+      {
+        "title": "Jarní kino",
+        "image": "-NNyXVQH9Ho",
+        "info": {
+          "what": "Doprovodný program",
+          "when": "28. 4. 20:30",
+          "where": "Park Komenského"
+        }
+      }
+    ]
+
+block template-content
+  +hud("zdw")
+
+  section.m-hero--half
+    .m-hero__content
+      h1.t-head--a Opening Party
+
+  .o-facts
+    .o-facts__wrap
+      ul.o-facts__list
+        -
+          var eventInfo = [
+            {
+              "title": "Datum konání",
+              "content": "26. 5. 2016"
+            },
+            {
+              "title": "Čas",
+              "content": "19:00 – 02:00"
+            },
+            {
+              "title": "Místo",
+              "content": "Platforma 14|15"
+            },
+            {
+              "title": "Kategorie",
+              "content": "Party"
+            }
+          ]
+        each item in eventInfo
+          li.o-facts__item
+            strong.o-facts__title= item.title
+            | 
+            span.o-facts__content= item.content
+
+  main
+    .l-wrap
+      .m-event
+        .m-event__main
+          p Výkop Zlin Design Weeku obstará opening konaný na platformě mezi 14. a 15. budovou. Kromě slavnostního zahájení, proslovů a dalších oficialit dojde na bohatý doprovodný program. Hlavními taháky jsou Fashion Show ateliéru Design oděvu, během které bude představena nová kolekce UTB, či videomapping. Večer zpříjemní také DJ, stánky s občerstvením a nápoji včetně Jägermeisteru.
+          h2 Harmonogram openingu
+          ul
+            li
+              time 19:00
+              |  začátek
+            li
+              time 20:00
+              |  Fashion Show - ateliér Designu oděvu
+            li
+              time 21:00
+              |  první videomapping - 3 Apes
+            li
+              time 23:00
+              |  druhý videomapping - 3 Apes
+
+        .m-event__aside
+          .o-map--small
+            .o-map__viewport
+              include ../_partials/_google-maps.html
+          h3 Lokalita
+          ul
+            li Platforma 14|15
+            li Vavrečkova 7040
+            li 760 01 Zlín
+
+      .m-related
+        h4.m-related__title Další výstavy
+        .m-related__list
+          each item in relatedArray
+            +mediaItem("m-related__item", "event-detail.html", item)
+
+
+  +crossroad("zdw")
+
+  +mail("full")
+
+  +supporters
+
+  +foot
+
+  +peek("bg_bid_3.jpg", "zlindesignweek")
