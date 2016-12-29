@@ -1,5 +1,5 @@
-[class^="o-button--"],
-[class*=" o-button--"] {
+// Abstractions
+@mixin a-button() {
   display: inline-block;
 
   text-transform: uppercase;
@@ -14,10 +14,20 @@
   }
 }
 
-.o-button--outline {
+@mixin a-button--outline() {
   border: 2px solid;
 
   @include padding(.75em 1.75em);
+}
+
+// Classes
+[class^="o-button--"],
+[class*=" o-button--"] {
+  @include a-button();
+}
+
+.o-button--outline {
+  @include a-button--outline();
 
   .o-section--black & {
     @include link--white;

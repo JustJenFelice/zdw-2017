@@ -1,0 +1,36 @@
+.o-event {
+  float: left;
+
+  width: 33.333%;
+
+  padding-left: 1em;
+  padding-right: 1em;
+
+  margin-top: 2em;
+}
+
+.o-event__thumbnail {
+  position: relative;
+
+  color: white;
+}
+
+.o-event__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 1em;
+
+  background-color: rgba(black, .5);
+}
+
+.o-event__title {
+  @include head--e;
+}
+
+.o-event__content {
+  margin-top: 1em;
+}

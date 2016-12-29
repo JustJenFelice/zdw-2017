@@ -1,0 +1,53 @@
+extends ../_templates/_site
+
+block template-content
+  +hud("zdw")
+
+  section.m-hero--half
+    .m-hero__content
+      h1.t-head--a Program
+
+  section.l-wrap
+    ul.o-filter
+      each instance, index in ["Vše", "Výstavy", "Vepřo Knedlo Design", "Party", "Konference", "Best in Design"]
+        li.o-filter__item
+          if index == 0
+            mark.o-filter__active= instance
+          else
+            a.o-filter__link(href="javascript:")= instance
+
+    .o-map
+      .o-map__viewport
+        include ../_partials/_google-maps.html
+      button.o-map__button(data-toggle="map") Zobrazit mapu
+
+    .m-events
+      each day in ["Monday", "Tuesday", "Wednesday"]
+        .m-events__section
+          h1.m-events__title= day
+          .m-events__list
+            - var eventCount = Math.ceil(Math.random() * 4) + 1
+            - var i = 0
+            - var randomImages = ["Oi_Utj7dKZg", "0WQOCx1g8hw", "TBVsc-XxnUw", "-NNyXVQH9Ho", "F9o7u-CnDJk"]
+            while eventCount > i
+              - var randomImageIndex = Math.round(Math.random() * 4)
+              a.o-event(href="javascript:")
+                .o-event__thumbnail
+                  .o-event__overlay
+                    strong.o-event__title: +dummy(3, "words")
+                  img.o-event__image(src="https://source.unsplash.com/" + randomImages[randomImageIndex] + "/640x430", alt="Unsplash")
+                .o-event__content
+                  .o-event__info--what Vepřo knedlo design, Workshop
+                  .o-event__info--when Út 29. 5.
+                  .o-event__info--where Lighthouse KOMA, parkoviště 34. budova Svit
+              - eventCount--
+
+  +crossroad("zdw")
+
+  +mail("full")
+
+  +supporters
+
+  +foot
+
+  +peek("bg_bid_3.jpg", "zlindesignweek")

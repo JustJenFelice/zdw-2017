@@ -1,0 +1,32 @@
+.o-filter {
+  display: flex;
+  justify-content: space-between;
+
+  list-style-type: none;
+  padding-left: 0;
+  @include margin(3em null);
+}
+
+.o-filter__item {
+  &:not(:first-child) {
+    margin-left: 1em;
+  }
+}
+
+.o-filter__active {
+  display: block;
+
+  color: white;
+  border: 1px solid black;
+  background-color: black;
+
+  padding: .5em 1em;
+}
+
+.o-filter__link {
+  display: block;
+
+  border: 1px solid;
+
+  padding: .5em 1em;
+}
