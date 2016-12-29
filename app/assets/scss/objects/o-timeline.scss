@@ -2,6 +2,7 @@
   list-style-type: none;
   @include padding(null $wrap-padding-horz--1);
 
+  font-family: $font__mono;
   line-height: 2;
 }
 
@@ -12,7 +13,7 @@
 }
 
 .o-timeline__active {
-  font-weight: $font__sans--bold;
+  font-weight: $font__mono--bold;
 
   color: currentColor;
   background-color: transparent;
