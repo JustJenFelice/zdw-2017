@@ -1,0 +1,32 @@
+.l-table {
+  @include media($dr__large) {
+    display: table;
+    width: 100%;
+  }
+}
+
+.l-table__cell {
+  position: relative;
+
+  @include reset-children;
+
+  @include media($dr__small) {
+    &:not(:first-child) {
+      margin-top: 1.5em;
+    }
+  }
+
+  @include media($dr__large) {
+    display: table-cell;
+    width: 50%;
+
+    vertical-align: top;
+
+    &:first-child {
+      padding-right: 1em;
+    }
+    &:last-child {
+      padding-left: 1em;
+    }
+  }
+}
