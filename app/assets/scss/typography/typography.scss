@@ -7,6 +7,12 @@
   }
 }
 
+// Abstractions
+@mixin a-bold {
+  font-weight: $font__sans--semibold;
+}
+
+// Classes
 .t-smallcaps {
   font-weight: $font__sans--semibold;
 
@@ -126,5 +132,5 @@
 }
 
 .t-bold {
-  font-weight: $font__sans--semibold;
+  @include a-bold;
 }
