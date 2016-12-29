@@ -81,3 +81,27 @@
   margin-left: -1em;
   margin-right: -1em;
 }
+
+.m-events__item {
+  float: left;
+
+  width: 33.333%;
+}
+
+.m-related__title {
+  @include head--e;
+}
+
+.m-related__list {
+  @include clearfix;
+
+  margin-top: -2em;
+  margin-left: -1em;
+  margin-right: -1em
+}
+
+.m-related__item {
+  float: left;
+
+  width: 25%;
+}

@@ -1,5 +1,5 @@
-mixin mediaItem(link, object)
-  a.o-media(href=link)
+mixin mediaItem(modifier, link, object)
+  a.o-media(href=link, class=modifier)
     .o-media__thumbnail
       .o-media__overlay
         strong.o-media__title= object.title

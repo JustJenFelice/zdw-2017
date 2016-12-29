@@ -80,7 +80,7 @@ block template-content
             - var i = 0
             while groupCount > i
               - var randomIndex = Math.round(Math.random() * 4)
-              +mediaItem("event-detail.html", eventArray[randomIndex])
+              +mediaItem("m-events__item", "event-detail.html", eventArray[randomIndex])
               - groupCount--
 
   +crossroad("zdw")
