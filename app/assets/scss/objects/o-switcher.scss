@@ -53,12 +53,12 @@
   }
 
   @include ui-toggle("without");
-  opacity: .25;
+  opacity: .5;
 
   @include padding(1em $wrap-padding-horz--2 1em null);
 
   &:hover {
-    opacity: .5;
+    opacity: .75;
   }
 }
 
