@@ -13,6 +13,13 @@
   @include head--e;
 }
 
+.m-mail__content {
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 35em;
+}
+
 .m-mail__form {
   @include margin(2em auto null);
 
