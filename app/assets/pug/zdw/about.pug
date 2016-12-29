@@ -1,0 +1,47 @@
+extends ../_templates/_site
+
+block template-content
+  +hud("zdw")
+
+  section.m-hero--half
+    .m-hero__content
+      h1.t-head--a O Zlin Design Weeku
+
+    .m-hero__pin
+      ul.o-timeline
+        li.o-timeline__item
+          mark.o-timeline__active 2016
+        each year in ["2015", "2014"]
+          li.o-timeline__item
+            a.o-timeline__link(href="javascript:")= year
+
+  section.m-fullimage(style="background-image: url(/assets/images/history_2014.jpg)")
+    .m-fullimage__content.l-wrap
+      a.m-fullimage__button.o-button--outline(href="https://www.youtube.com/embed/r_654PozdKg", data-featherlight="iframe") Přehrát video
+
+  section
+    .l-wrap
+      p Třetí týden designu ve Zlíně. Opět u nás uvidíte současný design a tvorbu firem či designérů z Česka i ze zahraničí. Aby třetí ročník se návštěvníkům nezdál moc stereotypní, vytváříme nové koncepty výstav a instalací. Zanecháváme výstavní CITY moduly, vracíme se na Zlínský zámek, obnovujeme instalaci ve Zlatém Jablku, ztratit se budete moct v designu i v parcích, ale chceme vás pozvat skoro až k nám domů. A to prostřednictvím tzv. flat galleries. Záležet si dáváme i na jednotlivých instalacích díky promyšleným konceptům podpořené sjednocujícím tématem Zlin Design Weeku 2017 - Omezení.
+      h1.t-head--e Nějaký pěkný nadpis
+      p Omezení je spousta. V normálním životě i v designu. Omezení je všechno a zároveň to nemusí být nic. Záleží na každém, jak s ním nakládá, jak se s ním vypořádá, a co si z něho bere. My vám představíme ta pozitivní omezení, která se v designu vyskytují.
+      p V Aule Univerzity Tomáše Bati ve Zlíně proběhne Konference design &amp; marketing, která se bude zabývat překážkami na poli designu, lidským omezením i omezením díky různým faktorům. Konference slibuje jména jako… nevím co dál tudyduu. V osmém ročníku soutěže je tu i mezinárodní soutěž pro mladé designéry Best in Design, dříve známá jako Talent designu&hellip;
+
+  section.m-carousel.o-section--black
+    .m-carousel__header.l-wrap
+      h1.t-head--c Fotogalerie
+    .m-carousel__list(data-carousel, data-featherlight-gallery, data-featherlight-filter="[data-gallery]")
+      each item in [106, 112, 212, 335, 366]
+        .m-carousel__item
+          a.m-carousel__link(href="assets/images/gallery/img_gallery_" + item + ".jpeg", data-gallery)
+            .m-carousel__thumbnail--photo
+              img.m-carousel__image(src="http://unsplash.it/800/500/?image=" + item, alt="Gallery image")
+
+  +crossroad("zdw")
+
+  +mail("full")
+
+  +supporters
+
+  +foot
+
+  +peek("bg_bid_3.jpg", "zlindesignweek")
