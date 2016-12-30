@@ -1,0 +1,87 @@
+.o-ticket {
+  position: relative;
+
+  color: white;
+  background-color: black;
+}
+
+.o-ticket__aside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 6em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-right: .25em dotted white;
+}
+
+.o-ticket__note {
+  color: currentColor;
+  background-color: transparent;
+
+  text-align: center;
+
+  transform: rotate(-90deg);
+}
+
+.o-ticket__content {
+  margin-left: 6em;
+
+  padding: 1em 1em 1em 1.5em;
+}
+
+.o-ticket__table {
+  display: table;
+  width: 100%;
+}
+
+.o-ticket__cell {
+  display: table-cell;
+  vertical-align: top;
+
+  @include reset-children;
+
+  &:last-child {
+    text-align: right;
+  }
+}
+
+.o-ticket__title {
+  @include head--f;
+  margin-bottom: 0;
+}
+
+.o-ticket__subtitle {
+  font-size: .75em;
+}
+
+.o-ticket__button {
+  @include a-button--small;
+  @include link--white;
+}
+
+.o-ticket__list {
+  margin-top: 1em;
+  margin-bottom: 0;
+
+  list-style-type: none;
+  padding-left: 0;
+
+  @include head--c;
+}
+
+.o-ticket__price {
+  display: inline-block;
+}
+
+.o-ticket__sup {
+  font-size: .5em;
+  vertical-align: super;
+
+  margin-left: .5em;
+}

@@ -1,0 +1,83 @@
+extends ../_templates/_site
+
+block template-content
+  +hud("zdw")
+
+  section.m-hero--full(style="background-image: url(/assets/images/bg_bid_1.jpg)")
+    .m-hero__content
+      h1.m-hero__title.t-head--a Konference Design &amp; marketing 2017
+      p.m-hero__details
+        strong.m-hero__date 26. dubna 2017 
+        span.m-hero__location Zlín, CZE
+      .m-hero__text
+        p Propojení dvou světů, které se navzájem potřebují a doplňují, ne vždy se ale navzájem chápou. Řečníci ze světa i České republiky, kteří mají opravdu co říct, přinesou mnoho podnětů a inspirace. Nenechte si ujít tuto příležitost rozšířit si obzory, navázat nové kontakty a poznat spoustu nových lidí.
+      a.m-hero__button.o-button--outline(href="javascript:") Harmonogram
+
+  main.o-section--white
+    .l-wrap
+      h1.o-section__title.t-head--c Spojení designu a marketingu
+
+      ul.o-flexlist
+        li.o-flexlist__item--tri
+          strong.o-flexlist__emphasis Design
+          p Design jako plán něčeho. Design jako funkce. Design jako estetika. Design jako produkt s funkční hodnotou. Design jako umění. Design. Hodnota. Potřebuje design marketing, aby nebyl pouhopouhým výtvorem na poličce? 
+
+        li.o-flexlist__item--tri
+          strong.o-flexlist__emphasis Marketing
+          p Marketing jako proces. Marketing jako uspokojování potřeb zákazníka. Marketing je být ve správný čas na správném místě. Design a marketing? Díky kreativitě a jejich promyšlené provázanosti vznikají opravdové hodnoty, které pak tvoří základní stavební kámen pro produkt, značku nebo společnost.
+
+        li.o-flexlist__item--tri
+          strong.o-flexlist__emphasis Omezení
+          p Omezení zadáním, časem, materiálem, rozpočtem, prostorem, pravidly. Omezení naším vnímáním a naší myslí samotnou. Design a marketing jsou omezovány různými faktory. Musí být ale vždy omezení negativní? Existují pozitivní omezení?
+
+  section.m-tickets.o-section--light
+    .l-wrap
+      .m-tickets__list
+        each ticket in [1, 2]
+          article.m-tickets__item
+            .o-ticket
+              .o-ticket__aside
+                mark.o-ticket__note Prvních 300&nbsp;vstupenek
+              .o-ticket__content
+                .o-ticket__table
+                  .o-ticket__cell
+                    h1.o-ticket__title
+                      | Vstupenka 
+                      = ticket
+                      | . vlna
+                    small.o-ticket__subtitle Předprodej trvá do 15. března
+                  .o-ticket__cell
+                    a.o-ticket__button.o-button--outline(href="javascript:") Koupit
+
+                ul.o-ticket__list
+                  li.o-ticket__price 1050#[span.o-ticket__sup Kč]
+                  li.o-ticket__price 250#[span.o-ticket__sup Kč student]
+
+  +crossroad("zdw")
+
+  +mail("full")
+
+  section.o-section--light
+    .l-wrap
+      .m-article__head
+        h1.m-article__title Máte dotaz?
+        p Pokud ho nenajdete níže, napište nám na #[a(href="mailto:info@zlindesignweek.com") info@zlindesignweek.com].
+
+      .m-article__columns
+        h2.m-article__runin.t-head--b Pro koho je Konference design &amp; marketing určena?
+        p Pro všechny, kteří se zajímají o design a marketing, o fungování těchto dvou světů a touží po nových impulzech a inspiraci. Díky různorodosti řečníků si své najdou jak profesionálové z oboru, tak studenti a další, kteří se o design nebo marketing blíže zajímají.
+
+        h2.m-article__runin.t-head--b V jakém jazyce bude konference?
+        p Vzhledem k tomu, že naši řečníci jsou jak z Česka, tak ze zahraničí, budou jednotlivé bloky probíhat v češtině nebo angličtině dle původu řečníka. V ceně vstupného, bude možné zapůjčit si sluchátka se simultánním překladem.
+
+        h2.m-article__runin.t-head--b Jak bude vypadat finální program?
+        p Na konferenci vystoupí 8 řečníků. Můžete se těšit na dva coffee-breaky a oběd. Po skončení konference jste zvání na afterparty, kde se kromě jídla a pití můžete seznámit, prodiskutovat proběhlý den nebo vyměnit pár kontaktů. 
+
+        h2.m-article__runin.t-head--b Do kdy můžu vstupenku stornovat nebo změnit jméno účastníka?
+        p Stornovat vstupenku je možné do 9. dubna, změnit jméno účastníka potom do 16. dubna.
+
+  +supporters
+
+  +foot
+
+  +peek("bg_bid_3.jpg", "talentdesignu")
