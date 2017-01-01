@@ -30,28 +30,7 @@ block template-content
           strong.o-flexlist__emphasis Omezení
           p Omezení zadáním, časem, materiálem, rozpočtem, prostorem, pravidly. Omezení naším vnímáním a naší myslí samotnou. Design a marketing jsou omezovány různými faktory. Musí být ale vždy omezení negativní? Existují pozitivní omezení?
 
-  section.m-tickets.o-section--light
-    .l-wrap
-      .m-tickets__list
-        each ticket in [1, 2]
-          article.m-tickets__item
-            .o-ticket
-              .o-ticket__aside
-                mark.o-ticket__note Prvních 300&nbsp;vstupenek
-              .o-ticket__content
-                .o-ticket__table
-                  .o-ticket__cell
-                    h1.o-ticket__title
-                      | Vstupenka 
-                      = ticket
-                      | . vlna
-                    small.o-ticket__subtitle Předprodej trvá do 15. března
-                  .o-ticket__cell
-                    a.o-ticket__button.o-button--outline(href="javascript:") Koupit
-
-                ul.o-ticket__list
-                  li.o-ticket__price 1050#[span.o-ticket__sup Kč]
-                  li.o-ticket__price 250#[span.o-ticket__sup Kč student]
+  +tickets
 
   +crossroad("zdw")
 
