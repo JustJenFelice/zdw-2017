@@ -1,0 +1,43 @@
+extends ../_templates/_site
+
+block template-content
+  +hud("zdw")
+
+  section.m-hero--half
+    .m-hero__content
+      h1.t-head--a O konferenci
+
+    .m-hero__pin
+      ul.o-timeline
+        li.o-timeline__item
+          mark.o-timeline__active 2016
+        each year in ["2015", "2014"]
+          li.o-timeline__item
+            a.o-timeline__link(href="javascript:")= year
+
+  section
+    .l-wrap
+      p Konference design &amp; marketing proběhne již po třetí v kulisách Zlína, a to jako nedílná součást sedmidenního festivalu designu Zlin Design Week. Málokdy bývá součástí už tak velké akce i konference, v tom je zlínský design week unikátní. V jednom týdnu tak proběhne nespočet výstav, workshopů, přednášek, ale i vernisáží, jedno kino i vyhlášení designérské soutěže. Konference design &amp; marketing je jako jedinou konferencí podobného zaměření v České republice oblíbena u studentů, odborníků z firem i designových studií, učitelů a profesorů, zkrátka a dobře stává se platformou setkávání široké skupiny lidí. 
+      p To, co jí určuje směr je téma. V prvním ročníku jím bylo Design - Značka - Příběh, kde byl na programu zejména osud značky na trhu, branding nebo příběhy o značkách. Slyšeli jsme například o Baru, který neexistuje, Freshlabels, jak se vyrábí lustry v Lasvitu nebo jak se fotí pro Redbull. Druhý ročník získal téma Prachy. O hodnotě designu, značky a lidské práce, také o tom, jak být dobrým designérem a markeťákem mluvili webový designér Jerry Tvrdek, Marian Fury CEO ze Zaraguzy, Jindra Vejvodová z Preciosy nebo designér Petr Novak. A letošní ročník nás čeká téma Omezení. Na první poslech zní omezení dosti negativně, je jich totiž opravdu spousta. Ale my vám ukážeme ta pozitivní omezení nebo jak se s těmi negativními správně vypořádat.
+
+  +tickets
+
+  section.m-carousel.o-section--black
+    .m-carousel__header.l-wrap
+      h1.t-head--c Fotogalerie
+    .m-carousel__list(data-carousel, data-featherlight-gallery, data-featherlight-filter="[data-gallery]")
+      each item in [106, 112, 212, 335, 366]
+        .m-carousel__item
+          a.m-carousel__link(href="assets/images/gallery/img_gallery_" + item + ".jpeg", data-gallery)
+            .m-carousel__thumbnail--photo
+              img.m-carousel__image(src="http://unsplash.it/800/500/?image=" + item, alt="Gallery image")
+
+  +crossroad("zdw")
+
+  +mail("full")
+
+  +supporters
+
+  +foot
+
+  +peek("bg_bid_3.jpg", "zlindesignweek")
