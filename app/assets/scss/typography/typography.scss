@@ -1,3 +1,4 @@
+// Abstractions
 @mixin link--white {
   &:link, &:visited {
     color: white;
@@ -7,9 +8,57 @@
   }
 }
 
-// Abstractions
 @mixin a-bold {
   font-weight: $font__sans--semibold;
+}
+
+@mixin head--a {
+  font-size: em(36);
+  font-family: $font__mono;
+  font-weight: $font__mono--regular;
+
+  @include media($bp__desktop) {
+    font-size: em(56);
+  }
+}
+
+@mixin head--b {
+  font-size: em(24);
+  font-family: $font__mono;
+  font-weight: $font__mono--regular;
+
+  @include media($dr__large) {
+    font-size: em(36);
+  }
+}
+
+@mixin head--c {
+  font-size: em(28);
+  font-weight: $font__sans--medium;
+}
+
+@mixin head--d {
+  font-size: em(18);
+  font-weight: $font__sans--medium;
+
+  @include media($dr__large) {
+    font-size: em(22);
+  }
+}
+
+@mixin head--e {
+  font-size: em(20);
+  font-family: $font__mono;
+  font-weight: $font__mono--regular;
+}
+
+@mixin head--f {
+  font-size: em(20);
+  font-family: $font__mono;
+  font-weight: $font__mono--regular;
+
+  text-transform: uppercase;
+  letter-spacing: em(1);
 }
 
 // Classes
@@ -31,62 +80,22 @@
 }
 
 .t-caps--large {
-  font-size: 1.5em;
+  font-size: em(24);
 
   @include media($bp__desktop) {
-    font-size: 2.25em;
+    font-size: em(36);
   }
 }
 
 .t-caps--small {
-  font-size: 1.25em;
+  font-size: em(20);
 
   @include media($dr__large) {
-    font-size: 1.75em;
+    font-size: em(28);
   }
 }
 
 /* HEADLINES */
-
-@mixin head--a {
-  font-size: 2.25em;
-  font-family: $font__mono;
-  font-weight: $font__mono--regular;
-
-  @include media($bp__desktop) {
-    font-size: 3.5em;
-  }
-}
-
-@mixin head--b {
-  font-size: 1.75em;
-  font-weight: $font__sans--medium;
-}
-
-@mixin head--c {
-  font-size: 1.5em;
-  font-family: $font__mono;
-  font-weight: $font__mono--regular;
-
-  @include media($dr__large) {
-    font-size: 2.25em;
-  }
-}
-
-@mixin head--e {
-  font-size: em(20);
-  font-family: $font__mono;
-  font-weight: $font__mono--regular;
-}
-
-@mixin head--f {
-  font-size: em(20);
-  font-family: $font__mono;
-  font-weight: $font__mono--regular;
-
-  text-transform: uppercase;
-  letter-spacing: em(1);
-}
 
 .t-head--a {
   @include head--a;
@@ -97,12 +106,6 @@
 .t-head--b {
   @include head--b;
 
-  @include margin(.25em null);
-}
-
-.t-head--c {
-  @include head--c;
-
   @include margin(.75em null);
 
   @include media($dr__large) {
@@ -110,13 +113,14 @@
   }
 }
 
-.t-head--d {
-  font-size: 1.125em;
-  font-weight: $font__sans--medium;
+.t-head--c {
+  @include head--c;
 
-  @include media($dr__large) {
-    font-size: 1.375em;
-  }
+  @include margin(.25em null);
+}
+
+.t-head--d {
+  @include head--d;
 }
 
 .t-head--e {
@@ -127,7 +131,7 @@
 
 .t-text--big {
   @include media($dr__large) {
-    font-size: 1.375em;
+    font-size: em(22);
   }
 }
 

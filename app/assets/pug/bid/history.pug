@@ -23,18 +23,18 @@ block template-content
 
   section.m-hilite.o-section--black
     .l-wrap
-      h1.m-hilite__title.t-head--c Hlavní výhra
+      h1.m-hilite__title.t-head--b Hlavní výhra
       .m-hilite__content
         img.m-hilite__image(src="assets/images/highlight_2014.jpg", alt="Winner of 2014")
         .m-hilite__info
-          h2.t-head--b Cornelius Comanns
+          h2.t-head--c Cornelius Comanns
           p Hlavním vítězem soutěže se stal student Royal College of Art v Londýně Cornelius Comanns za svůj návrh Expanded Stairs v&nbsp;kategorii Design interiéru a&nbsp;veřejného prostoru. Mezinárodní odborná porota mu udělila titul „Talent designu 2014“.
 
   section.o-section--white
     .l-wrap
       each category, catIndex in ["Průmyslový design", "Fashion design", "Grafický design", "Design interiéru a veřejného prostoru", "Produktový design"]
         article.m-podium
-          h1.m-podium__title.t-head--c= category
+          h1.m-podium__title.t-head--b= category
           ol.m-podium__list
             each item, itemIndex in ["Lucie Rožanská", "Cornelius Comanns", "Monika Bartošová"]
               li.m-podium__item
@@ -46,7 +46,7 @@ block template-content
   section.m-hilite.o-section--dark(style="background-image: url(/assets/images/bg_bid_2.jpg)")
     .l-wrap
       .o-section__bar
-        h2.o-section__title.t-head--c Speciální ocenění
+        h2.o-section__title.t-head--b Speciální ocenění
         strong.o-section__subtitle Mimo ocenění v kategoriích porota udělila dvě zvláštní ceny obvzlášť hodnotným soutěžním návrhům.
 
       ul.m-hilite__list.o-flexlist
@@ -60,7 +60,7 @@ block template-content
 
   section.m-carousel.o-section--black
     .m-carousel__header.l-wrap
-      h1.t-head--c Fotogalerie
+      h1.t-head--b Fotogalerie
     .m-carousel__list(data-carousel, data-featherlight-gallery, data-featherlight-filter="[data-gallery]")
       each item in [106, 112, 212, 335, 366]
         .m-carousel__item
