@@ -33,8 +33,12 @@
 }
 
 @mixin head--c {
-  font-size: em(28);
+  font-size: em(20);
   font-weight: $font__sans--medium;
+
+  @include media($dr__large) {
+    font-size: em(28);
+  }
 }
 
 @mixin head--d {
@@ -47,18 +51,26 @@
 }
 
 @mixin head--e {
-  font-size: em(20);
+  font-size: em(16);
   font-family: $font__mono;
   font-weight: $font__mono--regular;
+
+  @include media($dr__large) {
+    font-size: em(20);
+  }
 }
 
 @mixin head--f {
-  font-size: em(20);
+  font-size: em(16);
   font-family: $font__mono;
   font-weight: $font__mono--regular;
 
   text-transform: uppercase;
   letter-spacing: em(1);
+
+  @include media($dr__large) {
+    font-size: em(20);
+  }
 }
 
 // Classes
@@ -95,8 +107,6 @@
   }
 }
 
-/* HEADLINES */
-
 .t-head--a {
   @include head--a;
 
@@ -127,6 +137,10 @@
   @include head--e;
 
   @include margin(.5em null);
+}
+
+.t-head--f {
+  @include head--f;
 }
 
 .t-text--big {
