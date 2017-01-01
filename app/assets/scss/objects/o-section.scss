@@ -27,6 +27,7 @@
 
 .o-section__title {
   text-align: center;
+  @include head--b;
 
   .o-section__bar & {
     margin-bottom: .5em;
