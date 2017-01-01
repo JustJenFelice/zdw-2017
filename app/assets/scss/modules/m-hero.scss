@@ -50,6 +50,10 @@
   }
 }
 
+.m-hero__title {
+  @include head--a;
+}
+
 .m-hero__text {
   margin-bottom: 1.5em;
 
