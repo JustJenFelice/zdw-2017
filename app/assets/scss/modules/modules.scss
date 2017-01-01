@@ -59,17 +59,3 @@
     top: 30%;
   }
 }
-
-.m-tickets__list {
-  @include clearfix;
-
-  @include margin(null -.5em);
-}
-
-.m-tickets__item {
-  float: left;
-
-  width: 50%;
-
-  @include padding(null .5em);
-}
