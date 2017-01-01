@@ -19,11 +19,11 @@ mixin crossroad(type)
 
   case type
     when "zdw"
-      - tempProjectA = tempProject[1]
-      - tempProjectB = tempProject[2]
+      - tempProjectA = tempProject[2]
+      - tempProjectB = tempProject[1]
     when "conf"
-      - tempProjectA = tempProject[0]
-      - tempProjectB = tempProject[2]
+      - tempProjectA = tempProject[2]
+      - tempProjectB = tempProject[0]
     when "bid"
     default
       - tempProjectA = tempProject[0]
