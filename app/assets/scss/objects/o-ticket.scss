@@ -77,6 +77,10 @@
 
 .o-ticket__price {
   display: inline-block;
+
+  &:not(:first-child) {
+    margin-left: 1em;
+  }
 }
 
 .o-ticket__sup {
