@@ -26,6 +26,12 @@
   }
 }
 
+.m-article__intro {
+  @include margin(null auto);
+
+  max-width: 45em;
+}
+
 .m-article__columns {
   column-width: 14em;
   column-count: 2;

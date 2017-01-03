@@ -1,0 +1,54 @@
+extends ../_templates/_site
+
+block template-content
+  +hud("conf")
+
+  section.m-hero--half
+    .m-hero__content
+      h1.m-hero__title Program
+
+  section
+    .l-wrap
+      .m-article
+        h1.o-section__title Letošní program bude opět nabitý!
+        .m-article__intro
+          p Můžete se těšit na více zahraničních řečníků, skvělou kávu, která provoní čas přestávek a delikátní občerstvení, které nasytí všechny nadšené posluchače konference. Vše uzavřeme večer na afterparty, kde se budou moci setkat jak diváci, tak řečníci. Už teď se těšíme, více informací vám za chvíli prozradíme!
+
+      .s-schedule-map.o-map--large
+        .o-map__viewport
+          include ../_partials/_google-maps.html
+        a.o-map__button(href="javascript:") Zobrazit na mapě
+
+      .m-schedule
+        .m-schedule__header
+          strong.m-schedule__label--time Začátek
+          strong.m-schedule__label--name Název
+          strong.m-schedule__label--lang Jazyk
+        each item, index in ["Oi_Utj7dKZg", "0WQOCx1g8hw", "TBVsc-XxnUw", "-NNyXVQH9Ho", "F9o7u-CnDJk"]
+          if index == 0 || index == 3
+            .m-schedule__pause
+              .m-schedule__col--1
+                mark.m-schedule__time 09:40
+              .m-schedule__col--2
+                strong.m-schedule__name: +dummy(6, "words")
+              .m-schedule__col--3 &nbsp;
+          .m-schedule__item
+            .m-schedule__col--1
+              mark.m-schedule__time 09:40
+            .m-schedule__col--2
+              img.m-schedule__image(src="https://source.unsplash.com/" + item + "/400x400", alt="Unsplash")
+              strong.m-schedule__name: +dummy(6, "words")
+            .m-schedule__col--3
+              span.m-schedule__lang CZ
+
+  +tickets
+
+  +crossroad("conf")
+
+  +mail("full")
+
+  +supporters
+
+  +foot
+
+  +peek("bg_bid_3.jpg", "zlindesignweek")

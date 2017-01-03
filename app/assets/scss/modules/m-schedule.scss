@@ -1,0 +1,78 @@
+.m-schedule {
+  display: table;
+  width: 100%;
+
+  margin-top: 3em;
+}
+
+.m-schedule__header {
+  display: table-row;
+}
+
+[class^="m-schedule__label--"],
+[class*=" m-schedule__label--"] {
+  display: table-cell;
+
+  padding-bottom: 1.5em;
+
+  font-family: $font__mono;
+  font-weight: normal;
+}
+
+.m-schedule__label--time {
+  padding-left: 1em;
+}
+
+.m-schedule__label--name {
+  padding-left: 7rem;
+}
+
+.m-schedule__item {
+  display: table-row;
+}
+
+.m-schedule__pause {
+  display: table-row;
+
+  color: white;
+  background-color: black;
+}
+
+[class^="m-schedule__col--"],
+[class*=" m-schedule__col--"] {
+  display: table-cell;
+
+  border-top: 2px solid black;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+}
+
+.m-schedule__col--2 {
+  @include clearfix;
+}
+
+.m-schedule__time {
+  color: currentColor;
+  background-color: transparent;
+
+  @include head--e;
+
+  margin-right: 3em;
+
+  padding-left: 1em;
+}
+
+.m-schedule__name {
+  @include head--e;
+
+  &:first-child {
+    margin-left: 7rem;
+  }
+}
+
+.m-schedule__image {
+  float: left;
+  margin-right: 2em;
+
+  width: 5em;
+}
