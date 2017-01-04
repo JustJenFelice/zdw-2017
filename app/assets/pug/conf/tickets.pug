@@ -1,0 +1,55 @@
+extends ../_templates/_site
+
+block template-content
+  +hud("conf")
+
+  section.m-hero--half(style="background-image: url(/assets/images/bg_bid_3.jpg)")
+    .m-hero__content
+      h1.m-hero__title Vstupenka na konferenci
+
+  section.o-section--light
+    .l-wrap
+      h1.o-section__title Co je součástí?
+
+      ul.m-cards
+        li.m-cards__item
+          .m-cards__block
+            .m-cards__content
+              strong.m-cards__top Přednášky
+              span.m-cards__bottom 8 inspirujících řečníků z Česka i zahraničí.
+        li.m-cards__item
+          .m-cards__block
+            .m-cards__content
+              strong.m-cards__top Gastro full-service
+              span.m-cards__bottom Nejrůznější pochutiny včetně dobré kávy.
+        li.m-cards__item
+          .m-cards__block
+            .m-cards__content
+              strong.m-cards__top Afterparty
+              span.m-cards__bottom V ceně vstupenky je afterparty s alkoholem zdarma. Už jste někdy trsali na zámku?
+        li.m-cards__item
+          .m-cards__block
+            .m-cards__content
+              strong.m-cards__top Dárky
+              span.m-cards__bottom Protože všichni rádi dostávají dárky, v den konference od nás dostanete rovnou plnou tašku.
+
+  main
+    form.m-application.l-wrap
+      h1.m-application__title.t-head--b Kontaktní údaje
+      .m-application__section
+        each item in ["Jméno", "Příjmení", "Adresa", "Město", "PSČ", "Země", "Telefon", "E-mail"]
+          .m-application__row
+            input.o-input--black(type="text", placeholder=item)
+
+      .m-application__foot
+        input.o-submit--black(type="submit", value="Koupit vstupenku")
+
+  +crossroad("conf")
+
+  +mail("full")
+
+  +supporters
+
+  +foot
+
+  +peek("bg_bid_3.jpg", "zlindesignweek")
