@@ -53,14 +53,38 @@
   max-width: 17em;
 }
 
-.o-peek__link--fb {
+[class^="o-peek__link"],
+[class*=" o-peek__link"] {
   border-bottom: 2px solid;
 
   &:link, &:visited {
     color: white;
     border-bottom-color: rgba(white, .25);
   }
+}
+
+.o-peek__link--fb {
   &:hover, &:active {
     border-bottom-color: #3b5998;
+  }
+}
+.o-peek__link--yt {
+  &:hover, &:active {
+    border-bottom-color: #cd201f;
+  }
+}
+.o-peek__link--ig {
+  &:hover, &:active {
+    border-bottom-color: #5851db;
+  }
+}
+.o-peek__link--tw {
+  &:hover, &:active {
+    border-bottom-color: #1da1f2;
+  }
+}
+.o-peek__link--md {
+  &:hover, &:active {
+    border-bottom-color: #02b875;
   }
 }

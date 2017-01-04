@@ -1,7 +1,13 @@
-mixin peek(background, social)
+mixin peek(background, project)
   .o-peek(style="background-image: url(/assets/images/" + background + ")")
     .o-peek__content
-      p.o-peek__text Uvidíme se ve Zlíně! Mezitím nás můžete sledovat na #[a.o-peek__link--fb(href="https://www.facebook.com/" + social, data-external) Facebooku].
+      if project == "zdw"
+        p.o-peek__text Uvidíme se ve Zlíně! Mezitím nás můžete sledovat na #[a.o-peek__link--fb(href="https://www.facebook.com/zlindesignweek", data-external) Facebooku].
+      else if project == "bid"
+        p.o-peek__text Uvidíme se ve Zlíně! Mezitím nás můžete sledovat na #[a.o-peek__link--fb(href="https://www.facebook.com/talentdesignu", data-external) Facebooku].
+      else
+        p.o-peek__text Uvidíme se ve Zlíně! Mezitím nás můžete sledovat na #[a.o-peek__link--fb(href="https://www.facebook.com/zlindesignweek", data-external) Facebooku], #[a.o-peek__link--yt(href="javascript:", data-external) Youtube], #[a.o-peek__link--ig(href="javascript:", data-external) Instagramu], #[a.o-peek__link--tw(href="javascript:", data-external) Twitteru] nebo #[a.o-peek__link--md(href="javascript:", data-external) Medium].
+
     ul.o-peek__credits
       li.o-peek__item
         strong.o-peek__term Design 
