@@ -52,6 +52,10 @@
 
 .m-hero__title {
   @include head--a;
+
+  .m-hero--half & {
+    margin-bottom: .25em;
+  }
 }
 
 .m-hero__text {
