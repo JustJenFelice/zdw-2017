@@ -1,16 +1,32 @@
-mixin stats
+mixin stats(project)
   main.m-part.o-section--white
     .l-wrap
-      ul.o-flexlist
-        li.o-flexlist__item--tri
-          mark.o-flexlist__emphasis 10 000 €
-          |  jsme rozdali
-        li.o-flexlist__item--tri
-          mark.o-flexlist__emphasis 1 320 prací
-          |  bylo zasláno
-        li.o-flexlist__item--tri
-          mark.o-flexlist__emphasis 620 návštěvníků
-          |  se zúčastnilo galavečeru
+      if project == "conf"
+        ul.o-flexlist
+          li.o-flexlist__item--tri
+            mark.o-flexlist__emphasis 1 den
+            |  poznatků a motivace
+          li.o-flexlist__item--tri
+            mark.o-flexlist__emphasis 12 přednášek
+            |  od mezinárodních řečníků
+          li.o-flexlist__item--tri
+            mark.o-flexlist__emphasis 350 návštěvníků
+            |  se zúčastnilo konference
 
-      .m-part__text
-        p Do sedmého ročníku Talent designu 2016 se přihlásilo celkem 1 320 prací. Počet přihlášek se oproti předchozímu ročníku zdvojnásobil, což svědčí o&nbsp;vzrůstající oblibě soutěže v&nbsp;tuzemsku i&nbsp;ve světě. Soutěžní práce k&nbsp;nám totiž chodí nejen z&nbsp;Maďarska, Bulharska, Itálie, Španělska, Dánska, Polska, Slovenska, ale i&nbsp;ze Singapuru, Jižní Koreje, Íránu, USA, Indie či Brazílie. Slavnostní galavečer a&nbsp;vyhlášení vítězů Talent designu 2016 proběhl 29. dubna v Kongresovém centru ve Zlíně. Nyní už ale hledáme ty nejlepší talenty s&nbsp;novým názvem soutěže Best in Design!
+        .m-part__text
+          p Druhý ročník konference se uskutečnil v Městském divadle ve Zlíně, kde na prknech, co znamenají svět, vystoupilo dvanáct řečníků. 350 účastníků konference vyslechli odborníky přes design aut, grafiku, weby, design thinking nebo marketing firem i produktu. Celý den jsme uzavřeli na afterparty v industriálním prostředí baťovského areálu Svit v 64. budově, kde kapela Purist dokonale naladila atmosféru na celý večer.
+
+      else
+        ul.o-flexlist
+          li.o-flexlist__item--tri
+            mark.o-flexlist__emphasis 10 000 €
+            |  jsme rozdali
+          li.o-flexlist__item--tri
+            mark.o-flexlist__emphasis 1 320 prací
+            |  bylo zasláno
+          li.o-flexlist__item--tri
+            mark.o-flexlist__emphasis 620 návštěvníků
+            |  se zúčastnilo galavečeru
+
+        .m-part__text
+          p Do sedmého ročníku Talent designu 2016 se přihlásilo celkem 1 320 prací. Počet přihlášek se oproti předchozímu ročníku zdvojnásobil, což svědčí o&nbsp;vzrůstající oblibě soutěže v&nbsp;tuzemsku i&nbsp;ve světě. Soutěžní práce k&nbsp;nám totiž chodí nejen z&nbsp;Maďarska, Bulharska, Itálie, Španělska, Dánska, Polska, Slovenska, ale i&nbsp;ze Singapuru, Jižní Koreje, Íránu, USA, Indie či Brazílie. Slavnostní galavečer a&nbsp;vyhlášení vítězů Talent designu 2016 proběhl 29. dubna v Kongresovém centru ve Zlíně. Nyní už ale hledáme ty nejlepší talenty s&nbsp;novým názvem soutěže Best in Design!

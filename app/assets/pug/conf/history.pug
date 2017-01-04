@@ -1,0 +1,54 @@
+extends ../_templates/_site
+
+block template-content
+  +hud("zdw")
+
+  section.m-hero--half
+    .m-hero__content
+      h1.m-hero__title O Konferenci 2016
+
+    .m-hero__pin
+      ul.o-timeline
+        each year in ["2017", "2016", "2015"]
+          if year == "2016"
+            li.o-timeline__item
+              mark.o-timeline__active= year
+          else
+            li.o-timeline__item
+              a.o-timeline__link(href="history.html")= year
+
+  section.m-fullimage(style="background-image: url(/assets/images/history_2014.jpg)")
+    .m-fullimage__content.l-wrap
+      a.m-fullimage__button.o-button--outline(href="https://www.youtube.com/embed/r_654PozdKg", data-featherlight="iframe") Přehrát video
+
+  +stats("conf")
+
+  section.o-section--light
+    .l-wrap
+      h1.o-section__title Na ročníku 2016 přednášeli
+      .m-speakers
+        each item, index in [1, 2, 3, 4, 5, 6, 7, 8]
+          .m-speakers__item--small.o-person
+            .o-person__thumbnail
+              img.o-person__image(src="http://i.pravatar.cc/600?img=" + index * 10, alt="Portrait")
+            .o-person__content
+              strong.o-person__name: +dummy(2, "words")
+              span.o-person__description: +dummy(5, "words")
+
+  section.m-carousel.o-section--black
+    .m-carousel__header.l-wrap
+      h1.t-head--b Fotogalerie
+    .m-carousel__list(data-carousel, data-featherlight-gallery, data-featherlight-filter="[data-gallery]")
+      each item in [106, 112, 212, 335, 366]
+        .m-carousel__item
+          a.m-carousel__link(href="assets/images/gallery/img_gallery_" + item + ".jpeg", data-gallery)
+            .m-carousel__thumbnail--photo
+              img.m-carousel__image(src="http://unsplash.it/800/500/?image=" + item, alt="Gallery image")
+
+  +supporters
+
+  +crossroad
+
+  +foot
+
+  +peek("bg_bid_3.jpg", "zlindesignweek")
