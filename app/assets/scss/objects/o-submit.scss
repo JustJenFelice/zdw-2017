@@ -17,7 +17,7 @@
 
   cursor: pointer;
 
-  @include appearance(none);
+  appearance: none;
 
   &:focus {
     outline: none;

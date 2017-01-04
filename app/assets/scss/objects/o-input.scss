@@ -13,7 +13,7 @@
   color: currentColor;
   background-color: transparent;
 
-  @include appearance(none);
+  appearance: none;
 
   &:focus {
     outline: 0;
