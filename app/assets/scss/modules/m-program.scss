@@ -24,4 +24,8 @@
   float: left;
 
   width: 33.333%;
+
+  &:nth-child(4n) {
+    clear: both;
+  }
 }
