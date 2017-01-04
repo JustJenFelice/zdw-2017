@@ -8,17 +8,16 @@ var
 gulp.task("styles", function () {
   return gulp.src(config.dev.scssBase)
 
-    .pipe(plugins.plumber(function(error) {
-      plugins.beepbeep();
-      console.log(error);
-      this.emit("end");
-    }))
-
     .pipe(plugins.sassBulkImport())
 
     .pipe(plugins.sass({
       includePaths: require("node-neat").with("bower_components/")
+    }).on("error", function (error) {
+      plugins.beepbeep();
+      plugins.sass.logError.bind(this)(error);
     }))
+
+    .pipe(plugins.autoprefixer())
 
     .pipe(gulp.dest(config.dev.cssRoot))
     

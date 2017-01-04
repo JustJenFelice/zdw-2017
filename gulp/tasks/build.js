@@ -31,9 +31,6 @@ gulp.task("build:compile", ["build:move"], function() {
       {
         js: [plugins.uglify()],
         css: [
-          plugins.autoprefixer({
-            cascade: false
-          }),
           plugins.cleanCss({
             keepSpecialComments: 0
         })]
