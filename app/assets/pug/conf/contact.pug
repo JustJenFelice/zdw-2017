@@ -1,0 +1,30 @@
+extends ../_templates/_site
+
+block template-content
+  +hud("zdw")
+
+  section.m-hero--half(style="background-image: url(/assets/images/bg_bid_2.jpg)")
+    .m-hero__content
+      h1.m-hero__title Kontakt
+
+  main.m-contact.o-section--light
+    .l-wrap
+
+      .m-contact__group
+        h1 Manažerka projektu
+        ul
+          li: strong Aneta Oulehlová
+          li #[a(href="mailto:aneta.oulehlova@zlindesignweek.com") aneta.oulehlova@zlindesignweek.com]
+          li +420 736 222 423
+
+      .m-contact__foot
+        h1 Máte nějaký dotaz nebo problém?
+        p Urgentní věci Vám rádi zodpovíme na +420 776 343 310, méně naléhavé prosím směřujte na #[a(href="mailto:info@zlindesignweek.com") info@zlindesignweek.com].
+
+  +supporters
+
+  +crossroad
+
+  +foot
+
+  +peek("bg_bid_3.jpg", "talentdesignu")
