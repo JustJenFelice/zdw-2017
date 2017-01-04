@@ -18,6 +18,10 @@
   &:focus {
     outline: 0;
   }
+
+  &::placeholder {
+    color: $grey--400;
+  }
 }
 
 .o-input--white {
