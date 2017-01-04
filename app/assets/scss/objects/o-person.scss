@@ -1,0 +1,12 @@
+.o-person__content {
+  margin-top: 1em;
+}
+
+.o-person__name {
+  display: block;
+  @include head--e;
+}
+
+.o-person__description {
+  font-size: .875em;
+}

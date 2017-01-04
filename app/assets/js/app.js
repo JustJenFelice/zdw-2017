@@ -26,3 +26,18 @@ $("[data-upload]").change(function() {
     this.value = "";
   }
 });
+
+$("[data-onoff]").on("click", function() {
+  var
+    thisAttr = $(this).data("onoff"),
+    classToAdd = "onoff--" + thisAttr,
+    classActive = "is--active";
+
+  $body.removeClass(function(index, css) {
+    return (css.match (/(^|\s)onoff--\S+/g) || []).join(" ");
+  });
+
+  $body.addClass(classToAdd);
+  $(this).addClass(classActive);
+  $(this).siblings().removeClass(classActive);
+});

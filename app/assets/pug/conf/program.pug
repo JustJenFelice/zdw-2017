@@ -19,6 +19,10 @@ block template-content
           include ../_partials/_google-maps.html
         a.o-map__button(href="javascript:") Zobrazit na mapě
 
+      .o-onoff
+        button.o-onoff__button.is--active(data-onoff="speakers") Řečníci
+        button.o-onoff__button(data-onoff="schedule") Harmonogram
+
       .m-schedule
         .m-schedule__header
           strong.m-schedule__label--time Začátek
@@ -40,6 +44,15 @@ block template-content
               strong.m-schedule__name: +dummy(6, "words")
             .m-schedule__col--3
               span.m-schedule__lang CZ
+
+      .m-speakers
+        each item, index in [1, 2, 3, 4, 5, 6, 7, 8]
+          a.m-speakers__item.o-person(href="event-detail.html")
+            .o-person__thumbnail
+              img.o-person__image(src="http://i.pravatar.cc/600?img=" + index * 10, alt="Portrait")
+            .o-person__content
+              strong.o-person__name: +dummy(2, "words")
+              span.o-person__description: +dummy(5, "words")
 
   +tickets
 

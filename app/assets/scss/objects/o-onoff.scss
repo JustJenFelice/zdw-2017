@@ -1,0 +1,21 @@
+.o-onoff {
+  @include clearfix;
+
+  text-align: center;
+}
+
+.o-onoff__button {
+  float: left;
+
+  width: 50%;
+
+  @include ui-toggle;
+  border: 2px solid black;
+
+  line-height: 3em;
+
+  &.is--active {
+    color: white;
+    background-color: black;
+  }
+}

@@ -1,8 +1,12 @@
 .m-schedule {
-  display: table;
+  display: none;
   width: 100%;
 
   margin-top: 3em;
+
+  .onoff--schedule & {
+    display: table;
+  }
 }
 
 .m-schedule__header {
