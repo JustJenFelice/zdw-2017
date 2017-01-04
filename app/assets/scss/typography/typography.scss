@@ -17,8 +17,10 @@
   font-family: $font__mono;
   font-weight: $font__mono--regular;
 
+  line-height: 1.25;
+
   @include media($bp__desktop) {
-    font-size: em(56);
+    font-size: em(52);
   }
 }
 
