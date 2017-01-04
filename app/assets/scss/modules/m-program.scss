@@ -25,7 +25,7 @@
 
   width: 33.333%;
 
-  &:nth-child(4n) {
+  &:nth-child(3n + 1) {
     clear: both;
   }
 }
