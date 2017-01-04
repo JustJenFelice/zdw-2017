@@ -30,7 +30,10 @@ block template-content
       ul.m-cards
         each card in ["Výstavy", "Party", "Vepřo Knedlo Design"]
           li.m-cards__item
-            a.m-cards__link(href="javascript:")= card
+            a.m-cards__link(href="javascript:")
+              .m-cards__block
+                .m-cards__content
+                  strong.m-cards__top= card
 
   +crossroad("zdw")
 
