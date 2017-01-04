@@ -11,13 +11,6 @@
   box-sizing: border-box;
 
   text-align: center;
-}
-
-.o-sticker--round {
-  color: black;
-  background-color: white;
-
-  transform: rotate(10deg);
 
   transition: transform $duration--s;
 
@@ -26,6 +19,13 @@
   &:hover, &:active {
     transform: rotate(0);
   }
+}
+
+.o-sticker--solid {
+  color: black;
+  background-color: yellow;
+
+  transform: rotate(10deg);
 }
 
 .o-sticker__title {
