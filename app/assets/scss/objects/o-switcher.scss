@@ -53,6 +53,9 @@
   }
 
   @include ui-toggle("without");
+
+  box-sizing: content-box;
+
   opacity: .5;
 
   @include padding(1em $wrap-padding-horz--2 1em null);

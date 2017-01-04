@@ -1,6 +1,8 @@
 [class^="o-nav__toggle"],
 [class*=" o-nav__toggle"] {
   @include ui-toggle("padded");
+
+  box-sizing: content-box;
 }
 
 .o-nav__toggle--open {
