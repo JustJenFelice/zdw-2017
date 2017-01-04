@@ -10,12 +10,23 @@
   }
 }
 
-.m-speakers__item {
+[class^="m-speakers__item"],
+[class*=" m-speakers__item"] {
   float: left;
+}
 
+.m-speakers__item--large {
   width: 33.333%;
 
   &:nth-child(3n + 1) {
+    clear: both;
+  }
+}
+
+.m-speakers__item--small {
+  width: 25%;
+
+  &:nth-child(4n + 1) {
     clear: both;
   }
 }
