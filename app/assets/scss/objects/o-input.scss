@@ -25,7 +25,7 @@
 }
 
 .o-input--white {
-  @include placeholder {
-    color: white;
+  &::placeholder {
+    color: rgba(white, .5);
   }
 }
