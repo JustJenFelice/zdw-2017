@@ -3,6 +3,7 @@ $wrap-padding-horz--2: 2.75em;
 
 $wrap-padding-vert--1: 1.75em;
 $wrap-padding-vert--2: 3em;
+$wrap-padding-vert--3: 4.5em;
 
 @mixin wrap-padding($direction: all) {
   @if ($direction == horizontal) {
@@ -55,6 +56,12 @@ $wrap-padding-vert--2: 3em;
   @include wrap-padding(all);
 
   max-width: 70em;
+}
+
+.l-wrap--big {
+  @include media($dr__large) {
+    @include padding($wrap-padding-vert--3 null);
+  }
 }
 
 .l-wrap--no-bottom {
