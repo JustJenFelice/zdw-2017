@@ -12,7 +12,9 @@ gulp.task("styles", function () {
 
     .pipe(plugins.sass({
       includePaths: require("node-neat").with("bower_components/")
-    }).on("error", function (error) {
+    })
+
+    .on("error", function (error) {
       plugins.beepbeep();
       plugins.sass.logError.bind(this)(error);
     }))
@@ -21,5 +23,7 @@ gulp.task("styles", function () {
 
     .pipe(gulp.dest(config.dev.cssRoot))
     
-    .pipe(plugins.browserSync.stream());
+    .pipe(plugins.browserSync.stream({
+      match: "**/*.css"
+    }));
 });
