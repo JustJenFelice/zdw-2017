@@ -12,6 +12,8 @@
     "pugGlob": "app/assets/pug/**/*.pug",
     "pugIgnore": "!app/assets/pug/**/_*.pug",
 
+    "jsonGlobal": "app/assets/data/global.json",
+
     "scssRoot": "app/assets/scss/",
     "scssBase": "app/assets/scss/*.scss",
     "scssGlob": "app/assets/scss/**/*.scss",
