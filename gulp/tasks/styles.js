@@ -8,7 +8,7 @@ var
 gulp.task("styles", function () {
   return gulp.src(config.dev.scssBase)
 
-    .pipe(plugins.sassBulkImport())
+    .pipe(plugins.sassGlob())
 
     .pipe(plugins.sass({
       includePaths: require("node-neat").with("bower_components/")
