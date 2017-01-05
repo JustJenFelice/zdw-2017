@@ -1,4 +1,72 @@
 {
+  "pages": [
+    [
+      {
+        "title": "O ZDW",
+        "link": "about.html"
+      },
+      {
+        "title": "Program",
+        "link": "program.html"
+      },
+      {
+        "title": "Blog",
+        "link": "javascript:"
+      },
+      {
+        "title": "Kontakt",
+        "link": "contact.html"
+      },
+      {
+        "title": "English",
+        "link": "javascript:"
+      }
+    ],
+    [
+      {
+        "title": "O konferenci",
+        "link": "about.html"
+      },
+      {
+        "title": "Program",
+        "link": "program.html"
+      },
+      {
+        "title": "Vstupenky",
+        "link": "tickets.html"
+      },
+      {
+        "title": "Kontakt",
+        "link": "contact.html"
+      },
+      {
+        "title": "English",
+        "link": "javascript:"
+      }
+    ],
+    [
+      {
+        "title": "O soutěži",
+        "link": "about.html"
+      },
+      {
+        "title": "Pravidla",
+        "link": "rules.html"
+      },
+      {
+        "title": "Historie",
+        "link": "history.html"
+      },
+      {
+        "title": "Kontakt",
+        "link": "contact.html"
+      },
+      {
+        "title": "English",
+        "link": "javascript:"
+      }
+    ]
+  ],
   "jury": [
     {
       "name": "Ladislav Škoda",
@@ -59,6 +127,32 @@
       "portrait": "jury_riha.jpg",
       "title": "Typograf",
       "description": "Mladý český typograf byl již dvakrát oceněn v rámci, European Design Award. Nové rodiny písma vytváří od roku 2014 ve své vlastní společnosti Superior Type."
+    }
+  ],
+  "winners": [
+    {
+      "thumbnail": "portrait_winner_2012.jpg",
+      "title": "Denisa Lukáčová",
+      "year": "2012",
+      "link": "https://www.youtube.com/embed/0OwBykRV8Cs"
+    },
+    {
+      "thumbnail": "portrait_winner_2011.jpg",
+      "title": "Štěpán Soutner",
+      "year": "2011",
+      "link": "https://www.youtube.com/embed/scrG6WqTYaE"
+    },
+    {
+      "thumbnail": "portrait_winner_2010.jpg",
+      "title": "Jana Nováková",
+      "year": "2010",
+      "link": "https://www.youtube.com/embed/hXSE3IILwNg"
+    },
+    {
+      "thumbnail": "portrait_winner_2009.jpg",
+      "title": "Lenka Svatošová",
+      "year": "2009",
+      "link": "https://www.youtube.com/embed/3PTKLscoDN0"
     }
   ]
 }
