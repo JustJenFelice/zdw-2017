@@ -8,4 +8,4 @@ require("./gulp/tasks/watch.js");
 require("./gulp/tasks/svg.js");
 require("./gulp/tasks/build.js");
 
-gulp.task("default", ["server:html", "watch"]);
+gulp.task("default", ["server", "watch"]);

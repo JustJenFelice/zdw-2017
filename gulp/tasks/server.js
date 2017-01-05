@@ -6,7 +6,7 @@ var
   config = require("../gulpconfig.json");
 
 // Run a server for HTML files
-gulp.task("server:html", ["styles", "templates"], function() {
+gulp.task("server", ["styles", "templates"], function() {
   plugins.browserSync.init({
     server: {
       baseDir: config.dev.root,
@@ -15,14 +15,6 @@ gulp.task("server:html", ["styles", "templates"], function() {
       },
       middleware: plugins.hygienistMiddleware(config.dev.root)
     },
-    notify: false
-  });
-});
-
-// Set-up a proxy for PHP files
-gulp.task("server:php", ["styles", "templates"], function() {
-  plugins.browserSync.init({
-    proxy: config.dev.proxy,
     notify: false
   });
 });

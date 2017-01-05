@@ -1,7 +1,6 @@
 {
   "dev": {
     "root": "app/",
-    "proxy": "localhost/zdw-2017/app/",
 
     "resources": "gulp/resources.json",
 
