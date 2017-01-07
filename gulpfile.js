@@ -68,7 +68,7 @@ gulp.task('templates:resources', function() {
 });
 
 gulp.task('templates:inject', ['templates:compile', 'templates:resources'], function() {
-  return gulp.src(config.dev.pagesGlob, {base: '/app/'})
+  return gulp.src(config.dev.pagesGlob, {base: "/" + config.dev.root})
 
     .pipe(plugins.cached('pages'))
 
@@ -83,7 +83,7 @@ gulp.task('templates:inject', ['templates:compile', 'templates:resources'], func
       }
     ))
 
-    .pipe(gulp.dest('/app/'));
+    .pipe(gulp.dest("/" + config.dev.root));
 });
 
 gulp.task('templates', ['templates:inject'], function(done) {
