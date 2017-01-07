@@ -7,7 +7,7 @@
     "pagesFormat": ".html",
     "pagesRoot": "app/assets/html",
     "pagesGlob": "app/assets/html/**/*.html",
-    "pagesIgnore": "**/[^_]*.html",
+    "pagesFilter": "**/[^_]*.html",
 
     "pugRoot": "app/assets/pug/",
     "pugGlob": "app/assets/pug/**/*.pug",

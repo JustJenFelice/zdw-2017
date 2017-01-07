@@ -52,7 +52,7 @@ gulp.task('templates:compile', function() {
       this.emit('end');
     })
 
-    .pipe(plugins.filter(config.dev.pagesIgnore))
+    .pipe(plugins.filter(config.dev.pagesFilter))
 
     .pipe(plugins.rename(function (path) {
       path.extname = config.dev.pagesFormat;
