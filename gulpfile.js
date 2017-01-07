@@ -73,7 +73,7 @@ gulp.task('templates:inject', ['templates:compile', 'templates:resources'], func
     .pipe(plugins.cached('pages'))
 
     .pipe(plugins.rename(function (path) {
-      path.dirname = path.dirname.replace('assets/html', '.');
+      path.dirname = path.dirname.replace(config.dev.pagesPartial, '.');
     }))
 
     .pipe(plugins.inject(gulp.src(

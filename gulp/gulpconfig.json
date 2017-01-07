@@ -5,6 +5,7 @@
     "resources": "gulp/resources.json",
 
     "pagesFormat": ".html",
+    "pagesPartial": "assets/html",
     "pagesRoot": "app/assets/html",
     "pagesGlob": "app/assets/html/**/*.html",
     "pagesFilter": "**/[^_]*.html",
