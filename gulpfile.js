@@ -15,7 +15,7 @@ const
 Run a server for HTML files
 
 */
-gulp.task('server', function() {
+gulp.task('server', ['templates'], function() {
   return browserSync.init({
     server: {
       baseDir: config.dev.root,
