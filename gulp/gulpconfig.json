@@ -5,17 +5,18 @@
     "resources": "gulp/resources.json",
 
     "pagesFormat": ".html",
-    "pagesGlob": "app/**/*.html",
-    "pagesIgnore": "!app/{assets,guide}/**/*.html",
+    "pagesRoot": "app/assets/html",
+    "pagesGlob": "app/assets/html/**/*.html",
+    "pagesIgnore": "**/[^_]*.html",
 
     "pugRoot": "app/assets/pug/",
     "pugGlob": "app/assets/pug/**/*.pug",
-    "pugIgnore": "!app/assets/pug/**/_*.pug",
 
-    "jsonGlobal": "app/assets/data/global.json",
+    "jsonGlob": "app/assets/data/*.json",
+    "jsonShared": "app/assets/data/global.json",
 
     "scssRoot": "app/assets/scss/",
-    "scssBase": "app/assets/scss/*.scss",
+    "scssBase": "app/assets/scss/!(_)*.scss",
     "scssGlob": "app/assets/scss/**/*.scss",
 
     "cssRoot": "app/assets/css/",
@@ -24,9 +25,6 @@
 
     "imagesGlob": "app/assets/images/**/*",
     "imagesIgnore": "!app/assets/images/_ignore{,/**}",
-
-    "dataRoot": "app/assets/data/",
-    "dataGlob": "app/assets/data/*.json",
 
     "svgSourceGlob": "app/assets/svg/_source/*.svg",
     "svgBuildGlob": "app/assets/svg/*.svg",
