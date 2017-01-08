@@ -137,7 +137,10 @@ gulp.task('build:resources', function() {
 
 // Move other assets to production folder.
 gulp.task('build:move', ['build:wipe', 'build:resources'], function() {
-  return gulp.src(resources.toMove, {base: config.dev.root})
+  gulp.src(resources.move.relative, {base: config.dev.root})
+    .pipe(gulp.dest(config.dist.root));
+
+  return gulp.src(resources.move.static)
     .pipe(gulp.dest(config.dist.root));
 });
 

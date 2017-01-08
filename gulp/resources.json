@@ -1,12 +1,12 @@
 {
-  "toMove": [
-    "app/favicon*",
-    "app/apple-touch*",
-    "app/android-chrome*",
-    "!app/assets/**/*.html",
-    "app/**/*.html",
-    "app/assets/files/*"
-  ],
+  "move": {
+    "relative": [
+      "app/**/*.html",
+      "!app/assets/**/*.html",
+      "app/assets/files/*"
+    ],
+    "static": "app/assets/static/*"
+  },
   "injectDev": {
     "site": [
       "bower_components/normalize-css/normalize.css",
