@@ -23,13 +23,14 @@ block template-content
           p A&nbsp;není řeč jenom o výstavách. Zveme vás na Konferenci design &amp; marketing, kde budou mluvit ti nejpovolanější z&nbsp;obou oborů, na workshopy a&nbsp;přednášky a&nbsp;nakonec se dozvíme i&nbsp;výherce soutěže Best in Design, dříve známé jako Talent designu.
           p Po loňském tématu Prachy otevíráme téma další, tím je Omezení. Omezení v&nbsp;designu, omezení lidmi, zadáním, časem, materiálem, námi. Je jich spousta. Ale jsou vždy negativní?
 
-      ul.m-cards
+      ul.m-cards--short
         each card in ["Výstavy", "Party", "Vepřo Knedlo Design"]
           li.m-cards__item
-            a.m-cards__link(href="javascript:")
-              .m-cards__block
+            a.m-cards__block--link(href="javascript:")
+              .m-cards__stretch
                 .m-cards__content
-                  strong.m-cards__top= card
+                  .m-cards__top
+                    strong.m-cards__strong= card
 
       .m-teaser
         .m-teaser__item

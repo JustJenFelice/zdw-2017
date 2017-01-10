@@ -1,34 +1,52 @@
-.m-cards {
+[class^="m-cards--"],
+[class*=" m-cards--"] {
   display: flex;
 
   list-style-type: none;
   padding-left: 0;
 
   margin-top: 3em;
-  margin-left: -.5em;
-  margin-right: -.5em;
+  margin-left: -.75em;
+  margin-right: -.75em;
 }
 
 .m-cards__item {
   flex-grow: 1;
   flex-basis: 0;
 
-  padding: .5em;
+  padding: .75em;
 }
 
-.m-cards__link {
+.m-cards__block--link {
   display: block;
 
+  &:link,
+  &:visited {
+    color: black;
+    background-color: $grey--900;
+  }
   &:hover,
   &:active {
-    color: $grey--400;
+    color: white;
+    background-color: black;
   }
 }
 
-.m-cards__block {
+.m-cards__block--static {
+  color: white;
+  background-color: black;
+}
+
+.m-cards__stretch {
   position: relative;
 
-  padding-bottom: 90%;
+  .m-cards--short & {
+    padding-bottom: 40%;
+  }
+
+  .m-cards--tall & {
+    padding-bottom: 90%;
+  }
 }
 
 .m-cards__content {
@@ -42,13 +60,19 @@
   bottom: 0;
   left: 0;
 
-  border: 2px solid currentColor;
-
-  padding: 1em;
+  padding: 1.5em;
 }
 
 .m-cards__top {
   @include head--f;
+}
+
+.m-cards__strong {
+  font-weight: $font__mono--regular;
+
+  .m-cards__block--link:hover & {
+    border-bottom: 1px solid;
+  }
 }
 
 .m-cards__bottom {
