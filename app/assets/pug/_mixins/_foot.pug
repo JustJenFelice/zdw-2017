@@ -1,4 +1,4 @@
-mixin foot
+mixin foot(project)
   footer.o-foot
     .l-wrap
       .o-foot__logo: include ../../svg/logo_zdw.svg
@@ -17,6 +17,11 @@ mixin foot
         .o-foot__cell
           h4.o-foot__head.t-smallcaps Kontakt
           ul.o-foot__list
-            li.o-foot__li Michal Kinc
-            li.o-foot__li: a(href="mailto:michal.kinc@zlindesignweek.com") michal.kinc@zlindesignweek.com
-            li.o-foot__li +420 725 941 451
+            if project == "conf"
+              li.o-foot__li Aneta Oulehlová
+              li.o-foot__li: a(href="mailto:aneta.oulehlova@zlindesignweek.com") aneta.oulehlova@zlindesignweek.com
+              li.o-foot__li +420 736 222 423
+            else
+              li.o-foot__li Michal Kinc
+              li.o-foot__li: a(href="mailto:michal.kinc@zlindesignweek.com") michal.kinc@zlindesignweek.com
+              li.o-foot__li +420 725 941 451
