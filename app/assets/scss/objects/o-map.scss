@@ -6,26 +6,43 @@
   text-align: center;
 }
 
-.o-map__viewport {
-  position: relative;
-
+.o-map--large {
   height: 10em;
-
-  background-color: $grey--900;
-
-  iframe {
-    position: absolute;
-    left: 0;
-    top: 50%;
-
-    width: 100%;
-    height: 30em;
-
-    transform: translateY(-50%);
-  }
 
   .map--is-active & {
     height: 30em;
+  }
+}
+
+.o-map__viewport {
+  position: relative;
+
+  height: 15em;
+
+  background-color: $grey--900;
+
+  .o-map--large & {
+    height: 30em;
+
+    transform: translateY(-10em);
+  }
+
+  .map--is-active & {
+    transform: translateY(0);
+  }
+
+  .o-map--large &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .map--is-active &:after {
+    content: none;
   }
 }
 
@@ -38,13 +55,13 @@
   transform: translate(-50%, -50%);
 
   appearance: none;
-  background-color: transparent;
 
   @include a-button();
-  @include a-button--outline();
+  @include a-button--solid();
+
+  font-family: $font__sans;
 
   &:hover {
-    color: $c-hover;
     cursor: pointer;
   }
 

@@ -41,3 +41,11 @@ $("[data-onoff]").on("click", function() {
   $(this).addClass(classActive);
   $(this).siblings().removeClass(classActive);
 });
+
+function initMap() {
+  new google.maps.Map(document.getElementById("js-map"), {
+    center: {lat: 49.2242573, lng: 17.6569664},
+    zoom: 15,
+    scrollwheel: false
+  });
+}

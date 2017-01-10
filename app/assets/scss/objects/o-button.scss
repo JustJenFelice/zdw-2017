@@ -26,6 +26,21 @@
   @include padding(.75em 1.75em);
 }
 
+@mixin a-button--solid() {
+  border: none;
+  @include padding(.875em 1.75em);
+
+  &,
+  &:link,
+  &:visited {
+    color: white;
+    background-color: black;
+  }
+  &:hover, &:active {
+    background-color: rgba(black, .75);
+  }
+}
+
 // Classes
 [class^="o-button--"],
 [class*=" o-button--"] {
@@ -41,13 +56,5 @@
 }
 
 .o-button--solid {
-  @include padding(.875em 1.75em);
-
-  &:link, &:visited {
-    color: white;
-    background-color: black;
-  }
-  &:hover, &:active {
-    background-color: rgba(black, .75);
-  }
+  @include a-button--solid();
 }
