@@ -1,0 +1,43 @@
+.m-teaser {
+  display: flex;
+
+  margin-top: 3em;
+
+  margin-left: -.75em;
+  margin-right: -.75em;
+}
+
+.m-teaser__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  flex-basis: 0;
+  flex-grow: 1;
+
+  color: white;
+  background-color: black;
+
+  padding: 3em;
+
+  margin-left: .75em;
+  margin-right: .75em;
+}
+
+.m-teaser__title {
+  margin-top: 0;
+
+  @include head--b;
+
+  min-height: 3em;
+}
+
+.m-teaser__link {
+  @include link--white;
+
+  @include ui-toggle("without");
+
+  border-bottom: 1px solid;
+  margin-top: 2em;
+}
