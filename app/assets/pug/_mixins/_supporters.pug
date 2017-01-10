@@ -15,16 +15,20 @@ mixin supporters(type)
             a.o-affiliate__link(href="http://avonet.cz")
               img.o-affiliate__image(src="/assets/images/companies/logo_avonet.png", alt="Partner Logo")
 
-        else
-          //- Show fund logo for Best in Design
-          if type == "bid"
-            li.o-affiliate__item--large
-              h2.m-supporters__title.t-head--d Vyhlašovatel
-              a.o-affiliate__link(href="javascript:")
-                img.o-affiliate__image(src="/assets/images/companies/logo_fond_ruzickovych.jpg", alt="Partner Logo")
+        else if type == "bid"
+          li.o-affiliate__item--large
+            h2.m-supporters__title.t-head--d Vyhlašovatel
+            a.o-affiliate__link(href="javascript:")
+              img.o-affiliate__image(src="/assets/images/companies/logo_fond_ruzickovych.jpg", alt="Partner Logo")
 
-          //- Show University logo for all pages
           li.o-affiliate__item--large
             h2.m-supporters__title.t-head--d Spolupořadatel
             a.o-affiliate__link(href="http://www.utb.cz/fmk")
               img.o-affiliate__image(src="/assets/images/companies/logo_utb.png", alt="Partner Logo")
+
+        //- Show only UTB logo by default
+        else
+          li.o-affiliate__item--large
+              h2.m-supporters__title.t-head--d Pořadatel
+              a.o-affiliate__link(href="http://www.utb.cz/fmk")
+                img.o-affiliate__image(src="/assets/images/companies/logo_utb.png", alt="Partner Logo")
