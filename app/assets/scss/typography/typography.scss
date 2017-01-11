@@ -8,6 +8,15 @@
   }
 }
 
+@mixin link--black {
+  &:link, &:visited {
+    color: black;
+  }
+  &:hover, &:active {
+    color: rgba(black, .5);
+  }
+}
+
 @mixin a-bold {
   font-weight: $font__sans--semibold;
 }
