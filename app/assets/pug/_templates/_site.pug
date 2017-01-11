@@ -1,5 +1,6 @@
 block template-variables
   - var page = {title: "ZDW 2017", description: "Zlin Design Week 2017."}
+  - var theme = "default"
 
 doctype
 html.no-js(lang="en")
@@ -19,7 +20,7 @@ html.no-js(lang="en")
       <!-- endinject -->
       <!-- endbuild -->
 
-  body
+  body(class="theme--" + theme)
     include ../_mixins/_dummy
     include ../_mixins/_hud
     include ../_mixins/_intro
