@@ -41,7 +41,29 @@ Conference
     }
   }
 
+  .o-section--light {
+    background-color: $conf-color--900;
+  }
+
   .m-cards__block--static {
     background-color: $conf-color--500;
+  }
+
+  .m-tickets {
+    color: white;
+    background-color: $conf-color--500;
+  }
+
+  .o-ticket {
+    color: $conf-color--500;
+    background-color: white;
+  }
+
+  .o-ticket__button {
+    @include link--conf;
+  }
+
+  .ticket--is-disabled {
+    background-color: rgba(white, .5);
   }
 }
