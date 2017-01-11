@@ -3,38 +3,38 @@ extends ../_templates/_site
 block template-content
   +hud("conf")
 
-  section.m-hero--half
+  section.m-hero--half.m-hero-pseudo--top
     .m-hero__content
       h1.m-hero__title Otto Fabri
       span Designér ve Faraday Future
 
-  .o-facts
-    .o-facts__wrap
-      ul.o-facts__list
-        -
-          var eventInfo = [
-            {
-              "title": "Datum konání",
-              "content": "26. 5. 2016"
-            },
-            {
-              "title": "Čas",
-              "content": "19:00 – 02:00"
-            },
-            {
-              "title": "Místo",
-              "content": "Platforma 14|15"
-            },
-            {
-              "title": "Kategorie",
-              "content": "Party"
-            }
-          ]
-        each item in eventInfo
-          li.o-facts__item
-            strong.o-facts__title= item.title
-            | 
-            span.o-facts__content= item.content
+    .s-event-facts.o-facts
+      .o-facts__wrap
+        ul.o-facts__list
+          -
+            var eventInfo = [
+              {
+                "title": "Datum konání",
+                "content": "26. 5. 2016"
+              },
+              {
+                "title": "Čas",
+                "content": "19:00 – 02:00"
+              },
+              {
+                "title": "Místo",
+                "content": "Platforma 14|15"
+              },
+              {
+                "title": "Kategorie",
+                "content": "Party"
+              }
+            ]
+          each item in eventInfo
+            li.o-facts__item
+              strong.o-facts__title= item.title
+              | 
+              span.o-facts__content= item.content
 
   main
     .l-wrap

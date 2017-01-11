@@ -1,7 +1,9 @@
-[class^="m-hero--"] {
+[class^="m-hero--"],
+[class*=" m-hero--"] {
   position: relative;
 
   display: flex;
+  flex-direction: column;
 
   color: white;
   background-color: black;
@@ -14,7 +16,7 @@
 .m-hero--full {
   min-height: 100vh;
 
-  align-items: flex-end;
+  justify-content: flex-end;
 
   @include media($dr__large) {
     min-height: 100vmin;
@@ -24,14 +26,24 @@
 .m-hero--half {
   min-height: 75vh;
 
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  text-align: center;
+  justify-content: space-between;
 
   @include media($dr__large) {
     min-height: 50vmin;
+  }
+}
+
+// Create pseudo-elements to align content using display: flex
+.m-hero-pseudo--top {
+  &:before {
+    content: "";
+  }
+}
+
+.m-hero-pseudo--both {
+  &:before,
+  &:after {
+    content: "";
   }
 }
 
@@ -47,6 +59,10 @@
     @include media($dr__large) {
       max-width: 43em;
     }
+  }
+
+  .m-hero--half & {
+    text-align: center;
   }
 }
 
@@ -68,13 +84,14 @@
 
 .m-hero__button {
   @include link--white;
+
+  .m-hero--half & {
+    margin-top: 1em;
+  }
 }
 
 .m-hero__pin {
-  @include media($dr__large) {
-    position: absolute;
-    bottom: 0;
-  }
+  text-align: center;
 }
 
 .m-hero__details {
