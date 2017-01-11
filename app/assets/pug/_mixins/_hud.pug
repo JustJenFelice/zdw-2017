@@ -1,9 +1,11 @@
 mixin hud(type)
-  header.o-hud#js-headroom
+  header#js-headroom.o-hud
     .o-hud__head
       .o-hud__cell
-        if type == "zdw" || type == "conf"
+        if type == "zdw"
           a.o-logo--zdw(href="index.html"): include ../../svg/logo_zdw.svg
+        else if type == "conf"
+          a.o-logo--conf(href="index.html"): include ../../svg/logo_zdw.svg
         else
           a.o-logo--bid(href="index.html"): include ../../svg/logo_bid.svg
 
