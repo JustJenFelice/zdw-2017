@@ -17,13 +17,39 @@
   align-items: center;
   justify-content: center;
 
-  border-right: .25em dotted white;
+  border-right: .125em dotted currentColor;
+
+  &:before,
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    left: 100%;
+
+    transform: translateX(-50%);
+
+    border: .5em solid transparent;
+  }
+
+  &:before {
+    top: 0;
+
+    border-top-color: currentColor;
+  }
+  &:after {
+    bottom: 0;
+
+    border-bottom-color: currentColor;
+  }
 }
 
 .o-ticket__note {
   color: currentColor;
   background-color: transparent;
 
+  font-size: .875em;
   text-align: center;
 
   transform: rotate(-90deg);
@@ -77,6 +103,7 @@
 
 .o-ticket__price {
   display: inline-block;
+  font-family: $font__mono;
 
   &:not(:first-child) {
     margin-left: 1em;
