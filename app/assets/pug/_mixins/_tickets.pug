@@ -2,10 +2,11 @@ mixin tickets()
   section.m-tickets.o-section--light
     .l-wrap.l-wrap--big
       h1.m-tickets__title Chceš dojet? Kup si vstupenku!
+
       .m-tickets__list
         each ticket in [1, 2]
           article.m-tickets__item
-            .o-ticket
+            .o-ticket(class=ticket == 2 ? "ticket--is-disabled" : null)
               .o-ticket__aside
                 mark.o-ticket__note Prvních 300&nbsp;vstupenek
               .o-ticket__content
@@ -17,7 +18,10 @@ mixin tickets()
                       | . vlna
                     small.o-ticket__subtitle Předprodej trvá do 15. března
                   .o-ticket__cell
-                    a.o-ticket__button.o-button--outline(href="tickets.html") Koupit
+                    if ticket == 1
+                      a.o-ticket__button.o-button--outline(href="tickets.html") Koupit
+                    else
+                      | &nbsp;
 
                 ul.o-ticket__list
                   li.o-ticket__price 1050#[span.o-ticket__sup Kč]
