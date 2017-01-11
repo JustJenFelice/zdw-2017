@@ -71,9 +71,9 @@ block template-content
       button.o-map__button(data-toggle="map") Zobrazit mapu
 
     .m-program
-      each day in ["Monday", "Tuesday", "Wednesday"]
+      each day in ["24.&thinsp;04.&emsp;Pondělí", "25.&thinsp;04.&emsp;Úterý", "26.&thinsp;04.&emsp;Středa"]
         .m-program__section
-          h1.m-program__title= day
+          h1.m-program__title!= day
           .m-program__list
             - var groupCount = Math.ceil(Math.random() * 4) + 1
             - var i = 0
