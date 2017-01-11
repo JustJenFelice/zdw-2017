@@ -1,7 +1,10 @@
 extends ../_templates/_site
 
+append template-variables
+  - var theme = "conf"
+
 block template-content
-  +hud("conf")
+  +hud(theme)
 
   section.m-hero--half.m-hero-pseudo--top
     .m-hero__content
@@ -18,7 +21,7 @@ block template-content
     .m-fullimage__content.l-wrap
       a.m-fullimage__button.o-button--outline(href="https://www.youtube.com/embed/r_654PozdKg", data-featherlight="iframe") Přehrát video
 
-  +stats("conf")
+  +stats(theme)
 
   section.o-section--light
     .l-wrap
@@ -44,8 +47,8 @@ block template-content
 
   +supporters
 
-  +crossroad
+  +crossroad(theme)
 
-  +foot("conf")
+  +foot(theme)
 
-  +peek("bg_bid_3.jpg", "conf")
+  +peek("bg_bid_3.jpg", theme)

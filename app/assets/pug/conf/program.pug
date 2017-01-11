@@ -1,7 +1,10 @@
 extends ../_templates/_site
 
+append template-variables
+  - var theme = "conf"
+
 block template-content
-  +hud("conf")
+  +hud(theme)
 
   section.m-hero--half.m-hero-pseudo--both
     .m-hero__content
@@ -55,12 +58,12 @@ block template-content
 
   +tickets
 
-  +crossroad("conf")
+  +crossroad(theme)
 
   +mail("full")
 
   +supporters
 
-  +foot("conf")
+  +foot(theme)
 
-  +peek("bg_bid_3.jpg", "conf")
+  +peek("bg_bid_3.jpg", theme)
