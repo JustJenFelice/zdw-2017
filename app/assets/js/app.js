@@ -42,10 +42,14 @@ $("[data-onoff]").on("click", function() {
   $(this).siblings().removeClass(classActive);
 });
 
+var mapEl = document.getElementById("js-map");
+
 function initMap() {
-  new google.maps.Map(document.getElementById("js-map"), {
-    center: {lat: 49.2242573, lng: 17.6569664},
-    zoom: 15,
-    scrollwheel: false
-  });
+  if (mapEl !== null) {
+    new google.maps.Map(mapEl, {
+      center: {lat: 49.2242573, lng: 17.6569664},
+      zoom: 15,
+      scrollwheel: false
+    })
+  }
 }
