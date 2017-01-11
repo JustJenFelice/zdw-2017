@@ -1,11 +1,47 @@
-.zdw-cards__link {
-  &:hover,
-  &:active {
+@mixin link--conf {
+  &:link, &:visited {
+    color: $conf-color--500;
+  }
+  &:hover, &:active {
     color: black;
-    background-color: $zdw-color--500;
   }
 }
 
-.conf-cards__block {
-  background-color: $conf-color--500;
+/*
+
+ZDW
+
+*/
+
+.theme--zdw {
+  .m-cards__block--link {
+    &:hover,
+    &:active {
+      color: black;
+      background-color: $zdw-color--500;
+    }
+  }
+}
+
+/*
+
+Conference
+
+*/
+
+.theme--conf {
+  color: $conf-color--500;
+
+  .o-brick--black {
+    color: currentColor;
+    background-color: $conf-color--900;
+
+    a {
+      @include link--conf;
+    }
+  }
+
+  .m-cards__block--static {
+    background-color: $conf-color--500;
+  }
 }

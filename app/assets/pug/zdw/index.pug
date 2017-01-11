@@ -1,7 +1,10 @@
 extends ../_templates/_site
 
+append template-variables
+  - var theme = "zdw"
+
 block template-content
-  +hud("zdw")
+  +hud(theme)
 
   section.m-hero--full(style="background-image: url(/assets/images/bg_bid_1.jpg)")
     .m-hero__content
@@ -26,7 +29,7 @@ block template-content
       ul.m-cards
         each card in ["Výstavy", "Party", "Vepřo Knedlo Design"]
           li.m-cards__item
-            a.m-cards__block--link.zdw-cards__link(href="javascript:")
+            a.m-cards__block--link(href="javascript:")
               .m-cards__top
                 strong.m-cards__strong= card
 
@@ -45,7 +48,7 @@ block template-content
             p Uzávěrka soutěže je 13. února 2017.
           a.m-teaser__link(href="javascript:") Přejít na stránku
 
-  +crossroad("zdw")
+  +crossroad(theme)
 
   +mail("full")
 
@@ -53,4 +56,4 @@ block template-content
 
   +foot
 
-  +peek("bg_bid_3.jpg", "zdw")
+  +peek("bg_bid_3.jpg", theme)
