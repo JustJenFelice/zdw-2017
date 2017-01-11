@@ -1,0 +1,17 @@
+mixin brick(instance)
+  section(class="o-brick--" + instance.modifier)
+    .o-brick__image(style="background-image: url(" + instance.image + ")")
+
+    .o-brick__content
+      .o-brick__top
+        h2.t-head--b!= instance.title
+        .o-brick__text
+          if instance.content.large
+            each paragraph in instance.content.large
+              p.t-text--big!= paragraph
+          if instance.content.regular
+            each paragraph in instance.content.regular
+              p!= paragraph
+      if instance.button
+        .o-brick__bottom
+          a.o-button--outline(href=instance.button.href, data-featherlight=instance.button.video ? "iframe" : false)= instance.button.title

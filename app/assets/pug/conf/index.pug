@@ -39,16 +39,23 @@ block template-content
               strong.m-cards__top= card.title
               span.m-cards__bottom= card.content
 
-  section.o-brick--black
-    .o-brick__image(style="background-image: url(/assets/images/history_conf.jpg)")
+  -
+    var brick = {
+      "modifier": "black",
+      "image": "/assets/images/history_conf.jpg",
+      "title": "Koho budete moci na konferenci slyšet?",
+      "content": {
+        "regular": [
+          "Chceme vám přivést špičky z obou oborů z České republiky i ze zahraničí. Postupně je vám budeme přestavovat, zatím se můžete podívat, jak vysoko jsme nasadili laťku během minulých ročníků."
+        ]
+      },
+      "button": {
+        "title": "Historie",
+        "href": "history.html"
+      }
+    }
 
-    .o-brick__content
-      .o-brick__top
-        h2.t-head--b Koho budete moci na konferenci slyšet?
-        .o-brick__text
-          p.t-text--big Chceme vám přivést špičky z obou oborů z České republiky i ze zahraničí. Postupně je vám budeme přestavovat, zatím se můžete podívat, jak vysoko jsme nasadili laťku během minulých ročníků.
-      .o-brick__bottom
-        a.o-button--outline(href="history.html") Historie
+  +brick(brick)
 
   +tickets
 

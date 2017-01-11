@@ -46,16 +46,24 @@ block template-content
         .l-table__cell
           p Intenzivně pracujeme na třetím ročníku Zlin Design Weeku. Do kalendářů si zaznačte poslední dubnový týden, tedy 24.&ndash;30.&nbsp;4. 2017. To se totiž ulice Zlína opět zaplní designem, přinese několiv výstav, další ročník Konference Design &amp; Marketing, desítky přednášek a&nbsp;workshopů, ale i&nbsp;designérskou soutěž Best in Design.
 
-  section.o-brick--black
-    .o-brick__image(style="background-image: url(/assets/images/history_zdw.jpg)")
+  -
+    var brick = {
+      "modifier": "black",
+      "image": "/assets/images/history_zdw.jpg",
+      "title": "Jaký byl minulý ročník?",
+      "content": {
+        "large": [
+          "Pokud se chcete naladit už teď, pusťte si sestřih z&nbsp;minulého ročníku."
+        ]
+      },
+      "button": {
+        "title": "Přehrát video",
+        "video": true,
+        "href": "https://www.youtube.com/embed/xlQKuP_RgI4"
+      }
+    }
 
-    .o-brick__content
-      .o-brick__top
-        h2.t-head--b Jaký byl minulý ročník?
-        .o-brick__text
-          p.t-text--big Pokud se chcete naladit už teď, pusťte si sestřih z&nbsp;minulého ročníku.
-      .o-brick__bottom
-        a.o-button--outline(href="https://www.youtube.com/embed/xlQKuP_RgI4", data-featherlight="iframe") Přehrát video
+  +brick(brick)
 
   section.m-xroad(style="background-image: url(/assets/images/bg_zdw_2.jpg)")
     a.m-xroad__link(href="http://www.bestindesign.cz")
