@@ -17,18 +17,27 @@ block template-content
     .l-wrap
       h1.o-section__title Spojení designu a marketingu
 
-      ul.o-flexlist
-        li.o-flexlist__item--tri
-          h2.t-head--d Design
-          p Design jako plán něčeho. Design jako funkce. Design jako estetika. Design jako produkt s funkční hodnotou. Design jako umění. Design. Hodnota. Potřebuje design marketing, aby nebyl pouhopouhým výtvorem na poličce? 
-
-        li.o-flexlist__item--tri
-          h2.t-head--d Marketing
-          p Marketing jako proces. Marketing jako uspokojování potřeb zákazníka. Marketing je být ve správný čas na správném místě. Design a marketing? Díky kreativitě a jejich promyšlené provázanosti vznikají opravdové hodnoty, které pak tvoří základní stavební kámen pro produkt, značku nebo společnost.
-
-        li.o-flexlist__item--tri
-          h2.t-head--d Omezení
-          p Omezení zadáním, časem, materiálem, rozpočtem, prostorem, pravidly. Omezení naším vnímáním a naší myslí samotnou. Design a marketing jsou omezovány různými faktory. Musí být ale vždy omezení negativní? Existují pozitivní omezení?
+      ul.m-cards
+        -
+          var cardsObject = [
+            {
+              "title": "Design",
+              "content": "Design jako plán něčeho. Design jako funkce. Design jako estetika. Design jako produkt s funkční hodnotou. Design jako umění. Design. Hodnota. Potřebuje design marketing, aby nebyl pouhopouhým výtvorem na poličce?"
+            },
+            {
+              "title": "Marketing",
+              "content": "Marketing jako proces. Marketing jako uspokojování potřeb zákazníka. Marketing je být ve správný čas na správném místě. Design a marketing? Díky kreativitě a jejich promyšlené provázanosti vznikají opravdové hodnoty, které pak tvoří základní stavební kámen pro produkt, značku nebo společnost."
+            },
+            {
+              "title": "Omezení",
+              "content": "Omezení zadáním, časem, materiálem, rozpočtem, prostorem, pravidly. Omezení naším vnímáním a naší myslí samotnou. Design a marketing jsou omezovány různými faktory. Musí být ale vždy omezení negativní? Existují pozitivní omezení?"
+            }
+          ]
+        each card in cardsObject
+          li.m-cards__item
+            .m-cards__block--static.conf-cards__block
+              strong.m-cards__top= card.title
+              span.m-cards__bottom= card.content
 
   section.o-brick--black
     .o-brick__image(style="background-image: url(/assets/images/history_conf.jpg)")
