@@ -1,7 +1,10 @@
 extends ../_templates/_site
 
+append template-variables
+  - var theme = "zdw"
+
 block template-content
-  +hud("zdw")
+  +hud(theme)
 
   section.m-hero--half.m-hero-pseudo--both(style="background-image: url(/assets/images/bg_bid_2.jpg)")
     .m-hero__content
@@ -55,10 +58,10 @@ block template-content
         h1 Máte nějaký dotaz nebo problém?
         p Pokud to vyložene nehoří, nechte nám zprávu na #[a(href="mailto:info@zlindesignweek.com") info@zlindesignweek.com]. Pokud ano, raději volejte na +420 776 343 310.
 
-  +supporters
+  +supporters(theme)
 
-  +crossroad
+  +crossroad(theme)
 
-  +foot
+  +foot(theme)
 
-  +peek("bg_bid_3.jpg", "zdw")
+  +peek("bg_bid_3.jpg", theme)

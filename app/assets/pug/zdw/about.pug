@@ -1,7 +1,10 @@
 extends ../_templates/_site
 
+append template-variables
+  - var theme = "zdw"
+
 block template-content
-  +hud("zdw")
+  +hud(theme)
 
   section.m-hero--half.m-hero-pseudo--top
     .m-hero__content
@@ -48,12 +51,12 @@ block template-content
             .m-carousel__thumbnail--photo
               img.m-carousel__image(src="http://unsplash.it/800/500/?image=" + item, alt="Gallery image")
 
-  +crossroad("zdw")
+  +crossroad(theme)
 
   +mail("full")
 
-  +supporters
+  +supporters(theme)
 
-  +foot
+  +foot(theme)
 
-  +peek("bg_bid_3.jpg", "zdw")
+  +peek("bg_bid_3.jpg", theme)

@@ -1,6 +1,7 @@
 extends ../_templates/_site
 
 append template-variables
+  - var theme = "zdw"
   -
     var relatedArray = [
       {
@@ -42,7 +43,7 @@ append template-variables
     ]
 
 block template-content
-  +hud("zdw")
+  +hud(theme)
 
   section.m-hero--half.m-hero-pseudo--top
     .m-hero__content
@@ -112,12 +113,12 @@ block template-content
             +mediaItem("m-related__item", "event-detail.html", item)
 
 
-  +crossroad("zdw")
+  +crossroad(theme)
 
   +mail("full")
 
-  +supporters
+  +supporters(theme)
 
-  +foot
+  +foot(theme)
 
-  +peek("bg_bid_3.jpg", "zdw")
+  +peek("bg_bid_3.jpg", theme)

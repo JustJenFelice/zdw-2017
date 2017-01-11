@@ -1,6 +1,7 @@
 extends ../_templates/_site
 
 append template-variables
+  - var theme = "zdw"
   -
     var eventArray = [
       {
@@ -51,7 +52,7 @@ append template-variables
     ]
 
 block template-content
-  +hud("zdw")
+  +hud(theme)
 
   section.m-hero--half.m-hero-pseudo--both
     .m-hero__content
@@ -82,12 +83,12 @@ block template-content
               +mediaItem("m-program__item", "event-detail.html", eventArray[randomIndex])
               - groupCount--
 
-  +crossroad("zdw")
+  +crossroad(theme)
 
   +mail("full")
 
-  +supporters
+  +supporters(theme)
 
-  +foot
+  +foot(theme)
 
-  +peek("bg_bid_3.jpg", "zdw")
+  +peek("bg_bid_3.jpg", theme)
