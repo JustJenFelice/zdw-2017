@@ -1,0 +1,67 @@
+extends ../_templates/_site
+
+block template-content
+  +hud("zdw")
+
+  section.m-hero--half
+    .m-hero__content
+      h1.m-hero__title Historie ZDW
+
+    .m-hero__pin
+      ul.o-timeline
+        li.o-timeline__item
+          a.o-timeline__link(href="about.html") 2017
+        li.o-timeline__item
+          mark.o-timeline__active 2016
+
+  section.m-fullimage(style="background-image: url(/assets/images/history_2014_1.jpg)")
+    .m-fullimage__content.l-wrap
+      a.m-fullimage__button.o-button--outline(href="https://www.youtube.com/embed/r_654PozdKg", data-featherlight="iframe") Přehrát video
+
+  section
+    .l-wrap
+      .m-article.l-table
+        .l-table__cell
+          h2.t-head--b O ZDW 2016
+        .l-table__cell
+          p Sedmidenní festival designu pokračoval ve své vizi z předchozího ročníku, a to zaplnit ulice Zlína designem. Druhý ročník se, co se počtu výstavních míst týče, nafoukl téměř dvojnásobně oproti předchozímu ročníku. Celkem pět míst ve Zlíně se stalo hlavními body Zlin Design Weeku 2016. Tento ročník byl poprvé zastřešen tématem, jímž byly PRACHY. Zajímala nás především hodnota práce, investice nebo cena designu.
+
+    .o-section--light
+      .l-wrap
+        ul.o-flexlist
+          li.o-flexlist__item--tri
+            mark.o-flexlist__emphasis 12 000 
+            |  návštěvníků ZDW 2016
+          li.o-flexlist__item--tri
+            mark.o-flexlist__emphasis 350
+            |  návštěvníků konference
+          li.o-flexlist__item--tri
+            mark.o-flexlist__emphasis 1 320
+            |  soutěžních prací
+
+
+    .l-wrap
+      .m-article
+        .m-article__columns
+          p Prvním styčným bodem bylo náměstí Míru, kde v KOMA CITY modulech vystavovali firmy jako například TON, Brokis, mmcité nebo Moser, ve Zlatém Jablku byla potom instalována výstava Design v oblacích, která se stala galerií produktů zavěšených v designovém nebi. Druhým útočištěm se stalo parkoviště u 34. budovy, kde se pyšně tyčil KOMA Lighthouse, ve kterém byla v provozu kavárna a prostor pro designové talky. Výstavy se nacházely i v samotném industriálním baťovském areálu Svit, kde se v 64. budově rozprostíraly instalace vysokých uměleckých škol z Prahy, Bratislavy, Ústí nad Labem a samozřejmě ze Zlína. Prostor zde měla i výstava 15 let design centra Tescoma, Staged Design a hlavní výstava celého ZDW s názvem Peníze: Forma, Funkce, Investice, Úspory, Hodnota, Inspirace kurátora Adama Štěcha.
+          p Téma jako takové se nejvíce dotýkalo Konference design &amp; marketing, kde o problematice peněz, hodnoty designu nebo lidské práce hovořili řečníci jako automobiloví designéři Otto Fabri a Michal Vlček, Jindra Vejvodová z Preciosa Lighting, marketingový mág Petr Pištělák nebo designérské duo Jan Plecháč a Henry Wielgus. Konference se zúčastnilo 350 diváků, útočiště poskytlo Městské divadlo ve Zlíně.
+          p Soutěž Talent designu obdržela v sedmém ročníku rekordních 1 320 soutěžních prací z celého světa. Nejlepšími z nejlepších se stali Andrej Barčák a Andrej Čanecký ze Slovenska za grafické zpracování pravidel fotbalu v projektu Jedenástky.
+          p K týdnu designu patřil i Design Shop, workshopy nebo neformální design talky s kusem dobrého jídla zvané Vepřo Knedlo Design.
+
+  section.m-carousel.o-section--black
+    .m-carousel__header.l-wrap
+      h1.t-head--b Fotogalerie
+    .m-carousel__list(data-carousel, data-featherlight-gallery, data-featherlight-filter="[data-gallery]")
+      each item in [106, 112, 212, 335, 366]
+        .m-carousel__item
+          a.m-carousel__link(href="assets/images/gallery/img_gallery_" + item + ".jpeg", data-gallery)
+            .m-carousel__thumbnail--photo
+              img.m-carousel__image(src="http://unsplash.it/800/500/?image=" + item, alt="Gallery image")
+
+  +supporters
+
+  +crossroad("zdw")
+
+  +foot("zdw")
+
+  +peek("bg_zdw_3.jpg", "zdw")
