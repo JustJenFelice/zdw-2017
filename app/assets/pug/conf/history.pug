@@ -5,17 +5,14 @@ block template-content
 
   section.m-hero--half
     .m-hero__content
-      h1.m-hero__title O Konferenci 2016
+      h1.m-hero__title O konferenci 2016
 
     .m-hero__pin
       ul.o-timeline
-        each year in ["2017", "2016", "2015"]
-          if year == "2016"
-            li.o-timeline__item
-              mark.o-timeline__active= year
-          else
-            li.o-timeline__item
-              a.o-timeline__link(href="history.html")= year
+        li.o-timeline__item
+          a.o-timeline__link(href="about.html") 2017
+        li.o-timeline__item
+          mark.o-timeline__active 2016
 
   section.m-fullimage(style="background-image: url(/assets/images/history_2014_1.jpg)")
     .m-fullimage__content.l-wrap

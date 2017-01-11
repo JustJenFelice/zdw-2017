@@ -9,13 +9,10 @@ block template-content
 
     .m-hero__pin
       ul.o-timeline
-        each year in ["2017", "2016", "2015"]
-          if year == "2017"
-            li.o-timeline__item
-              mark.o-timeline__active= year
-          else
-            li.o-timeline__item
-              a.o-timeline__link(href="history.html")= year
+        li.o-timeline__item
+          mark.o-timeline__active 2017
+        li.o-timeline__item
+          a.o-timeline__link(href="history.html") 2016
 
   section
     .l-wrap
