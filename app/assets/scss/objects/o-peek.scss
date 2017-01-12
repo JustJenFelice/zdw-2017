@@ -1,5 +1,5 @@
 .o-peek {
-  @include fixed-background;
+  @include stretch-background("fixed");
   @include wrap-padding;
   min-height: 75vmin;
 

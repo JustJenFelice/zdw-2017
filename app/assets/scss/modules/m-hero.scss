@@ -10,7 +10,7 @@
 
   overflow: hidden;
 
-  @include fixed-background;
+  @include stretch-background("static");
 }
 
 .m-hero--full {
@@ -20,6 +20,10 @@
 
   @include media($dr__large) {
     min-height: 100vmin;
+  }
+
+  .device--is-desktop & {
+    background-attachment: fixed;
   }
 }
 

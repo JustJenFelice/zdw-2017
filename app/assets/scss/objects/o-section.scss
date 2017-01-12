@@ -1,6 +1,6 @@
 [class^="o-section--"],
 [class*=" o-section--"] {
-  @include fixed-background;
+  @include stretch-background("fixed");
 }
 
 .o-section--white {

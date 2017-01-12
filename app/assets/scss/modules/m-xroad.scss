@@ -1,5 +1,5 @@
 .m-xroad {
-  @include fixed-background;
+  @include stretch-background("fixed");
   background-color: black;
 
   @include media($dr__large) {

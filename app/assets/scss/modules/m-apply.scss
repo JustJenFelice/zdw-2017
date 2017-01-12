@@ -2,7 +2,7 @@
   color: white;
   background-color: $grey--100;
 
-  @include fixed-background;
+  @include stretch-background("fixed");
 
   @include media($dr__large) {
     padding-bottom: 1.5em;

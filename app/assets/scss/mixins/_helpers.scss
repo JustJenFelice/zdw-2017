@@ -1,10 +1,12 @@
-@mixin fixed-background {
+@mixin stretch-background($type: "static") {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  .device--is-desktop & {
-    background-attachment: fixed;
+  @if ($type == "fixed") {
+    .device--is-desktop & {
+      background-attachment: fixed;
+    }
   }
 }
 
