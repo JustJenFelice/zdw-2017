@@ -45,6 +45,11 @@ Conference
     background-color: $conf-color--900;
   }
 
+  [class^="m-hero--"],
+  [class*=" m-hero--"] {
+    background-color: $conf-color--500;
+  }
+
   .m-cards__block--static {
     background-color: $conf-color--500;
   }
@@ -73,5 +78,9 @@ Conference
 
   .ticket--is-disabled {
     background-color: rgba(white, .5);
+  }
+
+  .s-event-facts {
+    color: $conf-color--500;
   }
 }
