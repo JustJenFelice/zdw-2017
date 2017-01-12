@@ -33,7 +33,7 @@ Conference
   color: $conf-color--500;
 
   .o-brick--black {
-    color: currentColor;
+    color: $conf-color--500;
     background-color: $conf-color--900;
 
     a {
@@ -47,6 +47,14 @@ Conference
 
   .m-cards__block--static {
     background-color: $conf-color--500;
+  }
+
+  .o-onoff__button {
+    border-color: $conf-color--500;
+
+    &.is--active {
+      background-color: $conf-color--500;
+    }
   }
 
   .m-tickets {
