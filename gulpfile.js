@@ -137,15 +137,18 @@ gulp.task('build:resources', function() {
 
 // Move other assets to production folder.
 gulp.task('build:move', ['build:wipe', 'build:resources'], function() {
-  gulp.src(resources.move.relative, {base: config.dev.root})
+  return gulp.src(resources.move.relative, {base: config.dev.root})
     .pipe(gulp.dest(config.dist.root));
+});
 
+// Move other assets to production folder.
+gulp.task('build:static', ['build:wipe', 'build:resources'], function() {
   return gulp.src(resources.move.static)
     .pipe(gulp.dest(config.dist.root));
 });
 
 // Clean CSS and JS.
-gulp.task('build:compile', ['build:move'], function() {
+gulp.task('build:compile', ['build:move', 'build:static'], function() {
   return gulp.src(config.dev.root + 'index.html')
     .pipe(plugins.usemin(
       {
