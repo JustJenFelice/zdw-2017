@@ -63,28 +63,31 @@
   }
 }
 
-.o-peek__link--fb {
-  &:hover, &:active {
-    border-bottom-color: #3b5998;
+// Shameless specificity hack, still better than !important
+.o-peek .o-peek__text {
+  .o-peek__link--fb {
+    &:hover, &:active {
+      border-bottom-color: #3b5998;
+    }
   }
-}
-.o-peek__link--yt {
-  &:hover, &:active {
-    border-bottom-color: #cd201f;
+  .o-peek__link--yt {
+    &:hover, &:active {
+      border-bottom-color: #cd201f;
+    }
   }
-}
-.o-peek__link--ig {
-  &:hover, &:active {
-    border-bottom-color: #5851db;
+  .o-peek__link--ig {
+    &:hover, &:active {
+      border-bottom-color: #5851db;
+    }
   }
-}
-.o-peek__link--tw {
-  &:hover, &:active {
-    border-bottom-color: #1da1f2;
+  .o-peek__link--tw {
+    &:hover, &:active {
+      border-bottom-color: #1da1f2;
+    }
   }
-}
-.o-peek__link--md {
-  &:hover, &:active {
-    border-bottom-color: #02b875;
+  .o-peek__link--md {
+    &:hover, &:active {
+      border-bottom-color: #02b875;
+    }
   }
 }

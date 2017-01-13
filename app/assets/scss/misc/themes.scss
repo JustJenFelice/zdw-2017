@@ -18,8 +18,17 @@ ZDW
     color: black;
   }
 
+  .headroom--not-top,
+  .o-hud:after,
+  &.nav--is-open .o-hud {
+    background-color: $zdw-color--500;
+  }
+
+  .o-peek,
   [class^="m-hero--"],
-  [class*=" m-hero--"] {
+  [class*=" m-hero--"],
+  .m-cards__block--link:hover,
+  .m-cards__block--link:active {
     color: black;
     background-color: $zdw-color--500;
   }
@@ -27,24 +36,18 @@ ZDW
   [class^="o-logo--"],
   [class*=" o-logo--"],
   .o-nav__link,
-  .m-hero__button,
+  .o-timeline__link,
   &.nav--is-open .o-switcher__link,
-  .o-timeline__link {
+  .m-hero__button {
     @include link--black;
   }
 
-  .m-cards__block--link {
-    &:hover,
-    &:active {
+  [class^="o-peek__link"],
+  [class*=" o-peek__link"] {
+    &:link, &:visited {
       color: black;
-      background-color: $zdw-color--500;
+      border-bottom-color: rgba(black, .25);
     }
-  }
-
-  .headroom--not-top,
-  .o-hud:after,
-  &.nav--is-open .o-hud {
-    background-color: $zdw-color--500;
   }
 }
 
