@@ -1,22 +1,9 @@
 extends _templates/_site
 
 block template-content
-  header.o-hud#js-headroom
-    .o-hud__head
-      a.o-logo--conf(href="index.html"): include ../svg/logo_zdw.svg
+  - var theme = "conf"
 
-    .o-switcher
-      button.o-switcher__toggle(data-switcher)
-        | Všechny projekty
-        svg.o-switcher__icon(viewBox="0 0 16 10", xmlns="http://www.w3.org/2000/svg")
-          path(d="M2,2 L8,8 L14,2")
-      strong.o-switcher__title Další projekty
-      .o-switcher__content
-        a.o-switcher__link(href="http://www.zlindesignweek.com") Zlin Design Week
-        a.o-switcher__link(href="http://www.bestindesign.cz") Best in Design
-        mark.o-switcher__link--active Konference design &amp; marketing
-
-  span.o-switcher-close(data-switcher)
+  +hud(theme, false)
 
   section.m-hero--full(style="background-image: url(/assets/images/bg_conf_1.jpg)")
     .m-hero__content
@@ -65,12 +52,12 @@ block template-content
 
   +brick(brick)
 
-  +crossroad("conf")
+  +crossroad(theme)
 
   +mail
 
   +supporters("temp")
 
-  +foot("conf")
+  +foot(theme)
 
-  +peek("bg_conf_3.jpg", "conf")
+  +peek("bg_conf_3.jpg", theme)

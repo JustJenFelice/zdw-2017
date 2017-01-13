@@ -1,4 +1,4 @@
-mixin hud(type)
+mixin hud(type, navigation)
   header#js-headroom.o-hud
     .o-hud__head
       .o-hud__cell
@@ -18,25 +18,26 @@ mixin hud(type)
           span.o-nav__cross
           | Close
 
-    nav.o-nav
-      ul.o-nav__list
-        - var pageObject
-        case type
-          when "zdw"
-            - pageObject = pages[0]
-          when "conf"
-            - pageObject = pages[1]
-          when "bid"
-          default
-            - pageObject = pages[2]
-        each page in pageObject
-          li.o-nav__item
-            a.o-nav__link(href=page.link, data-external=page.external)
-              = page.title
-              if page.external
-                svg.o-nav__icon(width="8px", viewBox="0 0 12 12", xmlns="http://www.w3.org/2000/svg")
-                  path(d="M0.5,0.5 L11.5,0.5 L11.5,11.5")
-                  path(d="M0.5,11.5 L11.5,0.5")
+    unless navigation == false
+      nav.o-nav
+        ul.o-nav__list
+          - var pageObject
+          case type
+            when "zdw"
+              - pageObject = pages[0]
+            when "conf"
+              - pageObject = pages[1]
+            when "bid"
+            default
+              - pageObject = pages[2]
+          each page in pageObject
+            li.o-nav__item
+              a.o-nav__link(href=page.link, data-external=page.external)
+                = page.title
+                if page.external
+                  svg.o-nav__icon(width="8px", viewBox="0 0 12 12", xmlns="http://www.w3.org/2000/svg")
+                    path(d="M0.5,0.5 L11.5,0.5 L11.5,11.5")
+                    path(d="M0.5,11.5 L11.5,0.5")
 
     .o-switcher
       button.o-switcher__toggle(data-switcher)
