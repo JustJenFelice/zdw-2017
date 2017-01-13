@@ -11,45 +11,45 @@ block template-content
       h1.m-hero__title Přihláška
 
   main
-    form.m-application.l-wrap
-      h1.m-application__title Kontaktní údaje
-      .m-application__section
+    form.m-form.l-wrap
+      h1.m-form__title Kontaktní údaje
+      .m-form__section
         each item in ["Jméno", "Příjmení", "Adresa", "Město", "PSČ", "Země", "Telefon", "E-mail"]
-          .m-application__row
+          .m-form__row
             input.o-input--black(type="text", placeholder=item)
 
             if item == "Jméno"
-              strong.m-application__note V případě autorského kolektivu oddělte jména čárkou.
+              strong.m-form__note V případě autorského kolektivu oddělte jména čárkou.
             if item == "Telefon"
-              strong.m-application__note Telefonní číslo zadejte ve formátu +XXX 123 456 789.
+              strong.m-form__note Telefonní číslo zadejte ve formátu +XXX 123 456 789.
 
-      h1.m-application__title Detail školy
-      .m-application__section
+      h1.m-form__title Detail školy
+      .m-form__section
         each item in ["Země", "Město", "Název školy", "Obor", "Vedoucí katedry"]
-          .m-application__row
+          .m-form__row
             input.o-input--black(type="text", placeholder=item)
 
-      h1.m-application__title Detail práce
-      .m-application__section
-        .m-application__row
+      h1.m-form__title Detail práce
+      .m-form__section
+        .m-form__row
           input.o-input--black(type="text", placeholder="Úplný název práce")
-        .m-application__row
+        .m-form__row
           .o-dropdown
             select.o-dropdown__select
               option(disabled, selected) Kategorie
               option Kategorie 1
               option Kategorie 2
               option(disabled) A tak dále
-        .m-application__row
+        .m-form__row
           label.o-label
             span.o-label__text Datum vzniku
             input.o-input--black(type="date", min="2015-01-01")
 
-      h1.m-application__title Přílohy
-      .m-application__section
-        .m-application__row
+      h1.m-form__title Přílohy
+      .m-form__section
+        .m-form__row
           strong.t-bold
-            span.m-application__numbering 1 
+            span.m-form__numbering 1 
             | Prezentační poster
           ul
             li Formát: PDF (CMYK)
@@ -57,17 +57,17 @@ block template-content
             li Kvalita: 300 dpi
           input.o-upload(type="file")
 
-        .m-application__row
+        .m-form__row
           strong.t-bold
-            span.m-application__numbering 2 
+            span.m-form__numbering 2 
             | Textová část
           p Stručný popis koncepce – stručný komentář – záměr autora – objasnění základních východisek při tvorbě soutěžního návrhu a způsob jeho využití v praxi. 
           ul
             li Formát: DOC, TXT
           input.o-upload(type="file")
-        .m-application__row
+        .m-form__row
           strong.t-bold
-            span.m-application__numbering 3 
+            span.m-form__numbering 3 
             | Reprezentativní fotografie
           ul(data-upload-info)
             li Formát: JPG
@@ -76,18 +76,18 @@ block template-content
             li Počet: max. 20 ks
           input.o-upload(data-upload, type="file", name="project-photos[]", multiple)
 
-        .m-application__row
+        .m-form__row
           label.o-checkbox
             input.o-checkbox__input(type="checkbox")
             span.o-checkbox__text Odevzdáním soutěžních návrhů dávají soutěžící vyhlašovateli souhlas s bezplatným využitím soutěžních prací k výstavním a publikačním účelům, k zveřejnění soutěžní práce na internetu a ke zveřejnění kontaktu v souladu se zákonem č. 106/1999 Sb., o svobodném přístupu k informacím, v platném znění.
 
-      .m-application__foot
+      .m-form__foot
         input.o-submit--black(type="submit", value="Odeslat přihlášku")
-        a.m-application__cancel.o-button--outline(href="javascript:") Zrušit
+        a.m-form__cancel.o-button--outline(href="javascript:") Zrušit
 
     .o-section--light
-      .m-application__disclaimer.l-wrap
-        strong.m-application__afterword Po vyplnění přihlášky obdržíte potvrzovací e-mail. Pokud se tak nestane, kontaktujte prosím manažera soutěže na #[a(href="mailto:michal.kinc@zlindesignweek.com") michal.kinc@zlindesignweek.com].
+      .m-form__disclaimer.l-wrap
+        strong.m-form__afterword Po vyplnění přihlášky obdržíte potvrzovací e-mail. Pokud se tak nestane, kontaktujte prosím manažera soutěže na #[a(href="mailto:michal.kinc@zlindesignweek.com") michal.kinc@zlindesignweek.com].
 
   +supporters(theme)
 

@@ -41,14 +41,14 @@ block template-content
               span.m-cards__bottom= card.content
 
   main
-    form.m-application.l-wrap
-      h1.m-application__title.t-head--b Kontaktní údaje
-      .m-application__section
+    form.m-form.l-wrap
+      h1.m-form__title.t-head--b Kontaktní údaje
+      .m-form__section
         each item in ["Jméno", "Příjmení", "Adresa", "Město", "PSČ", "Země", "Telefon", "E-mail"]
-          .m-application__row
+          .m-form__row
             input.o-input--black(type="text", placeholder=item)
 
-      .m-application__foot
+      .m-form__foot
         input.o-submit--black(type="submit", value="Koupit vstupenku")
 
   +crossroad(theme)

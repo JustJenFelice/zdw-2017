@@ -1,10 +1,10 @@
-.m-application {
+.m-form {
   max-width: 40em;
 
   counter-reset: form-count;
 }
 
-.m-application__title {
+.m-form__title {
   @include head--b;
   text-align: center;
 
@@ -26,7 +26,7 @@
   }
 }
 
-.m-application__row {
+.m-form__row {
   &:not(:last-child) {
     margin-bottom: 1em;
 
@@ -36,34 +36,34 @@
   }
 }
 
-.m-application__note {
+.m-form__note {
   display: block;
   margin-top: 1em;
   
   font-weight: $font__sans--regular;
 }
 
-.m-application__foot {
+.m-form__foot {
   text-align: center;
 
   margin-top: 5em;
 }
 
-.m-application__cancel {
+.m-form__cancel {
   margin-top: 1em;
 }
 
-.m-application__numbering {
+.m-form__numbering {
   display: inline-block;
 
   width: em(40);
 }
 
-.m-application__disclaimer {
+.m-form__disclaimer {
   max-width: 40em;
 }
 
-.m-application__afterword {
+.m-form__afterword {
   font-weight: $font__sans--regular;
 
   a {
