@@ -12,7 +12,7 @@ block template-content
 
   main
     form.m-application.l-wrap
-      h1.m-application__title.t-head--b Kontaktní údaje
+      h1.m-application__title Kontaktní údaje
       .m-application__section
         each item in ["Jméno", "Příjmení", "Adresa", "Město", "PSČ", "Země", "Telefon", "E-mail"]
           .m-application__row
@@ -23,13 +23,13 @@ block template-content
             if item == "Telefon"
               strong.m-application__note Telefonní číslo zadejte ve formátu +XXX 123 456 789.
 
-      h1.m-application__title.t-head--b Detail školy
+      h1.m-application__title Detail školy
       .m-application__section
         each item in ["Země", "Město", "Název školy", "Obor", "Vedoucí katedry"]
           .m-application__row
             input.o-input--black(type="text", placeholder=item)
 
-      h1.m-application__title.t-head--b Detail práce
+      h1.m-application__title Detail práce
       .m-application__section
         .m-application__row
           input.o-input--black(type="text", placeholder="Úplný název práce")
@@ -45,7 +45,7 @@ block template-content
             span.o-label__text Datum vzniku
             input.o-input--black(type="date", min="2015-01-01")
 
-      h1.m-application__title.t-head--b Přílohy
+      h1.m-application__title Přílohy
       .m-application__section
         .m-application__row
           strong.t-bold

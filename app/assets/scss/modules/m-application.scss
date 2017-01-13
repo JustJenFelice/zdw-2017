@@ -5,6 +5,7 @@
 }
 
 .m-application__title {
+  @include head--b;
   text-align: center;
 
   margin-top: 2em;
