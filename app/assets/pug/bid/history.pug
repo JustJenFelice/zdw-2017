@@ -1,7 +1,10 @@
 extends ../_templates/_site
 
+append template-variables
+  - var theme = "bid"
+
 block template-content
-  +hud("bid")
+  +hud(theme)
 
   section.m-hero--half.m-hero-pseudo--top
     .m-hero__content
@@ -68,10 +71,10 @@ block template-content
             .m-carousel__thumbnail--photo
               img.m-carousel__image(src="http://unsplash.it/800/500/?image=" + item, alt="Gallery image")
 
-  +supporters("bid")
+  +supporters(theme)
 
-  +crossroad
+  +crossroad(theme)
 
-  +foot("bid")
+  +foot(theme)
 
-  +peek("bg_bid_3.jpg", "bid")
+  +peek("bg_bid_3.jpg", theme)

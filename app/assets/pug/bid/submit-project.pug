@@ -1,7 +1,10 @@
 extends ../_templates/_site
 
+append template-variables
+  - var theme = "bid"
+
 block template-content
-  +hud("bid")
+  +hud(theme)
 
   section.m-hero--half.m-hero-pseudo--both(style="background-image: url(/assets/images/bg_bid_3.jpg)")
     .m-hero__content
@@ -86,6 +89,6 @@ block template-content
       .m-application__disclaimer.l-wrap
         strong.m-application__afterword Po vyplnění přihlášky obdržíte potvrzovací e-mail. Pokud se tak nestane, kontaktujte prosím manažera soutěže na #[a(href="mailto:michal.kinc@zlindesignweek.com") michal.kinc@zlindesignweek.com].
 
-  +supporters("bid")
+  +supporters(theme)
 
-  +foot("bid")
+  +foot(theme)

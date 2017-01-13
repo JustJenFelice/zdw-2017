@@ -1,7 +1,10 @@
 extends ../_templates/_site
 
+append template-variables
+  - var theme = "bid"
+
 block template-content
-  +hud("bid")
+  +hud(theme)
 
   section.m-hero--half.m-hero-pseudo--both(style="background-image: url(/assets/images/bg_bid_2.jpg)")
     .m-hero__content
@@ -103,10 +106,10 @@ block template-content
 
   +apply-form
 
-  +supporters("bid")
+  +supporters(theme)
 
-  +crossroad
+  +crossroad(theme)
 
-  +foot("bid")
+  +foot(theme)
 
-  +peek("bg_bid_3.jpg", "bid")
+  +peek("bg_bid_3.jpg", theme)
