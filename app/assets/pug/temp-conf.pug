@@ -77,26 +77,6 @@ block template-content
 
   +supporters("temp")
 
-  footer.o-foot
-    .l-wrap
-      .o-foot__logo: include ../svg/logo_zdw.svg
-      .o-foot__table
-        .o-foot__cell
-          h4.o-foot__head.t-smallcaps O projektu
-          p ZLIN DESIGN WEEK je projekt realizovaný studenty Fakulty multimediálních komunikací Univerzity Tomáše Bati ve Zlíně.
-          p 24–30. dubna 2017; Zlín, Česká republika
-
-        .o-foot__cell
-          h4.o-foot__head.t-smallcaps Odkazy
-          ul.o-foot__list--nobreak
-            each link, title in {"Best in Design": "http://www.bestindesign.cz", "Konference D&thinsp;&amp;&thinsp;M": "http://www.zlindesignweek.com/konference/", "Design v Ulicích": "http://www.zlindesignweek.com/week/"}
-              li.o-foot__li: a(href=link)!= title
-
-        .o-foot__cell
-          h4.o-foot__head.t-smallcaps Kontakt
-          ul.o-foot__list
-            li.o-foot__li Aneta Oulehlová
-            li.o-foot__li: a(href="mailto:aneta.oulehlova@zlindesignweek.com") aneta.oulehlova@zlindesignweek.com
-            li.o-foot__li +420 736 222 423
+  +foot("conf")
 
   +peek("bg_conf_3.jpg", "conf")
