@@ -11,8 +11,26 @@ mixin foot(project)
         .o-foot__cell
           h4.o-foot__head.t-smallcaps Odkazy
           ul.o-foot__list--nobreak
-            each link in ["Zlin Design Week", "Konference", "Best in Design"]
-              li.o-foot__li: a(href="javascript:")!= link
+            -
+              var projectLinks = [
+                {
+                  "id": "zdw",
+                  "title": "Zlin Design Week",
+                  "href": "http://www.zlindesignweek.com/week/"
+                },
+                {
+                  "id": "conf",
+                  "title": "Konference",
+                  "href": "http://www.zlindesignweek.com/konference/"
+                },
+                {
+                  "id": "bid",
+                  "title": "Best in Design",
+                  "href": "http://www.bestindesign.cz"
+                }
+              ]
+            each link in projectLinks
+              li.o-foot__li: a(href=link.href)!= link.title
 
         .o-foot__cell
           h4.o-foot__head.t-smallcaps Kontakt
