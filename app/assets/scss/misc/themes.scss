@@ -14,12 +14,37 @@ ZDW
 */
 
 .theme--zdw {
+  .o-hud {
+    color: black;
+  }
+
+  [class^="m-hero--"],
+  [class*=" m-hero--"] {
+    color: black;
+    background-color: $zdw-color--500;
+  }
+
+  [class^="o-logo--"],
+  [class*=" o-logo--"],
+  .o-nav__link,
+  .m-hero__button,
+  &.nav--is-open .o-switcher__link,
+  .o-timeline__link {
+    @include link--black;
+  }
+
   .m-cards__block--link {
     &:hover,
     &:active {
       color: black;
       background-color: $zdw-color--500;
     }
+  }
+
+  .headroom--not-top,
+  .o-hud:after,
+  &.nav--is-open .o-hud {
+    background-color: $zdw-color--500;
   }
 }
 
