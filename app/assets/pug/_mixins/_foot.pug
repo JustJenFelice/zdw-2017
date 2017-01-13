@@ -16,12 +16,22 @@ mixin foot(project)
 
         .o-foot__cell
           h4.o-foot__head.t-smallcaps Kontakt
-          ul.o-foot__list
-            if project == "conf"
+          if project == "conf"
+            ul.o-foot__list
               li.o-foot__li Aneta Oulehlová
               li.o-foot__li: a(href="mailto:aneta.oulehlova@zlindesignweek.com") aneta.oulehlova@zlindesignweek.com
               li.o-foot__li +420 736 222 423
-            else
+          else if project == "zdw"
+            ul.o-foot__list
+              li.o-foot__li Nikola Timkovičová
+              li.o-foot__li: a(href="mailto:nikola.timkovicova@zlindesignweek.com") nikola.timkovicova@zlindesignweek.com
+              li.o-foot__li +420 776 343 310
+            ul.o-foot__list
+              li.o-foot__li Tereza Konečná
+              li.o-foot__li: a(href="mailto:tereza.konecna@zlindesignweek.com") tereza.konecna@zlindesignweek.com
+              li.o-foot__li +420 728 876 653
+          else
+            ul.o-foot__list
               li.o-foot__li Michal Kinc
               li.o-foot__li: a(href="mailto:michal.kinc@zlindesignweek.com") michal.kinc@zlindesignweek.com
               li.o-foot__li +420 725 941 451
