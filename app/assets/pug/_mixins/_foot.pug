@@ -12,7 +12,7 @@ mixin foot(project)
           h4.o-foot__head.t-smallcaps Odkazy
           ul.o-foot__list--nobreak
             -
-              var projectLinks = [
+              var projectsObject = [
                 {
                   "id": "zdw",
                   "title": "Zlin Design Week",
@@ -29,8 +29,9 @@ mixin foot(project)
                   "href": "http://www.bestindesign.cz"
                 }
               ]
-            each link in projectLinks
-              li.o-foot__li: a(href=link.href)!= link.title
+            each item in projectsObject
+              unless project == item.id
+                li.o-foot__li: a(href=item.href)!= item.title
 
         .o-foot__cell
           h4.o-foot__head.t-smallcaps Kontakt
