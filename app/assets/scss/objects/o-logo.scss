@@ -4,7 +4,9 @@
 
   padding: 1em $wrap-padding-horz--1;
 
-  fill: white;
+  @include link--white;
+
+  fill: currentColor;
 
   svg {
     display: block;
