@@ -136,3 +136,7 @@
 .o-nav__link {
   @include link--white;
 }
+
+.o-nav__icon {
+  @include svg-external;
+}

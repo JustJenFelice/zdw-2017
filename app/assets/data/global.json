@@ -11,7 +11,8 @@
       },
       {
         "title": "Blog",
-        "link": "javascript:"
+        "link": "https://medium.com/zlin-design-week",
+        "external": true
       },
       {
         "title": "Kontakt",

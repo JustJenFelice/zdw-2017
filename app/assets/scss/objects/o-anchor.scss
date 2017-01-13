@@ -1,7 +1,5 @@
 .o-anchor__icon {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1;
+  @include svg-external;
 
   margin-left: .5em;
 }
