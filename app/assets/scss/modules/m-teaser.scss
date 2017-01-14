@@ -1,10 +1,12 @@
 .m-teaser {
   display: flex;
+  flex-wrap: wrap;
 
-  margin-top: 3em;
+  margin: 1.5em -.75em -.5em;
 
-  margin-left: -.75em;
-  margin-right: -.75em;
+  @include media($dr__large) {
+    margin-top: 2.5em;
+  }
 }
 
 .m-teaser__item {
@@ -12,6 +14,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+
+  min-width: 16.5em;
 
   flex-basis: 0;
   flex-grow: 1;
@@ -22,10 +26,13 @@
   background-position: center;
   background-size: cover;
 
-  padding: 3em;
+  padding: 1.5em;
 
-  margin-left: .75em;
-  margin-right: .75em;
+  margin: .5em .75em;
+
+  @include media($dr__large) {
+    padding: 2.5em;
+  }
 }
 
 .m-teaser__title {

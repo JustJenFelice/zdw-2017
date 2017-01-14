@@ -1,20 +1,24 @@
 .m-cards {
   display: flex;
+  flex-wrap: wrap;
 
   list-style-type: none;
   padding-left: 0;
 
-  margin-top: 3em;
-  margin-left: -.75em;
-  margin-right: -.75em;
+  margin: 1.5em -.75em -.5em;
+
+  @include media($dr__large) {
+    margin-top: 2.5em;
+  }
 }
 
 .m-cards__item {
   flex-grow: 1;
   flex-basis: 0;
 
-  margin-left: .75em;
-  margin-right: .75em;
+  min-width: 10em;
+
+  margin: .5em .75em;
 }
 
 [class^="m-cards__block--"],
@@ -29,7 +33,7 @@
 }
 
 .m-cards__block--link {
-  padding-bottom: 20%;
+  padding-bottom: 15%;
 
   &:link,
   &:visited {

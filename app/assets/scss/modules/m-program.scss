@@ -13,19 +13,27 @@
 }
 
 .m-program__list {
-  @include clearfix;
+  display: flex;
+  flex-wrap: wrap;
 
-  margin-top: -2em;
+  margin-top: -.5em;
   margin-left: -1em;
   margin-right: -1em;
+
+  @include media($dr__large) {
+    margin-top: -1.5em;
+  }
 }
 
 .m-program__item {
-  float: left;
+  display: block;
 
-  width: 33.333%;
+  flex-basis: 0;
+  flex-grow: 1;
 
-  &:nth-child(3n + 1) {
-    clear: both;
+  min-width: 16.5em;
+
+  @include media($dr__large) {
+    max-width: 50%;
   }
 }

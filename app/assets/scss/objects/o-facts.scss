@@ -8,22 +8,22 @@
 
 .o-facts__list {
   display: flex;
+  flex-wrap: wrap;
 
   list-style-type: none;
   padding-left: 0;
 
-  margin-left: -.75em;
-  margin-right: -.75em;
+  margin: -.25em -.375em;
 }
 
 
 .o-facts__item {
-  width: 25%;
+  flex-basis: 0;
+  flex-grow: 1;
 
+  min-width: 16.5em;
   padding: .5em .75em;
-
-  margin-left: .75em;
-  margin-right: .75em;
+  margin: .25em .375em;
 
   background-color: white;
 }

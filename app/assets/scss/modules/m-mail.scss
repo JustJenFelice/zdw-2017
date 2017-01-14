@@ -47,7 +47,11 @@
 }
 
 .m-mail__foot {
-  margin-top: 4em;
+  margin-top: 2em;
+
+  @include media($dr__large) {
+    margin-top: 4em;
+  }
 }
 
 .m-mail__link {

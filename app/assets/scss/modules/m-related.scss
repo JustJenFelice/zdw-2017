@@ -3,15 +3,23 @@
 }
 
 .m-related__list {
-  @include clearfix;
+  display: flex;
+  flex-wrap: wrap;
 
-  margin-top: -2em;
+  margin-top: -1.5em;
   margin-left: -1em;
-  margin-right: -1em
+  margin-right: -1em;
 }
 
 .m-related__item {
-  float: left;
+  display: block;
 
-  width: 25%;
+  flex-basis: 0;
+  flex-grow: 1;
+
+  min-width: 16.5em;
+
+  @include media($dr__large) {
+    max-width: 50%;
+  }
 }

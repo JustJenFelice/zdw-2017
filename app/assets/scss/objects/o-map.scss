@@ -55,6 +55,7 @@
   transform: translate(-50%, -50%);
 
   appearance: none;
+  white-space: nowrap;
 
   @include a-button();
   @include a-button--solid();

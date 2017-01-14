@@ -1,7 +1,4 @@
 .m-event {
-  display: table;
-  width: 100%;
-
   ul {
     @include a-nolist;
   }
@@ -18,20 +15,33 @@
 
     margin-right: .5em;
   }
+
+  @include media($dr__large) {
+    display: table;
+    width: 100%;
+  }
 }
 
 .m-event__main {
-  display: table-cell;
-  vertical-align: top;
-
-  padding-right: 2em;
-
   @include reset-children;
+
+  @include media($dr__large) {
+    display: table-cell;
+    vertical-align: top;
+
+    padding-right: 2em;
+  }
 }
 
 .m-event__aside {
-  display: table-cell;
-  vertical-align: top;
+  @include media($dr__small) {
+    margin-top: 1.5em;
+  }
 
-  width: 33.333%;
+  @include media($dr__large) {
+    display: table-cell;
+    vertical-align: top;
+
+    width: 33.333%;
+  }
 }
