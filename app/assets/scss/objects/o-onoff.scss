@@ -2,6 +2,10 @@
   @include clearfix;
 
   text-align: center;
+
+  @include media($dr__small) {
+    font-size: .75em;
+  }
 }
 
 .o-onoff__button {

@@ -12,21 +12,37 @@
 
 [class^="m-speakers__item"],
 [class*=" m-speakers__item"] {
-  float: left;
+  display: block;
+
+  @include media($dr__portable) {
+    float: left;
+  }
+
+  @include media($bp__phablet) {
+    width: 50%;
+
+    &:nth-child(2n + 1) {
+      clear: both;
+    }
+  }
 }
 
 .m-speakers__item--large {
-  width: 33.333%;
+  @include media($dr__large) {
+    width: 33.333%;
 
-  &:nth-child(3n + 1) {
-    clear: both;
+    &:nth-child(3n + 1) {
+      clear: both;
+    }
   }
 }
 
 .m-speakers__item--small {
-  width: 25%;
+  @include media($dr__large) {
+    width: 25%;
 
-  &:nth-child(4n + 1) {
-    clear: both;
+    &:nth-child(4n + 1) {
+      clear: both;
+    }
   }
 }

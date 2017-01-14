@@ -8,13 +8,17 @@
 .m-tickets__list {
   @include clearfix;
 
-  @include margin(null -.5em);
+  margin: -.5em;
+
+  @include media($bp__desktop) {
+    display: flex;
+  }
 }
 
 .m-tickets__item {
-  float: left;
+  padding: .5em;
 
-  width: 50%;
-
-  @include padding(null .5em);
+  @include media($bp__desktop) {
+    flex-grow: 1;
+  }
 }

@@ -6,7 +6,11 @@
 }
 
 .m-mail__wrap {
-  max-width: 50em;
+  max-width: 30em;
+
+  @include media($dr__large) {
+    max-width: 50em;
+  }
 }
 
 .m-mail__title {
