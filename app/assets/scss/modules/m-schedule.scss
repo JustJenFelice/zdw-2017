@@ -5,54 +5,107 @@
   margin-top: 3em;
 
   .onoff--schedule & {
-    display: table;
+    display: block;
+  }
+
+  @include media($dr__small) {
+    text-align: center;
   }
 }
 
 .m-schedule__header {
-  display: table-row;
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  @include media($dr__small) {
+    display: none;
+  }
 }
 
 [class^="m-schedule__label--"],
 [class*=" m-schedule__label--"] {
-  display: table-cell;
-
-  padding-bottom: 1.5em;
+  flex-basis: 0;
+  flex-grow: .5;
 
   font-family: $font__mono;
   font-weight: normal;
 }
 
-.m-schedule__label--time {
-  padding-left: 1em;
-}
+.m-schedule__label {
+  &--name {
+    flex-grow: 1;
+  }
 
-.m-schedule__label--name {
-  padding-left: 7rem;
-}
-
-.m-schedule__item {
-  display: table-row;
+  &--lang {
+    text-align: right;
+  }
 }
 
 .m-schedule__pause {
-  display: table-row;
-
   color: white;
   background-color: black;
+
+  padding: 1em;
+
+  @include media($dr__large) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.m-schedule__item {
+  display: block;
+
+  border-top: 2px solid black;
+
+  padding: 1em;
+
+  @include media($dr__large) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 [class^="m-schedule__col--"],
 [class*=" m-schedule__col--"] {
-  display: table-cell;
-
-  border-top: 2px solid black;
-  padding-top: 1.25em;
-  padding-bottom: 1.25em;
+  flex-basis: 0;
+  flex-grow: .5;
 }
 
-.m-schedule__col--2 {
-  @include clearfix;
+.m-schedule__col {
+  &--2 {
+    display: inline;
+    flex-grow: 1;
+
+    @include media($dr__large) {
+      @include clearfix;
+    }
+  }
+
+  &--3 {
+    display: inline;
+
+    @include media($dr__small) {
+      .m-schedule__pause & {
+        display: none;
+      }
+
+      &:before {
+        content: "(";
+      }
+      &:after {
+        content: ")";
+      }
+    }
+
+    @include media($dr__large) {
+      text-align: right;
+    }
+  }
 }
 
 .m-schedule__time {
@@ -60,23 +113,26 @@
   background-color: transparent;
 
   @include head--e;
-
-  margin-right: 3em;
-
-  padding-left: 1em;
 }
 
 .m-schedule__name {
   @include head--e;
-
-  &:first-child {
-    margin-left: 7rem;
-  }
 }
 
 .m-schedule__image {
-  float: left;
-  margin-right: 2em;
+  max-width: 10em;
+  margin-left: auto;
+  margin-right: auto;
 
-  width: 5em;
+  @include media($dr__small) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  @include media($dr__large) {
+    float: left;
+    margin-right: 2em;
+
+    width: 5em;
+  }
 }

@@ -88,28 +88,30 @@ $form--wide:   60em;
 
 .m-form__choice-list {
   display: flex;
+  flex-wrap: wrap;
 
-  margin-left: -.75em;
-  margin-right: -.75em;
-
-  margin-bottom: 2.5em;
+  margin: -.5em -.75em 2.5em;
 }
 
 .m-form__choice {
   flex-basis: 0;
   flex-grow: 1;
 
-  margin-left: .75em;
-  margin-right: .75em;
+  min-width: 16.5em;
+
+  margin: .5em .75em;
 }
 
 .m-form__table {
   font-size: 1.125em;
+
+  white-space: nowrap;
 }
 
 [class^="m-form__trow"],
 [class*=" m-form__trow"] {
   display: flex;
+  flex-wrap: wrap;
 
   justify-content: space-between;
 }
@@ -126,6 +128,8 @@ $form--wide:   60em;
 [class^="m-form__tcell"],
 [class*=" m-form__tcell"] {
   flex-basis: 0;
+
+  margin: .25em .5em;
 }
 
 .m-form__tcell {
@@ -152,17 +156,23 @@ $form--wide:   60em;
 
   &-index {
     font-weight: $font__mono--bold;
+
+    @include media($bp__phone) {
+      display: block;
+    }
   }
 
   &-list {
     display: flex;
 
-    margin-left: -.75em;
-    margin-right: -.75em;
+    @include media($dr__small) {
+      flex-wrap: wrap;
+    }
+
+    margin: -.5em -.75em;
   }
 
   &-item {
-    margin-left: .75em;
-    margin-right: .75em;
+    margin: .5em .75em;
   }
 }

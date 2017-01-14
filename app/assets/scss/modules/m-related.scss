@@ -17,9 +17,7 @@
   flex-basis: 0;
   flex-grow: 1;
 
-  min-width: 16.5em;
-
-  @include media($dr__large) {
-    max-width: 50%;
+  @include media($dr__small) {
+    min-width: 16.5em;
   }
 }

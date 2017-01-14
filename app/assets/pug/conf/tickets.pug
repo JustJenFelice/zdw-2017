@@ -84,8 +84,8 @@ block template-content
           each item in [1]
             .m-form__row
               .m-form__group-name
-                strong.m-form__group-index Vstupenka #{item}
-                |  &emsp; Normální vstupenka
+                strong.m-form__group-index Vstupenka #{item}&emsp;
+                | Normální vstupenka
               .m-form__group-list
                 each item in ["Jméno", "Příjmení", "E-mail"]
                   input.m-form__group-item.o-input--black(type="text", placeholder=item)
