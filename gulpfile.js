@@ -113,6 +113,8 @@ gulp.task('styles', function () {
       plugins.sass.logError.bind(this)(error);
     }))
 
+    .pipe(plugins.autoprefixer())
+
     .pipe(gulp.dest(config.dev.cssRoot))
     
     .pipe(browserSync.stream());
