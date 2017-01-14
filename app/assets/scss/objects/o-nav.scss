@@ -117,6 +117,13 @@
   @include media($dr__mobile) {
     line-height: 2.5;
   }
+
+  @include media($bp__desktop) {
+    text-align: center;
+
+    margin-top: -.25em;
+    margin-bottom: -.25em;
+  }
 }
 
 .o-nav__item {
@@ -129,7 +136,7 @@
   @include media($bp__desktop) {
     display: inline-block;
 
-    @include margin(null 1em);
+    margin: .25em .75em;
   }
 }
 
