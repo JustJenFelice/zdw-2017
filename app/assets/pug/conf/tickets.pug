@@ -40,13 +40,85 @@ block template-content
               strong.m-cards__top= card.title
               span.m-cards__bottom= card.content
 
-  main
-    form.m-form.l-wrap
-      h1.m-form__title.t-head--b Kontaktní údaje
-      .m-form__section
-        each item in ["Jméno", "Příjmení", "Adresa", "Město", "PSČ", "Země", "Telefon", "E-mail"]
+  form.m-form
+    .l-wrap
+      h1.m-form__title Vyber si vstupenku
+      .m-form__section--wide
+        -
+          var radioObject = [
+            {
+              "title": "Firma či organizace",
+              "content": "Tyto vstupenky jsou určeny pro majitele, zástupce či zaměstnance architektonických a designérských studií."
+            },
+            {
+              "title": "Student",
+              "content": "Jak poznáme, že jsi student/ka? Všichni studenti se budou muset prokázat platným studentským ID své školy anebo průkazem ISIC u registrační přepážky na konferenci."
+            }
+          ]
+
+        .m-form__choice-list
+          each item in radioObject
+            label.m-form__choice.o-radio
+              input.o-radio__input(type="radio", name="ticket-type")
+              span.o-radio__wrap
+                span.o-radio__circle
+                | 
+                span.o-radio__title= item.title
+                .o-radio__content= item.content
+
+        .m-form__table
+          .m-form__trow
+            .m-form__tcell Normální vstupenka
+            .m-form__tcell 1990,-
+            .m-form__tcell--count
+              label Počet
+                input.m-form__stepper.o-stepper(type="number", min="1", value="1")
+          .m-form__trow--foot
+            .m-form__tcell Cena celkem
+            .m-form__tcell 1990,-
+            .m-form__tcell--count &nbsp;
+
+    .o-section--light
+      .l-wrap
+        .m-form__section--wide
+          each item in [1]
+            .m-form__row
+              .m-form__group-name
+                strong.m-form__group-index Vstupenka #{item}
+                |  &emsp; Normální vstupenka
+              .m-form__group-list
+                each item in ["Jméno", "Příjmení", "E-mail"]
+                  input.m-form__group-item.o-input--black(type="text", placeholder=item)
+
+    .l-wrap
+      h1.m-form__title Kontaktní údaje
+      .m-form__section--narrow
+        each item in ["Společnost, organizace nebo škola", "Zaměření společnosti nebo obor studia", "Jméno", "Příjmení", "E-mail", "Telefon", "Ulice", "Město", "PSČ", "Stát", "IČO (pouze pro firmy)", "DIČ (pouze pro firmy)"]
           .m-form__row
             input.o-input--black(type="text", placeholder=item)
+        .m-form__row
+          label.o-checkbox
+            input.o-checkbox__input(type="checkbox")
+            span.o-checkbox__text Chceš fakturovat na někoho jiného?
+
+      h1.m-form__title Jak budeš platit?
+      .m-form__section--narrow
+        .m-form__choice-list
+          each item in ["Převodem na účet", "Platební kartou"]
+            label.m-form__choice.o-radio
+              input.o-radio__input(type="radio", name="payment-type")
+              span.o-radio__wrap
+                span.o-radio__circle
+                | 
+                span.o-radio__title= item
+
+        .m-form__row
+          textarea.o-textarea(placeholder="Chceš nám napsat nějaký dopis?")
+
+        .m-form__row
+          label.o-checkbox
+            input.o-checkbox__input(type="checkbox")
+            span.o-checkbox__text: +dummy(20)
 
       .m-form__foot
         input.o-submit--black(type="submit", value="Koupit vstupenku")

@@ -12,6 +12,8 @@
   width: em(24);
   height: em(24);
 
+  color: currentColor;
+
   border: 2px solid;
   border-radius: 0;
 
@@ -37,7 +39,7 @@
   }
 
   &:checked {
-    background-color: black;
+    background-color: currentColor;
   }
 
   &:checked:after {

@@ -96,6 +96,11 @@ Conference
     background-color: $conf-color--500;
   }
 
+  :checked + .o-radio__wrap:before {
+    background-color: $conf-color--500;
+    border-color: $conf-color--500;
+  }
+
   .o-ticket {
     color: $conf-color--500;
     background-color: white;

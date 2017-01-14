@@ -1,0 +1,22 @@
+.o-stepper {
+  width: 4em;
+  padding: .5em .75em;
+
+  border-radius: 0;
+  border: 2px solid;
+
+  font-family: $font__sans;
+
+  line-height: 1;
+
+  color: currentColor;
+  background-color: transparent;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::placeholder {
+    color: $grey--400;
+  }
+}

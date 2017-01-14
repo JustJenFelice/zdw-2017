@@ -1,0 +1,20 @@
+.o-textarea {
+  width: 100%;
+  padding: 1.5em;
+
+  border-radius: 0;
+  border: 2px solid;
+
+  font-family: $font__sans;
+
+  color: currentColor;
+  line-height: 1.5;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::placeholder {
+    color: $grey--400;
+  }
+}
