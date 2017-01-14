@@ -1,5 +1,5 @@
 mixin peek(background, project)
-  .o-peek(style="background-image: url(/assets/images/" + background + ")")
+  .o-peek(style=background ? "background-image: url(/assets/images/" + background + ")" : false)
     .o-peek__content
       if project == "bid"
         p.o-peek__text Uvidíme se ve Zlíně! Mezitím nás můžete sledovat na #[a.o-peek__link--fb(href="https://www.facebook.com/talentdesignu", data-external) Facebooku].
