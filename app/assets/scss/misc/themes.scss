@@ -58,7 +58,10 @@ Conference
 */
 
 .theme--conf {
-  color: $conf-color--500;
+  &,
+  .s-event-facts {
+    color: $conf-color--500;
+  }
 
   .o-brick--black {
     color: $conf-color--500;
@@ -73,12 +76,10 @@ Conference
     background-color: $conf-color--900;
   }
 
+  .o-peek,
+  .m-cards__block--static,
   [class^="m-hero--"],
   [class*=" m-hero--"] {
-    background-color: $conf-color--500;
-  }
-
-  .m-cards__block--static {
     background-color: $conf-color--500;
   }
 
@@ -108,11 +109,10 @@ Conference
     background-color: rgba(white, .5);
   }
 
-  .o-peek {
+  .o-submit--black {
     background-color: $conf-color--500;
-  }
-
-  .s-event-facts {
-    color: $conf-color--500;
+    &:hover {
+      background-color: black;
+    }
   }
 }
