@@ -13,7 +13,7 @@
   list-style-type: none;
   padding-left: 0;
 
-  margin: -.25em -.375em;
+  margin: -.375em;
 }
 
 
@@ -21,9 +21,9 @@
   flex-basis: 0;
   flex-grow: 1;
 
-  min-width: 16.5em;
+  min-width: $block--b;
   padding: .5em .75em;
-  margin: .25em .375em;
+  margin: .375em;
 
   background-color: white;
 }

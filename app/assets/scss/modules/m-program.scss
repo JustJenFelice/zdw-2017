@@ -31,7 +31,7 @@
   flex-basis: 0;
   flex-grow: 1;
 
-  min-width: 16.5em;
+  min-width: $block--l;
 
   @include media($dr__large) {
     max-width: 50%;

@@ -18,6 +18,6 @@
   flex-grow: 1;
 
   @include media($dr__small) {
-    min-width: 16.5em;
+    min-width: $block--l;
   }
 }

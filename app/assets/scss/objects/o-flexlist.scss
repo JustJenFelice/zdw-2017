@@ -6,20 +6,20 @@
 
   list-style-type: none;
   padding-left: 0;
-  @include margin(-.75em null);
+  margin: -.75em -1em;
 
   text-align: center;
 }
 
 [class^="o-flexlist__item"],
 [class*=" o-flexlist__item"] {
-  @include padding(.75em 1em);
+  padding: .75em 1em;
 
   @include reset-children;
 }
 
 .o-flexlist__item--tri {
-  min-width: 16.5em;
+  min-width: $block--l;
 
   @include media($dr__large) {
     width: 33.333%;
@@ -27,7 +27,7 @@
 }
 
 .o-flexlist__item--quad {
-  min-width: 13.5em;
+  min-width: $block--s;
 
   @include media($dr__medium) {
     width: 50%;

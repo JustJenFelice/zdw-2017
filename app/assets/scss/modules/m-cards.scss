@@ -5,7 +5,7 @@
   list-style-type: none;
   padding-left: 0;
 
-  margin: 1.5em -.75em -.5em;
+  margin: 1.5em -.5em -.5em;
 
   @include media($dr__large) {
     margin-top: 2.5em;
@@ -16,9 +16,9 @@
   flex-grow: 1;
   flex-basis: 0;
 
-  min-width: 16.5em;
+  min-width: $block--s;
 
-  margin: .5em .75em;
+  margin: .5em;
 }
 
 [class^="m-cards__block--"],
