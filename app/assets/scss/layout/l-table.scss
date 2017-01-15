@@ -6,8 +6,6 @@
 }
 
 .l-table__cell {
-  position: relative;
-
   @include reset-children;
 
   @include media($dr__small) {

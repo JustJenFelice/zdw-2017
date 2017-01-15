@@ -1,10 +1,12 @@
 mixin intro(page)
-  main.m-article.o-section--white
+  main.o-section--white
     .l-wrap
-      .l-table
-        .l-table__cell
-            h2.t-head--c Talent is not enough, show your best!
+      .m-article
+        .m-article__table
+          .m-article__cell--flex
+            h2.m-article__title Talent is not enough, show your best!
             if page == "homepage"
               a.m-article__link(href="about.html") Více o soutěži
-        .l-table__cell
-          p Podej si přihlášku do největší designérské soutěže ve střední Evropě a poměř síly s mezinárodní konkurencí. Můžeš získat stáž v prestižní designérské firmě a k tomu vyhrát 4 000 €. Staň se vítězem Best in Design a otevři dveře spoustě možností.
+
+          .m-article__cell
+            p Podej si přihlášku do největší designérské soutěže ve střední Evropě a poměř síly s mezinárodní konkurencí. Můžeš získat stáž v prestižní designérské firmě a k tomu vyhrát 4 000 €. Staň se vítězem Best in Design a otevři dveře spoustě možností.
