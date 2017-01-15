@@ -97,6 +97,10 @@
 .o-nav {
   padding: $wrap-padding-horz--1;
 
+  @include media($bp__tablet) {
+    @include padding(null $wrap-padding-horz--2)
+  }
+
   @include media($dr__mobile) {
     display: none;
   }
