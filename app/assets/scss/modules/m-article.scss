@@ -42,6 +42,8 @@
 
 .m-article__runin {
   margin-top: 1em;
+
+  @include head--c;
 }
 
 .m-article__foot {
