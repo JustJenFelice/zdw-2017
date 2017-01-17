@@ -3,7 +3,7 @@ module.exports = function(config, gulp, plugins, browserSync, emitty, beepbeep) 
   gulp.task('styles', function () {
     return gulp.src(config.dev.scssBase)
 
-      .pipe(emittyScss.stream())
+      .pipe(emitty.stream())
 
       .pipe(plugins.sassGlob())
 
