@@ -58,7 +58,7 @@
   color: white;
 }
 
-[class^="o-foot__list"] {
+.o-foot__list {
   list-style-type: none;
   padding-left: 0;
 
@@ -67,8 +67,12 @@
 
     @include link--white;
   }
-}
 
-.o-foot__list--nobreak {
-  white-space: nowrap;
+  @include media($dr__portable) {
+    white-space: nowrap;
+
+    wbr {
+      display: none;
+    }
+  }
 }
