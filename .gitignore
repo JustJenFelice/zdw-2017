@@ -44,3 +44,5 @@ app/assets/fonts/*
 app/assets/css/*
 app/**/*.html
 app/assets/svg/*.svg
+
+!app/assets/pug/**/*.html
