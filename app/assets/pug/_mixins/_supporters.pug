@@ -32,3 +32,11 @@ mixin supporters(type)
               h2.m-supporters__title.t-head--d Pořadatel
               a.o-affiliate__link(href="http://www.utb.cz/fmk")
                 img.o-affiliate__image(src="/assets/images/companies/logo_utb.png", alt="Partner Logo")
+
+      if type == "full"
+        h2.m-supporters__title.t-head--d Partneři
+        ul.o-affiliate--sub
+          each institution in ["mmcite.png", "zlin.jpg", "tescoma.jpg", "galaxie.jpg", "raiffeisen.jpg", "continental.jpg", "designportal.jpg", "archiweb.jpg", "czechdesign.jpg", "detepe.jpg", "design_cabinet.jpg", "koma.png", "sketcher.jpg", "refresher.jpg", "idnes.png", "meopta.png", "dailystyle.jpg", "designeros.png", "dynamo.png", "zlincz.png"]
+            li.o-affiliate__item--small
+              a.o-affiliate__link(href="javascript:")
+                img.o-affiliate__image(src="/assets/images/companies/logo_" + institution, alt="Partner Logo")
