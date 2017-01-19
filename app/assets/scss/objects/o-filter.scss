@@ -1,7 +1,7 @@
 .o-filter {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 
   list-style-type: none;
   padding-left: 0;
@@ -14,10 +14,13 @@
 }
 
 .o-filter__item {
-  flex-grow: 1;
   text-align: center;
 
   margin: .5em .5em;
+
+  @include media($bp__desktop) {
+    flex-grow: 1;
+  }
 }
 
 .o-filter__active {
