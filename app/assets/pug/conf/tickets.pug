@@ -47,12 +47,11 @@ block template-content
         -
           var radioObject = [
             {
-              "title": "Firma či organizace",
-              "content": "Tyto vstupenky jsou určeny pro majitele, zástupce či zaměstnance architektonických a designérských studií."
+              "title": "Standard"
             },
             {
               "title": "Student",
-              "content": "Jak poznáme, že jsi student/ka? Všichni studenti se budou muset prokázat platným studentským ID své školy anebo průkazem ISIC u registrační přepážky na konferenci."
+              "content": "Na konferenci se bude třeba prokázat platným studentským průkazem."
             }
           ]
 
@@ -64,7 +63,8 @@ block template-content
                 span.o-radio__circle
                 | 
                 span.o-radio__title= item.title
-                .o-radio__content= item.content
+                if item.content
+                  .o-radio__content= item.content
 
         .m-form__table
           .m-form__trow
@@ -113,12 +113,15 @@ block template-content
                 span.o-radio__title= item
 
         .m-form__row
-          textarea.o-textarea(placeholder="Chceš nám napsat nějaký dopis?")
+          textarea.o-textarea(placeholder="Máš nějakou konkrétní připomínku, tajné přání nebo nápad, co by na konferenci nemělo chybět?")
 
         .m-form__row
           label.o-checkbox
             input.o-checkbox__input(type="checkbox")
-            span.o-checkbox__text: +dummy(20)
+            span.o-checkbox__text
+              | Souhlasím se zpracováním osobních údajů a s 
+              a(href="javascript:") obchodními podmínkami Konference design &amp; marketing
+              | .
 
       .m-form__foot
         input.o-submit--black(type="submit", value="Koupit vstupenku")

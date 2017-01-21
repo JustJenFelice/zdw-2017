@@ -4,25 +4,52 @@ mixin tickets()
       h1.m-tickets__title Chceš dojet? Kup si vstupenku!
 
       .m-tickets__list
-        each ticket in [1, 2]
+        -
+          var ticketObject = [
+            {
+              "note": "Prvních 200&nbsp;vstupenek",
+              "subtitle": "Předprodej začne 15. února.",
+              "enabled": true,
+              "price": {
+                "standard": "1050",
+                "student": "250"
+              },
+              "available": false
+            },
+            {
+              "note": "Zbývá 320&nbsp;vstupenek",
+              "subtitle": "Předprodej trvá do 15. dubna.",
+              "enabled": false,
+              "price": {
+                "standard": "1050",
+                "student": "250"
+              },
+              "available": false
+            }
+          ]
+        each ticket, index in ticketObject
           article.m-tickets__item
-            .o-ticket(class=ticket == 2 ? "ticket--is-disabled" : null)
+            .o-ticket(class=ticket.enabled ? null : "ticket--is-disabled")
               .o-ticket__aside
-                mark.o-ticket__note Prvních 300&nbsp;vstupenek
+                mark.o-ticket__note!= ticket.note
               .o-ticket__content
                 .o-ticket__table
                   .o-ticket__cell
                     h1.o-ticket__title
                       | Vstupenka 
-                      = ticket
+                      = index + 1
                       | . vlna
-                    small.o-ticket__subtitle Předprodej trvá do 15. března
+                    small.o-ticket__subtitle= ticket.subtitle
                   .o-ticket__cell
-                    if ticket == 1
+                    if ticket.available
                       a.o-ticket__button.o-button--outline(href="tickets.html") Koupit
                     else
                       | &nbsp;
 
                 ul.o-ticket__list
-                  li.o-ticket__price 1050#[span.o-ticket__sup Kč]
-                  li.o-ticket__price 250#[span.o-ticket__sup Kč student]
+                  li.o-ticket__price
+                    = ticket.price.standard
+                    span.o-ticket__sup Kč
+                  li.o-ticket__price
+                    = ticket.price.student
+                    span.o-ticket__sup Kč student
