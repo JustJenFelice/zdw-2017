@@ -50,4 +50,8 @@
 .o-checkbox__text {
   display: block;
   margin-left: 3em;
+
+  a {
+    border-bottom: 1px solid;
+  }
 }
