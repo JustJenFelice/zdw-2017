@@ -35,10 +35,7 @@ mixin tickets()
               .o-ticket__content
                 .o-ticket__table
                   .o-ticket__cell
-                    h1.o-ticket__title
-                      | Vstupenka 
-                      = index + 1
-                      | . vlna
+                    h1.o-ticket__title Vstupenka #{index + 1}.&thinsp;vlna
                     small.o-ticket__subtitle= ticket.subtitle
                   .o-ticket__cell
                     if ticket.available
