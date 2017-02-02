@@ -10,7 +10,8 @@
     "gulp": "gulp",
     "svg": "gulp svg",
     "build": "gulp build",
-    "test": "gulp test"
+    "test": "gulp test",
+    "bower": "bower"
   },
   "author": "",
   "license": "ISC",
