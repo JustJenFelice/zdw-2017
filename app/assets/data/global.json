@@ -10,6 +10,10 @@
         "link": "program.html"
       },
       {
+        "title": "Výstavy",
+        "link": "exhibitions.html"
+      },
+      {
         "title": "Blog",
         "link": "https://medium.com/zlin-design-week",
         "external": true
