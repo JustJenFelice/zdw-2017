@@ -31,13 +31,9 @@ mixin hud(type, navigation)
             default
               - pageObject = pages[2]
           each page in pageObject
-            li.o-nav__item
+            li.o-nav__item(class=page.external ? "menu-item--external" : null)
               a.o-nav__link(href=page.link, data-external=page.external)
                 = page.title
-                if page.external
-                  svg.o-nav__icon(width="8px", viewBox="0 0 12 12", xmlns="http://www.w3.org/2000/svg")
-                    path(d="M0.5,0.5 L11.5,0.5 L11.5,11.5")
-                    path(d="M0.5,11.5 L11.5,0.5")
 
     .o-switcher
       button.o-switcher__toggle(data-switcher)

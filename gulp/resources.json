@@ -3,7 +3,8 @@
     "relative": [
       "app/**/*.html",
       "!app/assets/**/*.html",
-      "app/assets/files/*"
+      "app/assets/files/*",
+      "app/assets/svg/*.svg"
     ],
     "static": "app/assets/static/*"
   },

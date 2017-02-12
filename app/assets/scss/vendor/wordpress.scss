@@ -9,3 +9,11 @@
     @extend .o-nav__link;
   }
 }
+
+.menu-item--external {
+  a:after {
+    content: url("../svg/icon_external.svg");
+
+    margin-left: .5em;
+  }
+}
