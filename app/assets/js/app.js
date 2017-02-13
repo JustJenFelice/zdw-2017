@@ -4,7 +4,7 @@ var
 $("[data-countdown]").each(function() {
   var
     momentLocale = $(this).data("countdown") || "cs",
-    endDate = moment("2017-02-13").locale(momentLocale),
+    endDate = moment($(this).text()).locale(momentLocale),
     deadDate = endDate.fromNow(),
     countdownText = momentLocale == "en" ? "Deadline " : "Uzávěrka ";
 
