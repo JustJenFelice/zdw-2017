@@ -5,10 +5,9 @@ $("[data-countdown]").each(function() {
   var
     momentLocale = $(this).data("countdown") || "cs",
     endDate = moment($(this).text()).locale(momentLocale),
-    deadDate = endDate.fromNow(),
-    countdownText = momentLocale == "en" ? "Deadline " : "Uzávěrka ";
+    deadDate = endDate.fromNow();
 
-  $(this).text(countdownText + deadDate);
+  $(this).text(deadDate);
 });
 
 $("[data-nav-toggle]").on("click", function() {
