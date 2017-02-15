@@ -30,8 +30,6 @@
 .m-hero--half {
   min-height: 75vh;
 
-  justify-content: space-between;
-
   @include media($dr__large) {
     min-height: 50vmin;
   }
@@ -67,6 +65,13 @@
 
   .m-hero--half & {
     text-align: center;
+
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
