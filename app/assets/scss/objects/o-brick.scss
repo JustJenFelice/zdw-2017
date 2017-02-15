@@ -42,7 +42,6 @@
 .o-brick__content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
   padding: 2em 1.5em;
 
@@ -60,6 +59,7 @@
 
 .o-brick__top {
   @include reset-children;
+  flex-grow: 1;
 
   max-width: 40em;
 }
