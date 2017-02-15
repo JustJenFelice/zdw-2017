@@ -8,11 +8,12 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .o-peek__content {
   @include reset-children;
+
+  flex-grow: 1;
 }
 
 .o-peek__credits {
