@@ -144,6 +144,14 @@
   }
 }
 
+.o-nav__item--external {
+  a:after {
+    content: url("../svg/icon_external.svg");
+
+    margin-left: .5em;
+  }
+}
+
 .o-nav__link {
   @include link--white;
 }

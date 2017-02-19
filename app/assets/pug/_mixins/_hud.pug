@@ -31,7 +31,7 @@ mixin hud(type, navigation)
             default
               - pageObject = pages[2]
           each page in pageObject
-            li.o-nav__item(class=page.external ? "menu-item--external" : null)
+            li.o-nav__item(class=page.external ? "o-nav__item--external" : null)
               a.o-nav__link(href=page.link, data-external=page.external)
                 = page.title
 
