@@ -58,7 +58,7 @@ block template-content
     .m-carousel__list(data-carousel, data-featherlight-gallery, data-featherlight-filter="[data-gallery]")
       each item in [106, 112, 212, 335, 366]
         .m-carousel__item
-          a.m-carousel__link(href="assets/images/gallery/img_gallery_" + item + ".jpeg", data-gallery)
+          a.m-carousel__link(href="/assets/images/gallery/img_gallery_" + item + ".jpeg", data-gallery)
             .m-carousel__thumbnail--photo
               img.m-carousel__image(src="http://unsplash.it/800/500/?image=" + item, alt="Gallery image")
 
