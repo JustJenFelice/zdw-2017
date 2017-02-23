@@ -19,7 +19,7 @@
 }
 
 .o-flexlist__item--tri {
-  min-width: $block--l;
+  flex-basis: $block--l;
 
   @include media($dr__large) {
     width: 33.333%;
@@ -27,7 +27,7 @@
 }
 
 .o-flexlist__item--quad {
-  min-width: $block--s;
+  flex-basis: $block--s;
 
   @include media($dr__medium) {
     width: 50%;

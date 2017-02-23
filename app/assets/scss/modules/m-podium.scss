@@ -25,12 +25,12 @@
 
 .m-podium__item {
   max-width: 25em;
-  @include margin(null auto);
 
+  @include margin(null auto);
   padding: 1em;
 
   @include media($dr__large) {
-    width: 33.333%;
+    flex: 1 0 0;
 
     &:first-child {
       order: 1;
@@ -96,8 +96,11 @@
 }
 
 .m-podium__name {
-  margin-top: 1.5em;
   margin-bottom: .25em;
+
+  @include media($dr__large) {
+    margin-top: 1.5em;
+  }
 }
 
 .m-podium__subtitle {

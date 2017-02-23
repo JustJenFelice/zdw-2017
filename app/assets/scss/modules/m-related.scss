@@ -3,21 +3,29 @@
 }
 
 .m-related__list {
-  display: flex;
-  flex-wrap: wrap;
-
   margin-top: -1.5em;
   margin-left: -1em;
   margin-right: -1em;
+
+  @include clearfix;
 }
 
 .m-related__item {
   display: block;
 
-  flex-basis: 0;
-  flex-grow: 1;
+  @include media($dr__portable) {
+    float: left;
+  }
 
-  @include media($dr__small) {
-    min-width: $block--l;
+  @include media($bp__phablet) {
+    width: 50%;
+
+    &:nth-child(2n + 1) {
+      clear: left;
+    }
+  }
+
+  @include media($dr__large) {
+    width: 25%;
   }
 }

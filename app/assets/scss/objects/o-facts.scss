@@ -18,10 +18,8 @@
 
 
 .o-facts__item {
-  flex-basis: 0;
-  flex-grow: 1;
+  flex: 1 0 $block--b;
 
-  min-width: $block--b;
   padding: .5em .75em;
   margin: .375em;
 

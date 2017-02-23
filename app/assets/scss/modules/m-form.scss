@@ -94,10 +94,7 @@ $form--wide:   60em;
 }
 
 .m-form__choice {
-  flex-basis: 0;
-  flex-grow: 1;
-
-  min-width: $block--l;
+  flex: 1 0 $block--l;
 
   margin: .5em .75em;
 }
@@ -110,10 +107,12 @@ $form--wide:   60em;
 
 [class^="m-form__trow"],
 [class*=" m-form__trow"] {
-  display: flex;
-  flex-wrap: wrap;
-
-  justify-content: space-between;
+  @include media($dr__portable) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .m-form__trow--foot {
@@ -127,19 +126,17 @@ $form--wide:   60em;
 
 [class^="m-form__tcell"],
 [class*=" m-form__tcell"] {
-  flex-basis: 0;
+  @include media($dr__portable) {
+    flex-basis: 4em;
+  }
 
   margin: .25em .5em;
 }
 
-.m-form__tcell {
-  flex-grow: 1;
-}
-
 .m-form__tcell--count {
-  flex-grow: .5;
-
-  text-align: right;
+  @include media($dr__portable) {
+    text-align: right;
+  }
 }
 
 .m-form__stepper {

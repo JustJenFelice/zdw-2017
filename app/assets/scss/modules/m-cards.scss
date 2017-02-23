@@ -13,10 +13,7 @@
 }
 
 .m-cards__item {
-  flex-grow: 1;
-  flex-basis: 0;
-
-  min-width: $block--s;
+  flex: 1 0 $block--s;
 
   margin: .5em;
 }

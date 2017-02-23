@@ -28,10 +28,7 @@
 .m-program__item {
   display: block;
 
-  flex-basis: 0;
-  flex-grow: 1;
-
-  min-width: $block--l;
+  flex: 1 0 $block--l;
 
   @include media($dr__large) {
     max-width: 50%;

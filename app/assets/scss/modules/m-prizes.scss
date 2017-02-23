@@ -12,10 +12,10 @@
 }
 
 .m-prizes__block {
-  position: relative;
-  flex-grow: 1;
+  flex: 1 0 $block--l;
 
-  min-width: $block--l;
+  position: relative;
+
   max-width: 28em;
 
   margin: .75em 1em;
