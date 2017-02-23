@@ -1,4 +1,6 @@
-// Abstractions
+/*
+Abstractions
+*/
 @mixin a-button() {
   display: inline-block;
 
@@ -41,7 +43,9 @@
   }
 }
 
-// Classes
+/*
+Classes
+*/
 [class^="o-button--"],
 [class*=" o-button--"] {
   @include a-button();

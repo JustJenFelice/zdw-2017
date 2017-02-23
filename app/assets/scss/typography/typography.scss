@@ -1,4 +1,6 @@
-// Abstractions
+/*
+Abstractions
+*/
 @mixin link--white {
   &:link, &:visited {
     color: white;
@@ -84,7 +86,9 @@
   }
 }
 
-// Classes
+/*
+Classes
+*/
 .t-smallcaps {
   font-weight: $font__sans--semibold;
 

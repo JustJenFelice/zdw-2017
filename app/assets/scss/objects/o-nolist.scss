@@ -1,10 +1,14 @@
-// Abstractions
+/*
+Abstractions
+*/
 @mixin a-nolist() {
   list-style-type: none;
   padding-left: 0;
 }
 
-// Classes
+/*
+Classes
+*/
 .o-nolist {
   @include a-nolist();
 }

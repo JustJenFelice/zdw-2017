@@ -61,7 +61,9 @@
   }
 }
 
-// Shameless specificity hack, still better than !important
+/*
+Shameless specificity hack, still better than !important
+*/
 .o-peek .o-peek__content {
   .o-peek__link--fb {
     &:hover, &:active {

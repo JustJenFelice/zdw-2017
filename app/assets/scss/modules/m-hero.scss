@@ -35,7 +35,7 @@
   }
 }
 
-// Create pseudo-elements to align content using display: flex
+/* Create pseudo-elements to align content using display: flex */
 .m-hero-pseudo--top {
   &:before {
     content: "";
@@ -53,7 +53,7 @@
   @include reset-children;
   @include wrap-padding;
 
-  margin-top: 6em; // Reserved space for o-hud
+  margin-top: 6em; /* Reserved space for o-hud */
 
   .m-hero--full & {
     max-width: 25em;

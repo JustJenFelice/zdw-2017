@@ -3,7 +3,7 @@
 }
 
 .m-supporters__title {
-  color: black; // Regardless of theme
+  color: black; /* Regardless of theme */
 
   @include media($dr__large) {
     margin-bottom: 1.5em;

@@ -2,21 +2,25 @@ $dev__phablet: 440;
 $dev__tablet:  740;
 $dev__desktop: 980;
 
-// Breakpoints
+/*
+Breakpoints
+*/
 $bp__phone:   new-breakpoint(max-width em($dev__phablet - 1));
 $bp__phablet: new-breakpoint(min-width em($dev__phablet) max-width em($dev__tablet - 1));
 $bp__tablet:  new-breakpoint(min-width em($dev__tablet) max-width em($dev__desktop - 1));
 $bp__desktop: new-breakpoint(min-width em($dev__desktop));
 
-// Device ranges
+/*
+Device ranges
+*/
 
-// Phone & phablet <<
+/* Phone & phablet << */
 $dr__small:    new-breakpoint(max-width em($dev__tablet - 1));
-// >> Phablet
+/* >> Phablet */
 $dr__portable: new-breakpoint(min-width em($dev__phablet));
-// Phablet & tablet
+/* Phablet & tablet */
 $dr__medium:   new-breakpoint(min-width em($dev__phablet) max-width em($dev__desktop - 1));
-// >> Tablet
+/* >> Tablet */
 $dr__large:    new-breakpoint(min-width em($dev__tablet));
-// << Desktop
+/* << Desktop */
 $dr__mobile:   new-breakpoint(max-width em($dev__desktop - 1));
