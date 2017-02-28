@@ -136,17 +136,13 @@
   margin-bottom: 0;
 }
 
-.o-ticket__subtitle {
-  font-size: .75em;
-}
-
 .o-ticket__button {
   @include a-button--small;
   @include link--white;
 }
 
 .o-ticket__list {
-  margin-top: 1em;
+  margin-top: 2em;
   margin-bottom: 0;
 
   list-style-type: none;

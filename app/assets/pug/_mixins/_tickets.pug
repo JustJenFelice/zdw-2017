@@ -7,22 +7,22 @@ mixin tickets()
         -
           var ticketObject = [
             {
-              "note": "Prvních 200&nbsp;vstupenek",
-              "subtitle": "Předprodej začne 15. února.",
               "enabled": true,
+              "note": "Konference design&nbsp;&amp;&nbsp;marketing",
+              "title": "Vstupenka v předprodeji",
               "price": {
-                "standard": "1050",
-                "student": "250"
+                "standard": "2000",
+                "student": "750"
               },
               "available": false
             },
             {
-              "note": "Zbývá 320&nbsp;vstupenek",
-              "subtitle": "Předprodej trvá do 15. dubna.",
               "enabled": false,
+              "note": "Konference design&nbsp;&amp;&nbsp;marketing",
+              "title": "Vstupenka na místě",
               "price": {
-                "standard": "1050",
-                "student": "250"
+                "standard": "2400",
+                "student": "900"
               },
               "available": false
             }
@@ -35,8 +35,7 @@ mixin tickets()
               .o-ticket__content
                 .o-ticket__table
                   .o-ticket__cell
-                    h1.o-ticket__title Vstupenka #{index + 1}.&thinsp;vlna
-                    small.o-ticket__subtitle= ticket.subtitle
+                    h1.o-ticket__title= ticket.title
                   .o-ticket__cell
                     if ticket.available
                       a.o-ticket__button.o-button--outline(href="tickets.html") Koupit

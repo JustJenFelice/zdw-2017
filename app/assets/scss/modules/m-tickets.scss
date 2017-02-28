@@ -19,6 +19,6 @@
   padding: .5em;
 
   @include media($bp__desktop) {
-    flex-grow: 1;
+    flex: 1 0 0;
   }
 }
