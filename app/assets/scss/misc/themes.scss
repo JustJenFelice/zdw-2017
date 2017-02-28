@@ -121,3 +121,16 @@ Conference
     }
   }
 }
+
+/*
+
+Best in Design
+
+*/
+.theme--bid {
+  .headroom--not-top,
+  .o-hud:after,
+  &.nav--is-open .o-hud {
+    background-color: $bid-color--500;
+  }
+}
