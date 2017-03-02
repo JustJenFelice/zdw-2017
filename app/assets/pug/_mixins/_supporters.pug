@@ -1,10 +1,9 @@
 mixin supporters(type)
   section.m-supporters.o-section--white
     .l-wrap
-      ul.o-affiliate--main
-
-        //- Temporary ZDW and Conference pages
-        if type == "temp"
+      //- Temporary pages
+      if type == "temp"
+        ul.o-affiliate--main
           li.o-affiliate__item--large
             h2.m-supporters__title.t-head--d Pořadatel
             a.o-affiliate__link(href="http://www.utb.cz/fmk")
@@ -15,7 +14,9 @@ mixin supporters(type)
             a.o-affiliate__link(href="http://avonet.cz")
               img.o-affiliate__image(src="/assets/images/companies/logo_avonet.png", alt="Partner Logo")
 
-        else if type == "bid"
+      //- Best in Design
+      else if type == "bid"
+        ul.o-affiliate--main
           li.o-affiliate__item--large
             h2.m-supporters__title.t-head--d Vyhlašovatel
             a.o-affiliate__link(href="javascript:")
@@ -26,17 +27,31 @@ mixin supporters(type)
             a.o-affiliate__link(href="http://www.utb.cz/fmk")
               img.o-affiliate__image(src="/assets/images/companies/logo_utb.png", alt="Partner Logo")
 
-        //- Show only UTB logo by default
-        else
+      //- Show only UTB logo by default
+      else
+        ul.o-affiliate--main
           li.o-affiliate__item--large
-              h2.m-supporters__title.t-head--d Pořadatel
-              a.o-affiliate__link(href="http://www.utb.cz/fmk")
-                img.o-affiliate__image(src="/assets/images/companies/logo_utb.png", alt="Partner Logo")
+            h2.m-supporters__title.t-head--d Pořadatel
+            a.o-affiliate__link(href="http://www.utb.cz/fmk")
+              img.o-affiliate__image(src="/assets/images/companies/logo_utb.png", alt="Partner Logo")
 
-      if type == "full"
-        h2.m-supporters__title.t-head--d Partneři
-        ul.o-affiliate--sub
-          each institution in ["mmcite.png", "zlin.jpg", "tescoma.jpg", "galaxie.jpg", "raiffeisen.jpg", "continental.jpg", "designportal.jpg", "archiweb.jpg", "czechdesign.jpg", "detepe.jpg", "design_cabinet.jpg", "koma.png", "sketcher.jpg", "refresher.jpg", "idnes.png", "meopta.png", "dailystyle.jpg", "designeros.png", "dynamo.png", "zlincz.png"]
-            li.o-affiliate__item--small
+          //- Week and Conference
+          if type == "full"
+            li.o-affiliate__item--large
+              h2.m-supporters__title.t-head--d Generální partner
               a.o-affiliate__link(href="javascript:")
-                img.o-affiliate__image(src="/assets/images/companies/logo_" + institution, alt="Partner Logo")
+                img.o-affiliate__image(src="/assets/images/companies/logo_mmcite.png", alt="Partner Logo")
+
+            li.o-affiliate__item--large
+              h2.m-supporters__title.t-head--d Významný partner
+              a.o-affiliate__link(href="http://avonet.cz")
+                img.o-affiliate__image(src="/assets/images/companies/logo_avonet.png", alt="Partner Logo")
+
+        //- Week and Conference
+        if type == "full"
+          h2.m-supporters__title.t-head--d Partneři
+          ul.o-affiliate--sub
+            each institution in ["mmcite.png", "zlin.jpg", "tescoma.jpg", "galaxie.jpg", "raiffeisen.jpg", "continental.jpg", "designportal.jpg", "archiweb.jpg", "czechdesign.jpg", "detepe.jpg", "design_cabinet.jpg", "koma.png", "sketcher.jpg", "refresher.jpg", "idnes.png", "meopta.png", "dailystyle.jpg", "designeros.png", "dynamo.png", "zlincz.png"]
+              li.o-affiliate__item--small
+                a.o-affiliate__link(href="javascript:")
+                  img.o-affiliate__image(src="/assets/images/companies/logo_" + institution, alt="Partner Logo")

@@ -7,6 +7,8 @@
 
   @include media($dr__large) {
     margin-bottom: 1.5em;
+
+    white-space: nowrap;
   }
 }
 
