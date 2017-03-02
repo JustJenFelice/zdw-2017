@@ -9,22 +9,24 @@ mixin tickets()
             {
               "enabled": true,
               "note": "Konference design&nbsp;&amp;&nbsp;marketing",
-              "title": "Vstupenka v předprodeji",
+              "title": "V předprodeji",
+              "subtitle": "Zbývá 320 vstupenek.",
               "price": {
                 "standard": "2000",
                 "student": "750"
               },
-              "available": false
+              "available": true
             },
             {
               "enabled": false,
               "note": "Konference design&nbsp;&amp;&nbsp;marketing",
-              "title": "Vstupenka na místě",
+              "title": "Na místě",
+              "subtitle": "Nutno předem registrovat emailem.",
               "price": {
                 "standard": "2400",
                 "student": "900"
               },
-              "available": false
+              "bookable": true
             }
           ]
         each ticket, index in ticketObject
@@ -36,9 +38,12 @@ mixin tickets()
                 .o-ticket__table
                   .o-ticket__cell
                     h1.o-ticket__title= ticket.title
+                    small.o-ticket__subtitle!= ticket.subtitle
                   .o-ticket__cell
                     if ticket.available
                       a.o-ticket__button.o-button--outline(href="tickets.html") Koupit
+                    else if ticket.bookable
+                      a.o-ticket__button.o-button--outline(href="mailto:petra.sedlackova@zlindesignweek.com") Rezervovat
                     else
                       | &nbsp;
 

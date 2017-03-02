@@ -1,6 +1,8 @@
 .o-ticket {
   position: relative;
 
+  height: 100%;
+
   color: white;
   background-color: black;
 }
@@ -134,6 +136,14 @@
 .o-ticket__title {
   @include head--f;
   margin-bottom: 0;
+}
+
+.o-ticket__subtitle {
+  font-size: .75em;
+
+  a {
+    border-bottom: 1px solid;
+  }
 }
 
 .o-ticket__button {
