@@ -26,10 +26,6 @@
   padding: 1.5em;
 
   margin: .5em .75em;
-
-  @include media($dr__large) {
-    padding: 2.5em;
-  }
 }
 
 .m-teaser__title {
@@ -38,6 +34,10 @@
   @include head--b;
 
   min-height: 3em;
+}
+
+.m-teaser__content {
+  max-width: 20em;
 }
 
 .m-teaser__link {
