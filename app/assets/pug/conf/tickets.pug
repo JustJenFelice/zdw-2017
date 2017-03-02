@@ -68,7 +68,7 @@ block template-content
 
         .m-form__table
           .m-form__trow
-            .m-form__tcell Normální vstupenka
+            .m-form__tcell Vstupenka Standard
             .m-form__tcell 1990,-
             .m-form__tcell--count
               label Počet
@@ -104,7 +104,7 @@ block template-content
       h1.m-form__title Jak budeš platit?
       .m-form__section--narrow
         .m-form__choice-list
-          each item in ["Převodem na účet", "Platební kartou"]
+          each item in ["Platební kartou", "Převodem na účet"]
             label.m-form__choice.o-radio
               input.o-radio__input(type="radio", name="payment-type")
               span.o-radio__wrap
