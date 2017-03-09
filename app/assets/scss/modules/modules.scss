@@ -38,16 +38,21 @@
 .m-intro-sticker {
   position: absolute;
 
-  right: 10%;
-
   @include media($dr__mobile) {
     transform: scale(.5);
     transform-origin: right top;
-
-    top: 10%;
   }
 
-  @include media($bp__desktop) {
-    top: 30%;
+  @include media($or__portrait) {
+    right: 1em;
+    top: 5em;
+
+    margin-top: 5vh;
+    margin-right: 2.5vw;
+  }
+
+  @include media($or__landscape) {
+    right: 5%;
+    bottom: 10%;
   }
 }

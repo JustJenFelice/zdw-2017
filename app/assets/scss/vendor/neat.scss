@@ -15,12 +15,16 @@ Device ranges
 */
 
 /* Phone & phablet << */
-$dr__small:    new-breakpoint(max-width em($dev__tablet - 1));
+$dr__small:     new-breakpoint(max-width em($dev__tablet - 1));
 /* >> Phablet */
-$dr__portable: new-breakpoint(min-width em($dev__phablet));
+$dr__portable:  new-breakpoint(min-width em($dev__phablet));
 /* Phablet & tablet */
-$dr__medium:   new-breakpoint(min-width em($dev__phablet) max-width em($dev__desktop - 1));
+$dr__medium:    new-breakpoint(min-width em($dev__phablet) max-width em($dev__desktop - 1));
 /* >> Tablet */
-$dr__large:    new-breakpoint(min-width em($dev__tablet));
+$dr__large:     new-breakpoint(min-width em($dev__tablet));
 /* << Desktop */
-$dr__mobile:   new-breakpoint(max-width em($dev__desktop - 1));
+$dr__mobile:    new-breakpoint(max-width em($dev__desktop - 1));
+
+/* Orientation */
+$or__portrait:  new-breakpoint(orientation portrait);
+$or__landscape: new-breakpoint(orientation landscape);
