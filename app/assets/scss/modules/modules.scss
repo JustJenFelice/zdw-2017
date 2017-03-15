@@ -5,10 +5,10 @@
 .m-supporters__title {
   color: black; /* Regardless of theme */
 
+  white-space: nowrap;
+  
   @include media($dr__large) {
     margin-bottom: 1.5em;
-
-    white-space: nowrap;
   }
 }
 
