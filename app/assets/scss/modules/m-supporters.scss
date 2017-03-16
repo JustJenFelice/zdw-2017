@@ -1,0 +1,15 @@
+.m-supporters {
+  text-align: center;
+}
+
+.m-supporters__title {
+  color: black; /* Regardless of theme */
+
+  white-space: nowrap;
+
+  margin-top: 1.75em;
+  
+  @include media($dr__large) {
+    margin-bottom: 1em;
+  }
+}

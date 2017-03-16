@@ -11,8 +11,6 @@
 .o-affiliate--main {
   justify-content: space-around;
   align-items: flex-start;
-
-  margin-bottom: 3em;
 }
 
 .o-affiliate--sub {
@@ -27,14 +25,14 @@
 }
 
 .o-affiliate__item--small {
-  width: 16.666%;
+  flex-basis: 16.666%;
 }
 
 .o-affiliate__item--large {
   @include reset-children;
 
   @include media($dr__large) {
-    width: 50%;
+    flex-basis: 50%;
   }
 }
 
